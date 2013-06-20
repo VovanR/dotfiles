@@ -1,3 +1,13 @@
+# If running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+        . "$HOME/.bashrc"
+    fi
+fi
+
+
+
 ####################
 # Global Variables #
 ####################
@@ -8,7 +18,10 @@ export GIT_EDITOR='nano'
 ########
 # Path #
 ########
-export PATH=~/.local/bin:$PATH
+# Set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
 
 
 
