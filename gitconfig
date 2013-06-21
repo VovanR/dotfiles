@@ -1,6 +1,3 @@
-[user]
-	name = Username
-	email = mail@gmail.com
 [credential]
 	helper = cache
 [core]
