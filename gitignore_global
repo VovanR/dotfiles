@@ -58,6 +58,7 @@ classes_cache.inc
 access.log
 error.log
 sessions
+.sessions
 
 # Project files #
 #################
@@ -65,5 +66,6 @@ makets
 framework
 tmp
 cache
+__pycache__
 data
 info.php
