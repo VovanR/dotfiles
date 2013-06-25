@@ -45,14 +45,8 @@ fi
 # LC_ALL=
 
 
-# Variables and functions for PS1 prompt
-# from http://welinux.ru/post/7293/
-function LA {
-# Load average
-LANG=C  uptime | \
-        sed 's/,//g' | \
-        egrep -o '([0-9]+\.[0-9]+)\ ([0-9]+\.[0-9]+)\ ([0-9]+\.[0-9]+)'
-}
+# Variables and for PS1 prompt
+# source: http://welinux.ru/post/7293/
 
 # Variables for convenient PS1 construction 
 txtblk='\[\e[0;30m\]' # Black - Regular
@@ -93,18 +87,25 @@ txtrst='\[\e[0m\]'    # Text Reset
 case $(id -u) in
     0)
         STARTCOLOUR=$txtred;
-        PROMPT="$bldred # $txtrst";
+        PROMPT="$bldred #";
         ;;
     *)
         STARTCOLOUR=$txtylw;
-        PROMPT="$bldgrn > $txtrst";
+        PROMPT="$bldgrn >";
         ;;
 esac
 
 # Prompt
-# PROMPT_COMMAND="echo -n [$(date +%k:%m:%S)] "
-# export PS1="\[\e[1;32m\][\u@\h \w]\$ \[\e[0m\]"
-PS1="$STARTCOLOUR\u$txtrst @ $txtcyn\h $txtgrn\w$txtrst [\$(LA)]$txtylw jobs:$bldylw\j $txtrst\n$PROMPT"
+# PS1="$bldgrn[\u@\h \w]\$ $txtrst"
+PS1="$STARTCOLOUR\u" # Username
+PS1+="$txtrst@" # @
+PS1+="$txtcyn\h " # Host
+PS1+="$bldgrn\w" # Working directory
+PS1+="$txtylw jobs:" # jobs:
+PS1+="$bldylw\j " # The number of processes you've suspended in this shell by hitting ^Z
+PS1+="$txtrst\n" # Newline
+PS1+="$PROMPT " # PROMPT
+PS1+="$txtrst" # Reset color
 
 # color in different utilitties by default
 alias ls='ls --color=auto'

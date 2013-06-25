@@ -6,6 +6,11 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# Easier navigation: .., ..., ~
+alias ..="cd ..;" # .. .. ..
+alias ...="cd ../.."
+alias ~="cd ~"
+
 # User scripts are located in ~/.local/bin
 alias sc='simple-commit.sh'
 alias crp='cropp.sh'
