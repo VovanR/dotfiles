@@ -6,7 +6,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-# Easier navigation: .., ..., ~
+# Easier navigation: ., .., ..., ~
+alias .='pwd'
 alias ..="cd ..;" # .. .. ..
 alias ...="cd ../.."
 alias ~="cd ~"
@@ -72,3 +73,4 @@ alias got='git '
 alias get='git '
 
 alias gg='git gui&'
+alias gtree='git log --graph --full-history --all --color --pretty=format:"%x1b[33m%h%x09%x09%x1b[32m%d%x1b[0m %x1b[34m%an%x1b[0m   %s" "$@"'
