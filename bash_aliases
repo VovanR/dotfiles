@@ -52,7 +52,7 @@ alias fnd="sudo chmod 777 -R ./"
 alias apre="sudo service apache2 restart"
 alias sitestart="mkdir makets; fnd; apre"
 
-alias sourcer="source ~/.bashrc"
+alias sourcer="source ~/.bash_profile"
 alias bashaliases="nano ~/.bash_aliases"
 alias open="xdg-open"
 

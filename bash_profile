@@ -49,6 +49,11 @@ fi
 # source: http://welinux.ru/post/7293/
 
 # Variables for convenient PS1 construction 
+#
+# Управляющие последовательности заключены в скобки "\[" и "\]"
+# для того, чтобы shell не учитывал их при оценке длины строки.
+# В противном случае длинные строки будут переноситься неверно.
+#
 txtblk='\[\e[0;30m\]' # Black - Regular
 txtred='\[\e[0;31m\]' # Red
 txtgrn='\[\e[0;32m\]' # Green
@@ -83,6 +88,29 @@ bakcyn='\[\e[46m\]'   # Cyan
 bakwht='\[\e[47m\]'   # White
 txtrst='\[\e[0m\]'    # Text Reset
 
+# Git status.
+# Adapted from: https://github.com/cowboy/dotfiles/
+# Source: https://github.com/miripiruni/dotfiles/
+function prompt_git() {
+    local status output flags
+    status="$(git status 2>/dev/null)"
+    [[ $? != 0 ]] && return;
+    output="$(echo "$status" | awk '/# Initial commit/ {print "(init)"}')"
+    [[ "$output" ]] || output="$(echo "$status" | awk '/# On branch/ {print $4}')"
+    [[ "$output" ]] || output="$(git branch | perl -ne '/^\* (.*)/ && print $1')"
+    flags="$(
+    echo "$status" | awk 'BEGIN {r=""} \
+        /^# Changes to be committed:$/ {r=r "+"}\
+        /^# Changes not staged for commit:$/ {r=r "!"}\
+        /^# Untracked files:$/ {r=r "?"}\
+        END {print r}'
+    )"
+    if [[ "$flags" ]]; then
+        output="$output[$flags]"
+    fi
+    echo -en '\033[00;33m'"; on "'\033[01;33m'$output
+}
+
 # Personal colors for root
 case $(id -u) in
     0)
@@ -101,8 +129,12 @@ PS1="$STARTCOLOUR\u" # Username
 PS1+="$txtrst@" # @
 PS1+="$txtcyn\h " # Host
 PS1+="$bldgrn\w" # Working directory
+
 PS1+="$txtylw jobs:" # jobs:
-PS1+="$bldylw\j " # The number of processes you've suspended in this shell by hitting ^Z
+PS1+="$bldylw\j" # The number of processes you've suspended in this shell by hitting ^Z
+
+PS1+="\$(prompt_git)" # Git details
+
 PS1+="$txtrst\n" # Newline
 PS1+="$PROMPT " # PROMPT
 PS1+="$txtrst" # Reset color
