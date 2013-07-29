@@ -6,8 +6,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-# Easier navigation: ., .., ..., ~
-alias .='pwd'
+# Easier navigation: .., ..., ~
 alias ..="cd ..;" # .. .. ..
 alias ...="cd ../.."
 alias ~="cd ~"
@@ -60,6 +59,9 @@ alias open="xdg-open"
 
 # Git aliases
 alias glog="git log --pretty=format:'%h %ad | [%an] %s%d' --graph --date=short"
+alias ghist="git hist"
+alias ghistp="git hist -p"
+alias ghists="git hist --stat"
 alias gs='git status '
 alias ga='git add '
 alias gb='git branch '

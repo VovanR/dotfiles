@@ -1,13 +1,3 @@
-# If running bash
-if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]; then
-        . "$HOME/.bashrc"
-    fi
-fi
-
-
-
 ####################
 # Global Variables #
 ####################
@@ -158,6 +148,3 @@ export LESS_TERMCAP_us=$'\033[01;36m'
 export TERM=xterm-256color
 
 export EDITOR=/usr/bin/nano
-
-echo `uname -a`
-echo `date`
