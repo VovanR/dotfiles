@@ -20,7 +20,7 @@ alias addhosts='sudo $HOME/.local/bin/addhosts.sh'
 # MySQL dump
 alias md='mysqldump -h localhost -u root --skip-opt --add-locks --lock-tables --extended-insert --create-options -cq'
 
-alias adhosts='sudo nano /etc/apache2/sites-available/`whoami`'
+alias adhosts='sudo nano /etc/apache2/sites-available/`whoami`.conf'
 alias edhosts='sudo nano /etc/hosts'
 
 # SVN aliases
