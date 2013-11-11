@@ -15,7 +15,7 @@ alias ~="cd ~"
 alias sc='simple-commit.sh'
 alias crp='cropp.sh'
 alias psd2png='psd2png.sh'
-alias addhosts='sudo $HOME/.local/bin/addhosts.sh'
+alias v-addhost='sudo $HOME/.local/bin/v-addhost.sh'
 
 # MySQL dump
 alias md='mysqldump -h localhost -u root --skip-opt --add-locks --lock-tables --extended-insert --create-options -cq'
