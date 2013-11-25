@@ -1,27 +1,65 @@
-###########
+# Inspired by: 
+# https://github.com/sapegin/dotfiles
+# https://github.com/miripiruni/dotfiles
+# https://github.com/dreadatour/dotfiles
+
+
 # Aliases #
 ###########
+
+# Prompt before overwrite
+alias cp='cp -i'
+alias rm='rm -I'
+alias mv='mv -i'
+alias ln='ln -i'
+
 # Some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
+alias ll='ls -lahF'
+alias la='ls -ahF'
 alias l='ls -CF'
 
-# Easier navigation: .., ..., ~
+# tree aliaces
+alias tree='tree --dirsfirst'
+
+# Easier navigation
 alias ..="cd ..;" # .. .. ..
 alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
 alias ~="cd ~"
+alias -- -="cd -" # The alias is `-`, not `--`
 
 # User scripts are located in ~/.local/bin
 alias sc='simple-commit.sh'
 alias crp='cropp.sh'
 alias psd2png='psd2png.sh'
-alias v-addhost='sudo $HOME/.local/bin/v-addhost.sh'
+alias v-addhost='v-addhost.sh'
+
+# Helpers
+alias fndf="sudo find ./ -type f -exec chmod 644 {} \;"
+alias fndd="sudo find ./ -type d -exec chmod 755 {} \;"
+alias fnd="fndd; fndf"
+alias sitestart="mkdir makets; fnd; apre"
+
+alias sourcer="source ~/.bash_profile"
+alias bashaliases="nano ~/.bash_aliases"
+
+alias open="xdg-open"
+alias o="xdg-open"
+alias e="sublime"
+
+# Show my IP
+alias myip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | awk '{print \$2}'"
+
+# Download file and save it with filename of remote file
+alias get="curl -O"
 
 # MySQL dump
 alias md='mysqldump -h localhost -u root --skip-opt --add-locks --lock-tables --extended-insert --create-options -cq'
 
 alias adhosts='sudo nano /etc/apache2/sites-available/`whoami`.conf'
 alias edhosts='sudo nano /etc/hosts'
+alias apre="sudo service apache2 restart"
 
 # SVN aliases
 alias sr="svn resolved"
@@ -44,17 +82,7 @@ alias sad="st | grep ^?"
 alias sadd="st | awk '/^[?]/{ print \$2 }' | xargs svn add"
 alias stc="st | grep ^C"
 # Открыть конфликтные файлы в Netbeans
-#alias stcn="st | awk '/^C/{ print \$2 }' | xargs '~/netbeans-7.2/bin/netbeans'"
-
-alias fndf="sudo find ./ -type f -exec chmod 777 {} \;"
-alias fndd="sudo find ./ -type d -exec chmod 777 {} \;"
-alias fnd="sudo chmod 777 -R ./"
-alias apre="sudo service apache2 restart"
-alias sitestart="mkdir makets; fnd; apre"
-
-alias sourcer="source ~/.bash_profile"
-alias bashaliases="nano ~/.bash_aliases"
-alias open="xdg-open"
+# alias stcn="st | awk '/^C/{ print \$2 }' | xargs '~/netbeans-7.2/bin/netbeans'"
 
 
 # Git aliases
