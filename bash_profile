@@ -1,38 +1,25 @@
-####################
+# Inspired by:
+# http://welinux.ru/post/7293/
+# https://github.com/cowboy/dotfiles/
+# https://github.com/miripiruni/dotfiles
+# https://github.com/dreadatour/dotfiles
+
+
 # Global Variables #
 ####################
+
 export GIT_EDITOR='nano'
 
 
 
-########
 # Path #
 ########
+
 # Set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-
-
-##########
-# Locale #
-##########
-# export LANG="ru_RU.UTF-8"
-# export LANGUAGE="en"
-# LC_CTYPE="ru_RU.UTF-8"
-# LC_NUMERIC=ru_RU.UTF-8
-# LC_TIME=ru_RU.UTF-8
-# LC_COLLATE="ru_RU.UTF-8"
-# LC_MONETARY=ru_RU.UTF-8
-# LC_MESSAGES="ru_RU.UTF-8"
-# LC_PAPER=ru_RU.UTF-8
-# LC_NAME=ru_RU.UTF-8
-# LC_ADDRESS=ru_RU.UTF-8
-# LC_TELEPHONE=ru_RU.UTF-8
-# LC_MEASUREMENT=ru_RU.UTF-8
-# LC_IDENTIFICATION=ru_RU.UTF-8
-# LC_ALL=
 
 
 # Variables and for PS1 prompt
@@ -129,10 +116,13 @@ PS1+="$txtrst\n" # Newline
 PS1+="$PROMPT " # PROMPT
 PS1+="$txtrst" # Reset color
 
+
+
 # color in different utilitties by default
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 eval `dircolors -b`
+
 
 # color in man
 export LESS_TERMCAP_mb=$'\033[01;36m'
@@ -143,6 +133,7 @@ export LESS_TERMCAP_se=$'\033[0m'
 export LESS_TERMCAP_so=$'\033[01;44;33m'
 export LESS_TERMCAP_ue=$'\033[0m'
 export LESS_TERMCAP_us=$'\033[01;36m'
+
 
 # Variable to use colorful MC and VIM
 export TERM=xterm-256color
