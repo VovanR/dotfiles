@@ -10,6 +10,17 @@
 
 export GIT_EDITOR='nano'
 
+# NVM
+if [ -s ~/.nvm/nvm.sh ]; then
+    export NVM_DIR=~/.nvm
+    source ~/.nvm/nvm.sh
+fi
+
+# bash aliases
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
 
 
 # Path #
