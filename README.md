@@ -23,7 +23,7 @@ Git:
     git config --global user.email "mail@gmail.com"
 
 Vim:
-        ln -s ~/.config/dotfiles/vimrc ~/.vimrc
+    ln -s ~/.config/dotfiles/vimrc ~/.vimrc
 
 Upgrade
 -------
