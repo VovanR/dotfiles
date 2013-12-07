@@ -1,7 +1,7 @@
 dotfiles
 ========
 
-My configs: bash, SVN, Git
+My configs: bash, SVN, Git, Vim
 
 Install
 -------
@@ -21,6 +21,9 @@ Git:
     ln -s ~/.config/dotfiles/gitignore_global ~/.gitignore_global
     git config --global user.name "Username"
     git config --global user.email "mail@gmail.com"
+
+Vim:
+        ln -s ~/.config/dotfiles/vimrc ~/.vimrc
 
 Upgrade
 -------
