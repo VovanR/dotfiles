@@ -104,18 +104,14 @@ set showcmd
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
-" Automatic commands
-if has("autocmd")
-        " Enable file type detection
-        filetype plugin on
-        " Treat .json files as .js
-        autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-endif
-
-
 " vim-pathogen
 call pathogen#infect()
 call pathogen#helptags()
+
+syntax enable
+
+" Enable file type detection
+filetype plugin indent on
 
 " Shift + Tab - next tab
 " map <S-Tab> :tabnext<CR>
@@ -146,7 +142,6 @@ map <F3> :NERDTreeToggle<CR>
 " F4 - TagBar toggle
 map <F4> :TagbarToggle<CR>
 
-syntax enable
 set background=dark
 colorscheme solarized
 
