@@ -65,8 +65,7 @@ set tabstop=4
 
 " Show 'invisible' characters
 " set listchars=tab:—\ ,trail:·,eol:¬,nbsp:_
-set listchars=tab:—\ ,trail:·,eol:¬,nbsp:_
-set list
+set list listchars=tab:—\ ,trail:·
 
 " Highlight searches
 set hlsearch
