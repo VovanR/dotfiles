@@ -176,9 +176,15 @@ set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
 
-let g:tagbar_autoclose=1
+" Не закрывать тагбар после перехода к функции
+let g:tagbar_autoclose=0
 let g:tagbar_compact=1
-let g:tagbar_sort = 0
+
+" Иконки свернуть развернуть список
+let g:tagbar_iconchars=['+', '-']
+
+" Не сортировать функции по имени
+let g:tagbar_sort=0
 
 let g:tagbar_phpctags_bin='~/phpctags/phpctags'
 
@@ -241,3 +247,7 @@ let g:nerdtree_tabs_open_on_console_startup=1
 
 " Не подсвечивать jsDoc
 let g:javascript_ignore_javaScriptdoc=0
+
+" Добавлять и удалять пробелы после символов комментирования
+let NERDSpaceDelims=1
+let NERDRemoveExtraSpaces=1
