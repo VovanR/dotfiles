@@ -109,6 +109,8 @@ call pathogen#helptags()
 
 syntax enable
 
+set foldmethod=indent
+
 " Enable file type detection
 filetype plugin indent on
 
@@ -240,7 +242,7 @@ let g:signify_vcs_list = [ 'git' ]
 " let g:signify_cursorhold_insert = 1
 
 " Обновлять состояние vim
-set updatetime=512
+set updatetime=128
 
 " To run NERDTreeTabs on console vim startup
 let g:nerdtree_tabs_open_on_console_startup=1
@@ -251,3 +253,6 @@ let g:javascript_ignore_javaScriptdoc=0
 " Добавлять и удалять пробелы после символов комментирования
 let NERDSpaceDelims=1
 let NERDRemoveExtraSpaces=1
+
+set textwidth=80
+set colorcolumn=+1
