@@ -39,12 +39,29 @@ let mapleader="\\"
 set binary
 set noeol
 
+
+
+" Ignore VCS files
+set wildignore+=.git,.svn
+
+" Ignore projects
+set wildignore+=*.sublime-project,*.sublime-workspace
+
+" Ignore archive files
+set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
+
+" Ignore less cache
+set wildignore+=*/LESS_CACHE/*
+
+" Ignore env
+set wildignore+=*/env/*
+
+
+
 " Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
-if exists("&undodir")
-  set undodir=~/.vim/undo
-endif
+set undodir=~/.vim/undo
 
 " Respect modeline in files
 set modeline
@@ -256,3 +273,12 @@ let NERDRemoveExtraSpaces=1
 
 set textwidth=80
 set colorcolumn=+1
+
+" Smarter tab line
+let g:airline#extensions#tabline#enabled = 1
+
+" Syntastic
+" let g:syntastic_javascript_checkers = ['jslint']
+
+" Save on buffer switch
+set autowrite
