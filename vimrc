@@ -1,9 +1,43 @@
 " Inspired by:
 " https://github.com/mathiasbynens/dotfiles
 " https://github.com/mpyatishev
+" https://github.com/mislav/vimfiles/blob/master/vimrc
 
 " Make Vim more useful
 set nocompatible
+
+" Use UTF-8 without BOM
+set encoding=utf-8 nobomb
+
+" vim-pathogen
+call pathogen#infect()
+call pathogen#helptags()
+
+" Enable file type detection
+filetype plugin indent on
+
+syntax enable
+
+" Theme
+set background=dark
+colorscheme solarized
+
+" set textwidth=80
+" set colorcolumn=+1
+set colorcolumn=81
+
+" don't try to highlight long lines
+set synmaxcol=800
+
+
+
+" Auto-reload buffers when file changed on disk
+set autoread
+
+" Disable swap files; systems don't crash that often these days
+set updatecount=0
+
+
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
@@ -25,12 +59,6 @@ set backspace=indent,eol,start
 
 " Optimize for fast terminal connections
 set ttyfast
-
-" Add the g flag to search/replace by default
-set gdefault
-
-" Use UTF-8 without BOM
-set encoding=utf-8 nobomb
 
 " Change mapleader
 let mapleader="\\"
@@ -84,6 +112,10 @@ set tabstop=4
 " set listchars=tab:—\ ,trail:·,eol:¬,nbsp:_
 set list listchars=tab:—\ ,trail:·
 
+
+
+"" Searching
+
 " Highlight searches
 set hlsearch
 
@@ -92,6 +124,19 @@ set incsearch
 
 " Ignore case of searches
 set ignorecase
+
+" Add the g flag to search/replace by default
+set gdefault
+
+
+
+" Time out on key codes but not mappings.
+" Basically this makes terminal Vim work sanely.
+set notimeout
+set ttimeout
+set ttimeoutlen=100
+
+
 
 " Enable mouse in all modes
 set mouse=a
@@ -120,16 +165,7 @@ set showcmd
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
-" vim-pathogen
-call pathogen#infect()
-call pathogen#helptags()
-
-syntax enable
-
-set foldmethod=indent
-
-" Enable file type detection
-filetype plugin indent on
+set foldmethod=syntax
 
 " Shift + Tab - next tab
 " map <S-Tab> :tabnext<CR>
@@ -159,9 +195,6 @@ map <F3> :NERDTreeToggle<CR>
 
 " F4 - TagBar toggle
 map <F4> :TagbarToggle<CR>
-
-set background=dark
-colorscheme solarized
 
 " auto switch to folder where editing file
 autocmd BufEnter * cd %:p:h
@@ -271,8 +304,7 @@ let g:javascript_ignore_javaScriptdoc=0
 let NERDSpaceDelims=1
 let NERDRemoveExtraSpaces=1
 
-set textwidth=80
-set colorcolumn=+1
+set nowrap
 
 " Smarter tab line
 let g:airline#extensions#tabline#enabled = 1
