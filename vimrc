@@ -79,7 +79,7 @@ set wildignore+=*.sublime-project,*.sublime-workspace
 set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 
 " Ignore less cache
-set wildignore+=*/LESS_CACHE/*
+set wildignore+=*/LESS_CACHE/*,*/CACHE/*
 
 " Ignore env
 set wildignore+=*/env/*
@@ -134,7 +134,7 @@ set gdefault
 " Basically this makes terminal Vim work sanely.
 set notimeout
 set ttimeout
-set ttimeoutlen=100
+set ttimeoutlen=50
 
 
 
@@ -165,7 +165,10 @@ set showcmd
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
+" Сворачивание кода
 set foldmethod=syntax
+set foldlevel=20
+set foldlevelstart=10
 
 " Shift + Tab - next tab
 " map <S-Tab> :tabnext<CR>
@@ -209,15 +212,19 @@ autocmd BufEnter * cd %:p:h
 vnoremap < <gv
 vnoremap > >gv
 
-"NERDTree
+" NERDTree
 let NERDTreeChDirMode=2
 let NERDTreeDirArrows=0
-""adds new keymaps for add and delete nodes
+" adds new keymaps for add and delete nodes
 runtime! plugin/NERD_tree.vim
 let opts = {'key': 'a', 'quickhelpText': 'add new node', 'callback': 'NERDTreeAddNode'}
 call NERDTreeAddKeyMap(opts)
 let opts = {'key': 'd', 'quickhelpText': 'delete node', 'callback': 'NERDTreeDeleteNode'}
 call NERDTreeAddKeyMap(opts)
+
+" Ширина левой панели
+let NERDTreeWinSize=30
+
 
 "toggles with Xorg key
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;ABCDEFGHIJKLMNOPQRSTUVWXYZ:,фисвуапршолдьтщзйкыегмцчняю;abcdefghijklmnopqrstuvwxyz.
@@ -227,6 +234,10 @@ set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
+
+
+" Автоматически открывать tagbar
+autocmd VimEnter * nested :TagbarOpen
 
 " Не закрывать тагбар после перехода к функции
 let g:tagbar_autoclose=0
@@ -239,6 +250,9 @@ let g:tagbar_iconchars=['+', '-']
 let g:tagbar_sort=0
 
 let g:tagbar_phpctags_bin='~/phpctags/phpctags'
+
+" Ширина тагбара
+let g:tagbar_width=31
 
 "let g:AutoPairsFlyMode=0
 
@@ -306,11 +320,25 @@ let NERDRemoveExtraSpaces=1
 
 set nowrap
 
+" Airline
 " Smarter tab line
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " Syntastic
 " let g:syntastic_javascript_checkers = ['jslint']
 
 " Save on buffer switch
 set autowrite
+
+
+" YouCompleteMe
+" Отключить автодополнение
+" let g:ycm_filetype_blacklist = {
+"       \ 'javascript' : 1,
+"       \}
+
+" Tern
+let g:tern_map_keys=1
+let g:tern_show_argument_hints='on_hold'
