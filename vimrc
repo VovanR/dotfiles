@@ -78,6 +78,9 @@ set wildignore+=*.sublime-project,*.sublime-workspace
 " Ignore archive files
 set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 
+" Ignore bin files
+set wildignore+=*.pyc
+
 " Ignore less cache
 set wildignore+=*/LESS_CACHE/*,*/CACHE/*
 
@@ -196,9 +199,6 @@ map <S-F3> :BufExplorer<CR>
 "map <S-F3> :Texplore<CR>
 map <F3> :NERDTreeToggle<CR>
 
-" F4 - TagBar toggle
-map <F4> :TagbarToggle<CR>
-
 " auto switch to folder where editing file
 autocmd BufEnter * cd %:p:h
 
@@ -225,6 +225,9 @@ call NERDTreeAddKeyMap(opts)
 " Ширина левой панели
 let NERDTreeWinSize=30
 
+" Ignore files
+let NERDTreeIgnore=['.sublime-project$[[file]]', '.sublime-workspace$[[file]]', '.pyc$[[file]]']
+
 
 "toggles with Xorg key
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;ABCDEFGHIJKLMNOPQRSTUVWXYZ:,фисвуапршолдьтщзйкыегмцчняю;abcdefghijklmnopqrstuvwxyz.
@@ -236,6 +239,9 @@ set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
 
 
+" F4 - TagBar toggle
+map <F4> :TagbarToggle<CR>
+
 " Автоматически открывать tagbar
 autocmd VimEnter * nested :TagbarOpen
 
@@ -246,13 +252,14 @@ let g:tagbar_compact=1
 " Иконки свернуть развернуть список
 let g:tagbar_iconchars=['+', '-']
 
+" Ширина тагбара
+let g:tagbar_width=30
+
 " Не сортировать функции по имени
 let g:tagbar_sort=0
 
 let g:tagbar_phpctags_bin='~/phpctags/phpctags'
 
-" Ширина тагбара
-let g:tagbar_width=31
 
 "let g:AutoPairsFlyMode=0
 
