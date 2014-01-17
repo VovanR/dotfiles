@@ -10,6 +10,7 @@ set nocompatible
 set encoding=utf-8 nobomb
 
 " vim-pathogen
+" let g:pathogen_disabled = []
 call pathogen#infect()
 call pathogen#helptags()
 
@@ -80,6 +81,9 @@ set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 
 " Ignore bin files
 set wildignore+=*.pyc
+
+" Images
+set wildignore+=*.psd,*.svg
 
 " Ignore less cache
 set wildignore+=*/LESS_CACHE/*,*/CACHE/*
@@ -313,7 +317,7 @@ let g:signify_vcs_list = [ 'git' ]
 " let g:signify_cursorhold_insert = 1
 
 " Обновлять состояние vim
-set updatetime=128
+set updatetime=2000
 
 " To run NERDTreeTabs on console vim startup
 let g:nerdtree_tabs_open_on_console_startup=1
@@ -339,12 +343,10 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 " Save on buffer switch
 set autowrite
 
-
-" YouCompleteMe
-" Отключить автодополнение
-" let g:ycm_filetype_blacklist = {
-"       \ 'javascript' : 1,
-"       \}
+" neocomplete
+let g:neocomplete#enable_at_startup = 1
+" <TAB>: completion
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Tern
 let g:tern_map_keys=1
