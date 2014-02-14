@@ -8,6 +8,7 @@ Install
 
     cd ~/.config
     git clone https://github.com/VovanR/dotfiles.git
+    git submodule update --init --recursive
 
 Bash:
 
@@ -24,7 +25,10 @@ Git:
 
 Vim:
 
+Install [pathogen.vim](https://github.com/tpope/vim-pathogen)
+
     ln -s ~/.config/dotfiles/vimrc ~/.vimrc
+    ln -s ~/.config/dotfiles/vim/bundle ~/.vim/bundle
 
 Upgrade
 -------
