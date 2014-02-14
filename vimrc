@@ -11,6 +11,7 @@ set encoding=utf-8 nobomb
 
 " vim-pathogen
 " let g:pathogen_disabled = []
+let g:pathogen_disabled = ['gundo.vim', 'phpfolding.vim', 'vim-jsbeautify']
 call pathogen#infect()
 call pathogen#helptags()
 
@@ -336,6 +337,8 @@ set nowrap
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#hunks#enabled = 0
+
 
 " Syntastic
 " let g:syntastic_javascript_checkers = ['jslint']
@@ -349,5 +352,5 @@ let g:neocomplete#enable_at_startup = 1
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Tern
-let g:tern_map_keys=1
-let g:tern_show_argument_hints='on_hold'
+" let g:tern_map_keys=1
+" let g:tern_show_argument_hints='on_hold'
