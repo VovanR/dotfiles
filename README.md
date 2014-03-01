@@ -25,7 +25,7 @@ Git:
 
 Vim:
 
-Install [pathogen.vim](https://github.com/tpope/vim-pathogen)
+Install [pathogen.vim](https://github.com/tpope/vim-pathogen#installation)
 
     ln -s ~/.config/dotfiles/vimrc ~/.vimrc
     ln -s ~/.config/dotfiles/vim/bundle ~/.vim/bundle
