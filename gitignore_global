@@ -27,6 +27,7 @@
 *.log
 *.sql
 *.sqlite
+doc/tags
 
 # OS generated files #
 ######################
