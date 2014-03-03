@@ -27,6 +27,8 @@ Vim:
 
 Install [pathogen.vim](https://github.com/tpope/vim-pathogen#installation)
 
+    cd vim/bundle/tern_for_vim
+    npm install
     ln -s ~/.config/dotfiles/vimrc ~/.vimrc
     ln -s ~/.config/dotfiles/vim/bundle ~/.vim/bundle
 
