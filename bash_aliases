@@ -1,4 +1,4 @@
-# Inspired by: 
+# Inspired by:
 # https://github.com/sapegin/dotfiles
 # https://github.com/miripiruni/dotfiles
 # https://github.com/dreadatour/dotfiles
@@ -42,7 +42,7 @@ alias fnd="fndd; fndf"
 alias sitestart="mkdir makets; fnd; apre"
 
 alias sourcer="source ~/.bash_profile"
-alias bashaliases="nano ~/.bash_aliases"
+alias bashaliases="vim ~/.bash_aliases"
 
 alias open="xdg-open"
 alias o="xdg-open"
@@ -57,8 +57,8 @@ alias get="curl -O"
 # MySQL dump
 alias md='mysqldump -h localhost -u root --skip-opt --add-locks --lock-tables --extended-insert --create-options -cq'
 
-alias adhosts='sudo nano /etc/apache2/sites-available/`whoami`.conf'
-alias edhosts='sudo nano /etc/hosts'
+alias adhosts='sudo vim /etc/apache2/sites-available/`whoami`.conf'
+alias edhosts='sudo vim /etc/hosts'
 alias apre="sudo service apache2 restart"
 
 # SVN aliases
