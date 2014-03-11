@@ -175,8 +175,8 @@ set scrolloff=3
 
 " Сворачивание кода
 set foldmethod=syntax
-set foldlevel=20
-set foldlevelstart=10
+set foldlevel=99
+set foldlevelstart=99
 
 " Shift + Tab - next tab
 " map <S-Tab> :tabnext<CR>
