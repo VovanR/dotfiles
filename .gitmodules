@@ -106,3 +106,6 @@
 [submodule "vim/bundle/vim-stylus"]
 	path = vim/bundle/vim-stylus
 	url = https://github.com/wavded/vim-stylus.git
+[submodule "vim/bundle/searchtasks.vim"]
+	path = vim/bundle/searchtasks.vim
+	url = https://github.com/gilsondev/searchtasks.vim.git
