@@ -214,7 +214,9 @@ highlight lCursor guifg=NONE guibg=Cyan
 
 
 "PHP lint
-au BufWritePost *.php !php -l %
+" Выводить сообщение проверки кода
+" au BufWritePost *.php !php -l %
+"
 "http://vim.wikia.com/wiki/Runtime_syntax_check_for_php
 ""if !exists('*PHPsynCHK')
 ""  function! PHPsynCHK()
@@ -319,7 +321,7 @@ let g:nerdtree_tabs_open_on_console_startup=1
 Plugin 'majutsushi/tagbar'
 map <F4> :TagbarToggle<CR>
 " Автоматически открывать tagbar
-autocmd VimEnter * nested :TagbarOpen
+" autocmd VimEnter * nested :TagbarOpen
 " Не закрывать тагбар после перехода к функции
 let g:tagbar_autoclose=0
 let g:tagbar_compact=1
