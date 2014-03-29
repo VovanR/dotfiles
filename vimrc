@@ -2,6 +2,7 @@
 " https://github.com/mathiasbynens/dotfiles
 " https://github.com/mpyatishev
 " https://github.com/mislav/vimfiles/blob/master/vimrc
+" https://github.com/gmarik/vimfiles
 
 " Make Vim more useful
 set nocompatible
@@ -9,20 +10,10 @@ set nocompatible
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
 
-" vim-pathogen
-" let g:pathogen_disabled = []
-let g:pathogen_disabled = ['gundo.vim', 'phpfolding.vim', 'vim-jsbeautify', 'tagbar-phpctags.vim']
-call pathogen#infect()
-call pathogen#helptags()
-
 " Enable file type detection
 filetype plugin indent on
 
 syntax enable
-
-" Theme
-set background=dark
-colorscheme solarized
 
 " set textwidth=80
 " set colorcolumn=+1
@@ -199,11 +190,6 @@ map <S-F2> :wa<CR>
 " Shift + F3 - open buffer
 map <S-F3> :BufExplorer<CR>
 
-" F3 - open dir
-"map <S-F3> :Sexplore!<CR>
-"map <S-F3> :Texplore<CR>
-map <F3> :NERDTreeToggle<CR>
-
 " auto switch to folder where editing file
 autocmd BufEnter * cd %:p:h
 
@@ -217,23 +203,6 @@ autocmd BufEnter * cd %:p:h
 vnoremap < <gv
 vnoremap > >gv
 
-" NERDTree
-let NERDTreeChDirMode=2
-let NERDTreeDirArrows=0
-" adds new keymaps for add and delete nodes
-runtime! plugin/NERD_tree.vim
-let opts = {'key': 'a', 'quickhelpText': 'add new node', 'callback': 'NERDTreeAddNode'}
-call NERDTreeAddKeyMap(opts)
-let opts = {'key': 'd', 'quickhelpText': 'delete node', 'callback': 'NERDTreeDeleteNode'}
-call NERDTreeAddKeyMap(opts)
-
-" Ширина левой панели
-let NERDTreeWinSize=30
-
-" Ignore files
-let NERDTreeIgnore=['.sublime-project$[[file]]', '.sublime-workspace$[[file]]', '.pyc$[[file]]']
-
-
 "toggles with Xorg key
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;ABCDEFGHIJKLMNOPQRSTUVWXYZ:,фисвуапршолдьтщзйкыегмцчняю;abcdefghijklmnopqrstuvwxyz.
 
@@ -243,41 +212,6 @@ set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
 
-
-" F4 - TagBar toggle
-map <F4> :TagbarToggle<CR>
-
-" Автоматически открывать tagbar
-autocmd VimEnter * nested :TagbarOpen
-
-" Не закрывать тагбар после перехода к функции
-let g:tagbar_autoclose=0
-let g:tagbar_compact=1
-
-" Иконки свернуть развернуть список
-let g:tagbar_iconchars=['+', '-']
-
-" Ширина тагбара
-let g:tagbar_width=30
-
-" Не сортировать функции по имени
-let g:tagbar_sort=0
-
-let g:tagbar_phpctags_bin='~/phpctags/phpctags'
-
-
-"let g:AutoPairsFlyMode=0
-
-"python-mode
-" Disable pylint checking every save
-""let g:pymode_lint_write = 0
-let g:pymode_lint_config = "$HOME/.pylintrc"
-
-"отключение rope для работы jedi
-let g:pymode_rope = 0
-
-let g:jedi#use_tabs_not_buffers = 0
-let g:jedi#completions_enable = 0
 
 "PHP lint
 au BufWritePost *.php !php -l %
@@ -305,11 +239,112 @@ au BufWritePost *.php !php -l %
 ""set errorformat=%m\ in\ %f\ on\ line\ %l
 ""au BufWriteCmd *.php call PHPsynCHK()
 
+" Обновлять состояние vim
+set updatetime=2000
+
+set nowrap
+
+" Save on buffer switch
+set autowrite
+
+
+
+" Plugins " {{{
+
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/vundle'
+
+
+" Editing
+
+Plugin 'editorconfig/editorconfig-vim'
+
+Plugin 'jiangmiao/auto-pairs'
+"let g:AutoPairsFlyMode=0
+
+Plugin 'scrooloose/nerdcommenter'
+" Добавлять и удалять пробелы после символов комментирования
+let NERDSpaceDelims=1
+let NERDRemoveExtraSpaces=1
+
+" Plugin 'vim-scripts/phpfolding.vim'
+
+Plugin 'klen/python-mode'
+" Disable pylint checking every save
+""let g:pymode_lint_write = 0
+" let g:pymode_lint_config = "$HOME/.pylintrc"
+
+Plugin 'mattn/emmet-vim'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'gilsondev/searchtasks.vim'
+
+
+" View
+
+Plugin 'sjl/gundo.vim'
+Plugin 'jlanzarotta/bufexplorer'
+Plugin 'kien/ctrlp.vim'
+
+Plugin 'vim-scripts/dbext.vim'
 let g:dbext_default_SQLITE_bin = 'sqlite3'
 
-" To stop vim-gitgutter running eagerly
-" let g:gitgutter_eager = 0
+Plugin 'scrooloose/nerdtree'
+" Автоматически открывать nerdtree
+autocmd vimenter * NERDTree
+" F3 - open dir
+"map <S-F3> :Sexplore!<CR>
+"map <S-F3> :Texplore<CR>
+map <F3> :NERDTreeToggle<CR>
+let NERDTreeChDirMode=2
+let NERDTreeDirArrows=0
+" adds new keymaps for add and delete nodes
+runtime! plugin/NERD_tree.vim
+let opts = {'key': 'a', 'quickhelpText': 'add new node', 'callback': 'NERDTreeAddNode'}
+call NERDTreeAddKeyMap(opts)
+let opts = {'key': 'd', 'quickhelpText': 'delete node', 'callback': 'NERDTreeDeleteNode'}
+call NERDTreeAddKeyMap(opts)
+let NERDTreeWinSize=30
+" Ignore files
+let NERDTreeIgnore=['.sublime-project$[[file]]', '.sublime-workspace$[[file]]', '.pyc$[[file]]']
 
+Plugin 'jistr/vim-nerdtree-tabs'
+" To run NERDTreeTabs on console vim startup
+let g:nerdtree_tabs_open_on_console_startup=1
+
+Plugin 'majutsushi/tagbar'
+map <F4> :TagbarToggle<CR>
+" Автоматически открывать tagbar
+autocmd VimEnter * nested :TagbarOpen
+" Не закрывать тагбар после перехода к функции
+let g:tagbar_autoclose=0
+let g:tagbar_compact=1
+let g:tagbar_iconchars=['+', '-']
+let g:tagbar_width=30
+" Не сортировать функции по имени
+let g:tagbar_sort=0
+
+" Plugin 'vim-php/tagbar-phpctags.vim'
+" let g:tagbar_phpctags_bin='~/phpctags/phpctags'
+
+Plugin 'bling/vim-airline'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#hunks#enabled = 0
+
+
+Plugin 'altercation/vim-colors-solarized'
+set background=dark
+colorscheme solarized
+
+Plugin 'tpope/vim-fugitive'
+
+Plugin 'mhinz/vim-signify'
 " Подсветка измененных строк
 let g:signify_vcs_list = [ 'git' ]
 " let g:signify_update_on_bufenter = 1
@@ -317,40 +352,54 @@ let g:signify_vcs_list = [ 'git' ]
 " let g:signify_cursorhold_normal = 1
 " let g:signify_cursorhold_insert = 1
 
-" Обновлять состояние vim
-set updatetime=2000
+Plugin 'bronson/vim-trailing-whitespace'
 
-" To run NERDTreeTabs on console vim startup
-let g:nerdtree_tabs_open_on_console_startup=1
-
-" Не подсвечивать jsDoc
-let g:javascript_ignore_javaScriptdoc=0
-
-" Добавлять и удалять пробелы после символов комментирования
-let NERDSpaceDelims=1
-let NERDRemoveExtraSpaces=1
-
-set nowrap
-
-" Airline
-" Smarter tab line
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#hunks#enabled = 0
-
-
-" Syntastic
+Plugin 'scrooloose/syntastic'
 " let g:syntastic_javascript_checkers = ['jslint']
 
-" Save on buffer switch
-set autowrite
-
-" neocomplete
+Plugin 'Shougo/neocomplete.vim'
 let g:neocomplete#enable_at_startup = 1
 " <TAB>: completion
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
-" Tern
+
+" Formatting
+
+Plugin 'csscomb/csscomb-for-vim'
+" Plugin 'maksimr/vim-jsbeautify'
+
+
+" Syntax
+
+" CSS
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'groenewege/vim-less'
+Plugin 'wavded/vim-stylus'
+
+Plugin 'tpope/vim-markdown'
+
+
+" JavaScript
+Plugin 'pangloss/vim-javascript'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'alarie/requirejs.vim'
+Plugin 'kchmck/vim-coffee-script'
+
+Plugin 'marijnh/tern_for_vim'
 " let g:tern_map_keys=1
 " let g:tern_show_argument_hints='on_hold'
+
+Plugin 'heavenshell/vim-jsdoc'
+" Не подсвечивать jsDoc
+let g:javascript_ignore_javaScriptdoc=0
+
+
+" HTML
+Plugin 'digitaltoad/vim-jade'
+
+
+" PHP
+Plugin 'shawncplus/phpcomplete.vim'
+
+
+" " }}}
