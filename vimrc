@@ -11,7 +11,7 @@ set encoding=utf-8 nobomb
 
 " vim-pathogen
 " let g:pathogen_disabled = []
-let g:pathogen_disabled = ['gundo.vim', 'phpfolding.vim', 'vim-jsbeautify']
+let g:pathogen_disabled = ['gundo.vim', 'phpfolding.vim', 'vim-jsbeautify', 'tagbar-phpctags.vim']
 call pathogen#infect()
 call pathogen#helptags()
 

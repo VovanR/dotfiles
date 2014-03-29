@@ -36,8 +36,8 @@ alias psd2png='psd2png.sh'
 alias v-addhost='v-addhost.sh'
 
 # Helpers
-alias fndf="sudo find ./ -type f -exec chmod 644 {} \;"
-alias fndd="sudo find ./ -type d -exec chmod 755 {} \;"
+alias fndf="sudo find ./ -type f -exec chmod 664 {} \;"
+alias fndd="sudo find ./ -type d -exec chmod 775 {} \;"
 alias fnd="fndd; fndf"
 alias sitestart="mkdir makets; fnd; apre"
 
