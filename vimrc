@@ -10,11 +10,6 @@ set nocompatible
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
 
-" Enable file type detection
-filetype plugin indent on
-
-syntax enable
-
 " set textwidth=80
 " set colorcolumn=+1
 set colorcolumn=81
@@ -283,7 +278,6 @@ Plugin 'klen/python-mode'
 
 Plugin 'mattn/emmet-vim'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'gilsondev/searchtasks.vim'
 
 
 " View
@@ -405,3 +399,8 @@ Plugin 'shawncplus/phpcomplete.vim'
 
 
 " " }}}
+
+" Enable file type detection
+syntax enable
+filetype off
+filetype plugin indent on
