@@ -43,7 +43,7 @@ vim +PluginInstall +qall
 ```
 
 ```
-cd vim/bundle/tern_for_vim
+cd ~/.vim/bundle/tern_for_vim
 npm install
 ````
 
@@ -52,4 +52,5 @@ npm install
 ````
 cd ~/.config/dotfiles
 git pull
+vim +PluginUpdate +qall
 ````
