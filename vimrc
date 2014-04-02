@@ -176,7 +176,7 @@ set wildignore+=*.psd,*.svg
 " Ignore less cache
 set wildignore+=*/LESS_CACHE/*,*/CACHE/*
 " Ignore env
-set wildignore+=*/env/*
+set wildignore+=*/env/*,*/node_modules/*
 
 " Show the current mode
 set showmode
@@ -187,9 +187,9 @@ set showmatch
 set matchtime=2
 
 " Error bells are displayed visually.
-set visualbell
+" set visualbell
 " Disable error bells
-" set noerrorbells
+set noerrorbells
 
 " Automatically read files which have been changed outside of Vim, if we
 " haven't changed it already.
