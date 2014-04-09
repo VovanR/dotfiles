@@ -87,8 +87,8 @@ Plugin 'shawncplus/phpcomplete.vim'
 syntax on
 
 " Line endings should be Unix-style unless the file is from someone else.
-set fileformat=unix
-au BufNewFile * set fileformat=unix
+" set fileformat=unix
+" au BufNewFile * set fileformat=unix
 
 " Automatically indent when adding a curly bracket, etc.
 " required! by vundle
@@ -176,7 +176,7 @@ set wildignore+=*.psd,*.svg
 " Ignore less cache
 set wildignore+=*/LESS_CACHE/*,*/CACHE/*
 " Ignore env
-set wildignore+=*/env/*,*/node_modules/*
+set wildignore+=*/env/*,*/node_modules/*,*/cache/*
 
 " Show the current mode
 set showmode
