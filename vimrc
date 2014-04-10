@@ -49,6 +49,7 @@ Plugin 'mhinz/vim-signify'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'scrooloose/syntastic'
 Plugin 'Shougo/neocomplete.vim'
+Plugin 'mileszs/ack.vim'
 
 " Formatting
 Plugin 'csscomb/csscomb-for-vim'
