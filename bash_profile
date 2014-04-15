@@ -8,7 +8,7 @@
 # Global Variables #
 ####################
 
-export GIT_EDITOR='nano'
+export GIT_EDITOR='vim'
 
 # NVM
 if [ -s ~/.nvm/nvm.sh ]; then
@@ -149,4 +149,4 @@ export LESS_TERMCAP_us=$'\033[01;36m'
 # Variable to use colorful MC and VIM
 export TERM=xterm-256color
 
-export EDITOR=/usr/bin/nano
+export EDITOR=/usr/bin/vim
