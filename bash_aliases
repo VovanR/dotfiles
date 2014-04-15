@@ -48,6 +48,9 @@ alias open="xdg-open"
 alias o="xdg-open"
 alias e="sublime"
 
+# Show image size
+alias v-size="identify -format '%wx%h\nwidth: %wpx;\nheight: %hpx;\nwidth %wpx\nheight %hpx'"
+
 # Show my IP
 alias myip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | awk '{print \$2}'"
 
