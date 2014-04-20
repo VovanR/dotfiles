@@ -72,6 +72,7 @@ Plugin 'heavenshell/vim-jsdoc'
 " HTML
 Plugin 'digitaltoad/vim-jade'
 Plugin 'tpope/vim-markdown'
+Plugin 'AndrewRadev/vim-eco'
 
 " PHP
 Plugin 'shawncplus/phpcomplete.vim'
