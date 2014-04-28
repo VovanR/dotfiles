@@ -376,7 +376,7 @@ let g:dbext_default_SQLITE_bin = 'sqlite3'
 
 " Plugin 'scrooloose/nerdtree'
 " Автоматически открывать nerdtree
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 " F3 - open dir
 " map <S-F3> :Sexplore!<CR>
 " map <S-F3> :Texplore<CR>
@@ -389,14 +389,14 @@ let opts = {'key': 'a', 'quickhelpText': 'add new node', 'callback': 'NERDTreeAd
 call NERDTreeAddKeyMap(opts)
 let opts = {'key': 'd', 'quickhelpText': 'delete node', 'callback': 'NERDTreeDeleteNode'}
 call NERDTreeAddKeyMap(opts)
-let NERDTreeWinSize=30
+let NERDTreeWinSize=50
 " Ignore files
 let NERDTreeIgnore=['.sublime-project$[[file]]', '.sublime-workspace$[[file]]', '.pyc$[[file]]']
 "
 
 " Plugin 'jistr/vim-nerdtree-tabs'
 " To run NERDTreeTabs on console vim startup
-let g:nerdtree_tabs_open_on_console_startup=1
+" let g:nerdtree_tabs_open_on_console_startup=1
 "
 
 " Plugin 'majutsushi/tagbar'
