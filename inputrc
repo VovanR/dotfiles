@@ -1,0 +1,2 @@
+# Ignore case in command completion
+set completion-ignore-case on
