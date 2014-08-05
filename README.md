@@ -53,6 +53,7 @@ Install [ack](http://beyondgrep.com/install/)
 in Ubuntu:
 ```
 sudo apt-get install ack-grep
+ln -s ~/.config/dotfiles/ackrc ~/.ackrc
 ```
 
 ## Upgrade

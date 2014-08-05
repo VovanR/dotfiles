@@ -1,0 +1,6 @@
+--ignore-dir=log
+--ignore-dir=tmp
+--ignore-dir=cache
+--ignore-dir=vendor
+--ignore-dir=makets
+--sort-files
