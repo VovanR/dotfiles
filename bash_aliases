@@ -2,6 +2,8 @@
 # https://github.com/sapegin/dotfiles
 # https://github.com/miripiruni/dotfiles
 # https://github.com/dreadatour/dotfiles
+# https://github.com/paulirish/dotfiles
+# https://github.com/addyosmani/dotfiles
 
 
 # Aliases #
@@ -49,6 +51,9 @@ alias v-upgrade="sudo apt-get update && sudo apt-get upgrade && sudo apt-get dis
 alias open="xdg-open"
 alias o="xdg-open"
 alias e="sublime"
+
+# Timer
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
 # Show image size
 alias v-size="identify -format '%wx%h\nwidth: %wpx;\nheight: %hpx;\nwidth %wpx\nheight %hpx'"
