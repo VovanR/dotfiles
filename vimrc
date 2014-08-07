@@ -143,8 +143,17 @@ set encoding=utf-8 nobomb
 " Status line
 " Always show status line
 set laststatus=2
-" Строка статуса: имя файла, тип файла и режим в котором он открыт, подробное положение в файле и номер буфера
-set statusline=%<%f\ [%Y%R%W]%1*%{(&modified)?'\ [+]\ ':''}%*%=%c%V,%l\ %P\ [%n]
+" http://stackoverflow.com/a/10416234/1284255
+set statusline=
+set statusline+=%7*\[%n]                                  "buffernr
+set statusline+=%1*\ %<%F\                                "File+path
+set statusline+=%2*\ %y\                                  "FileType
+set statusline+=%3*\ %{''.(&fenc!=''?&fenc:&enc).''}      "Encoding
+set statusline+=%3*\ %{(&bomb?\",BOM\":\"\")}\            "Encoding2
+set statusline+=%4*\ %{&ff}\                              "FileFormat (dos/unix..)
+set statusline+=%8*\ %=\ row:%l/%L\ (%03p%%)\             "Rownumber/total (%)
+set statusline+=%9*\ col:%03c\                            "Colnr
+set statusline+=%0*\ \ %m%r%w\ %P\ \                      "Modified? Readonly? Top/bot.
 
 " Show line number, cursor position.
 set ruler
@@ -296,7 +305,7 @@ endif
 map <S-F3> :BufExplorer<CR>
 
 " auto switch to folder where editing file
-autocmd BufEnter * cd %:p:h
+" autocmd BufEnter * cd %:p:h
 
 "from http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
 :set completeopt=menuone,longest,preview
@@ -417,9 +426,12 @@ let g:tagbar_sort=0
 "
 
 " Plugin 'bling/vim-airline'
+let g:airline_section_z='%l/%L:%03c'    " line number/total lines:column number
+
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#hunks#enabled = 0
 "
 
