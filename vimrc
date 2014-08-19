@@ -32,6 +32,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'klen/python-mode'
 Plugin 'mattn/emmet-vim'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'freitass/todo.txt-vim'
 
 " View
 Plugin 'sjl/gundo.vim'
