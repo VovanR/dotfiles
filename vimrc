@@ -438,6 +438,7 @@ let g:airline#extensions#hunks#enabled = 0
 
 
 " Plugin 'altercation/vim-colors-solarized'
+let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
 "
