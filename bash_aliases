@@ -46,7 +46,7 @@ alias sitestart="mkdir makets; fnd; apre"
 alias sourcer="source ~/.bash_profile"
 alias bashaliases="vim ~/.bash_aliases"
 
-alias v-upgrade="sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove && vim +PluginUpdate +qall && npm update npm -g"
+alias v-upgrade="sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove && vim +PluginUpdate +qall"
 
 alias open="xdg-open"
 alias o="xdg-open"
