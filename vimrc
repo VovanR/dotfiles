@@ -67,7 +67,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'alarie/requirejs.vim'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'marijnh/tern_for_vim'
+" Plugin 'marijnh/tern_for_vim'
 Plugin 'heavenshell/vim-jsdoc'
 
 " HTML
