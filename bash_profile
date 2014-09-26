@@ -36,7 +36,7 @@ fi
 # Variables and for PS1 prompt
 # source: http://welinux.ru/post/7293/
 
-# Variables for convenient PS1 construction 
+# Variables for convenient PS1 construction
 #
 # Управляющие последовательности заключены в скобки "\[" и "\]"
 # для того, чтобы shell не учитывал их при оценке длины строки.
@@ -99,6 +99,14 @@ function prompt_git() {
     echo -en '\033[00;33m'"; on "'\033[01;33m'$output
 }
 
+# Git whoami
+function prompt_git_whoami() {
+    name="$(git config --local user.name 2>/dev/null)"
+    email="$(git config --local user.email 2>/dev/null)"
+    [[ $? != 0 ]] && return;
+    echo -en ${name}' <'${email}'>'
+}
+
 # Personal colors for root
 case $(id -u) in
     0)
@@ -122,6 +130,7 @@ PS1+="$txtylw jobs:" # jobs:
 PS1+="$bldylw\j" # The number of processes you've suspended in this shell by hitting ^Z
 
 PS1+="\$(prompt_git)" # Git details
+PS1+=" $txtylw\$(prompt_git_whoami)" # Git whoami
 
 PS1+="$txtrst\n" # Newline
 PS1+="$PROMPT " # PROMPT
