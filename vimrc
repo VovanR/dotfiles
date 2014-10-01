@@ -35,7 +35,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'freitass/todo.txt-vim'
 
 " View
-Plugin 'sjl/gundo.vim'
+" Plugin 'sjl/gundo.vim'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-scripts/dbext.vim'
