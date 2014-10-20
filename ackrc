@@ -1,3 +1,11 @@
+--color-filename=white
+--color-lineno=cyan
+--color-match=magenta underline
+--type-add=css=.styl
+--type-add=js=.coffee
+--type-set=md=.markdown,.md
+--ignore-dir=.idea
+--ignore-dir=build
 --ignore-dir=log
 --ignore-dir=tmp
 --ignore-dir=cache
