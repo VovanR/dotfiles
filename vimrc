@@ -30,7 +30,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Shougo/neosnippet.vim'
 " Plugin 'vim-scripts/phpfolding.vim'
-" Plugin 'klen/python-mode'
+Plugin 'klen/python-mode'
 Plugin 'mattn/emmet-vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'freitass/todo.txt-vim'
@@ -371,9 +371,14 @@ xmap <C-k>     <Plug>(neosnippet_expand_target)
 "
 
 " Plugin 'klen/python-mode'
-" Disable pylint checking every save
-" let g:pymode_lint_write = 0
-" let g:pymode_lint_config = "$HOME/.pylintrc"
+let g:pymode_lint = 0
+let g:pymode_lint_on_write = 0
+let g:pymode_lint_unmodified = 0
+let g:pymode_lint_on_fly = 0
+let g:pymode_lint_message = 0
+
+let g:pymode_rope = 0
+let g:pymode_rope_lookup_project = 0
 "
 
 " Plugin 'mattn/emmet-vim'
