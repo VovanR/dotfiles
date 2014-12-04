@@ -1,5 +1,5 @@
 ! See: http://scarygliders.net/2011/12/01/customize-xterm-the-original-and-best-terminal/
-! Use a nice truetype font and size by default... 
+! Use a nice truetype font and size by default...
 xterm*faceName: Ubuntu Mono
 xterm*faceSize: 13
 

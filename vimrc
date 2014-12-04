@@ -45,7 +45,8 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'majutsushi/tagbar'
 " Plugin 'vim-php/tagbar-phpctags.vim'
 Plugin 'bling/vim-airline'
-Plugin 'altercation/vim-colors-solarized'
+" Plugin 'altercation/vim-colors-solarized'
+Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-fugitive'
 Plugin 'mhinz/vim-signify'
 Plugin 'bronson/vim-trailing-whitespace'
@@ -457,9 +458,13 @@ let g:airline#extensions#hunks#enabled = 0
 
 
 " Plugin 'altercation/vim-colors-solarized'
-let g:solarized_termcolors=256
-set background=dark
-colorscheme solarized
+" let g:solarized_termcolors=256
+" set background=dark
+" colorscheme solarized
+"
+
+" Plugin 'tomasr/molokai'
+colorscheme molokai
 "
 
 " Plugin 'tpope/vim-fugitive'
