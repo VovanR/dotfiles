@@ -301,7 +301,8 @@ if &term =~ '^screen'
   set <S-F3>=[1;2R
 endif
 if &term =~ '^xterm-256color'
-  set <S-F3>=O1;2R
+  " set <S-F3>=O1;2R
+  set <S-F3>=[1;2R
 endif
 
 " Shift + F3 - open buffer
