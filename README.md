@@ -14,6 +14,7 @@ git clone https://github.com/VovanR/dotfiles.git
 ```
 ln -s ~/.config/dotfiles/bash_aliases ~/.bash_aliases
 ln -s ~/.config/dotfiles/bash_profile ~/.bash_profile
+ln -s ~/.config/dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/.config/dotfiles/inputrc ~/.inputrc
 ln -s ~/.config/dotfiles/Xresources ~/.Xresources
 xrdb -merge ~/.Xresources
