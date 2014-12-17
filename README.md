@@ -12,6 +12,7 @@ git clone https://github.com/VovanR/dotfiles.git
 ### Bash
 
 ```
+ln -s ~/.config/dotfiles/bash_functions ~/.bash_functions
 ln -s ~/.config/dotfiles/bash_aliases ~/.bash_aliases
 ln -s ~/.config/dotfiles/bash_prompt ~/.bash_prompt
 ln -s ~/.config/dotfiles/bash_profile ~/.bash_profile

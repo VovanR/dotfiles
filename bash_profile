@@ -16,6 +16,11 @@ if [ -s ~/.nvm/nvm.sh ]; then
     source ~/.nvm/nvm.sh
 fi
 
+# bash prompt
+if [ -f ~/.bash_functions ]; then
+    . ~/.bash_functions
+fi
+
 # bash aliases
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
