@@ -420,7 +420,7 @@ let opts = {'key': 'a', 'quickhelpText': 'add new node', 'callback': 'NERDTreeAd
 call NERDTreeAddKeyMap(opts)
 let opts = {'key': 'd', 'quickhelpText': 'delete node', 'callback': 'NERDTreeDeleteNode'}
 call NERDTreeAddKeyMap(opts)
-let NERDTreeWinSize=50
+let NERDTreeWinSize=35
 " Ignore files
 let NERDTreeIgnore=['.sublime-project$[[file]]', '.sublime-workspace$[[file]]', '.pyc$[[file]]']
 "
