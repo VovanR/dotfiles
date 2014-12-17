@@ -6,6 +6,7 @@
 --type-set=md=.markdown,.md
 --ignore-dir=.idea
 --ignore-dir=build
+--ignore-dir=built
 --ignore-dir=log
 --ignore-dir=tmp
 --ignore-dir=cache
