@@ -190,7 +190,7 @@ set wildignore+=*.psd,*.svg
 " Ignore less cache
 set wildignore+=*/LESS_CACHE/*,*/CACHE/*
 " Ignore env
-set wildignore+=*/env/*,*/node_modules/*,*/cache/*
+set wildignore+=*/env/*,*/node_modules/*,*/cache/*,*/built/*
 
 " Show the current mode
 set showmode
