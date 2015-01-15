@@ -41,16 +41,12 @@ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 ```
 ln -s ~/.config/dotfiles/vimrc ~/.vimrc
+ln -s ~/.config/dotfiles/snippets ~/.vim/
 ```
 
 Install Plugins:
 ```
 vim +PluginInstall +qall
-```
-
-```
-cd ~/.vim/bundle/tern_for_vim
-npm install
 ```
 
 Install [ack](http://beyondgrep.com/install/)
