@@ -26,7 +26,6 @@ Plugin 'gmarik/vundle'
 
 " Editing
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Shougo/neosnippet.vim'
 " Plugin 'vim-scripts/phpfolding.vim'
@@ -336,6 +335,14 @@ set updatetime=2000
 " Save on buffer switch
 set autowrite
 
+" Automatically put ending braces
+:inoremap ( ()<left>
+:inoremap { {}<left>
+:inoremap [ []<left>
+:inoremap < <><left>
+:inoremap " ""<left>
+:inoremap ' ''<left>
+:inoremap ` ``<left>
 
 
 " Plugins " {{{
@@ -344,10 +351,6 @@ set autowrite
 " Editing
 
 " Plugin 'editorconfig/editorconfig-vim'
-"
-
-" Plugin 'jiangmiao/auto-pairs'
-" let g:AutoPairsFlyMode=0
 "
 
 " Plugin 'scrooloose/nerdcommenter'
