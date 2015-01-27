@@ -335,15 +335,6 @@ set updatetime=2000
 " Save on buffer switch
 set autowrite
 
-" Automatically put ending braces
-:inoremap ( ()<left>
-:inoremap { {}<left>
-:inoremap [ []<left>
-:inoremap < <><left>
-:inoremap " ""<left>
-:inoremap ' ''<left>
-:inoremap ` ``<left>
-
 
 " Plugins " {{{
 
