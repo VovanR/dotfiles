@@ -31,12 +31,6 @@ alias .....="cd ../../../.."
 alias ~="cd ~"
 alias -- -="cd -" # The alias is `-`, not `--`
 
-# User scripts are located in ~/.local/bin
-alias sc='simple-commit.sh'
-alias crp='cropp.sh'
-alias psd2png='psd2png.sh'
-alias v-addhost='v-addhost.sh'
-
 # Helpers
 alias fndf="sudo find ./ -type f -exec chmod 664 {} \;"
 alias fndd="sudo find ./ -type d -exec chmod 775 {} \;"
@@ -47,6 +41,7 @@ alias sourcer="source ~/.bash_profile"
 alias bashaliases="vim ~/.bash_aliases"
 
 alias v-upgrade="sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove && vim +PluginUpdate +qall"
+alias v-lint="gulp lint --src"
 
 alias open="xdg-open"
 alias o="xdg-open"
