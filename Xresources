@@ -3,6 +3,9 @@
 xterm*faceName: Ubuntu Mono
 xterm*faceSize: 13
 
+xterm*utf8: 1
+xterm*locale: true
+
 ! Every shell is a login shell by default (for inclusion of all necessary environment variables)
 xterm*loginshell: true
 
@@ -15,6 +18,7 @@ xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 ! right hand side scrollbar...
 xterm*rightScrollBar: true
 xterm*ScrollBar: false
+xterm*scrollKey: true
 
 ! stop output to terminal from jumping down to bottom of scroll again
 xterm*scrollTtyOutput: false
@@ -41,3 +45,11 @@ xterm*color12: #5f5fee
 xterm*color13: #bb88dd
 xterm*color14: #4eb4fa
 xterm*color15: #d0d0d0
+
+! urxvt
+urxvt.font: xft:Ubuntu Mono:size=12
+urxvt*scrollBar: false
+urxvt*scrollKey: false
+urxvt*scrollTtyOutput: false
+urxvt*scrollTtyKeypress: true
+urxvt.iconFile: /usr/share/icons/elementary-xfce/apps/48/terminal.png
