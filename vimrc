@@ -8,79 +8,101 @@
 "" Vim, not Vi.
 " This must be first, because it changes other options as a side effect.
 set nocompatible
-" required! by vundle
-filetype off
 
+
+
+" NeoBundle.vim
+" Note: Skip initialization for vim-tiny or vim-small.
+if !1 | finish | endif
+
+if has('vim_starting')
+    if &compatible
+        set nocompatible               " Be iMproved
+    endif
+
+    " Required:
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" My Bundles here:
+" Refer to |:NeoBundle-examples|.
+" Note: You don't set neobundle setting in .gvimrc!
 
 
 "" Plugins begin
 
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle, required
-" required! by vundle
-Plugin 'gmarik/vundle'
-
 " Editing
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'Shougo/neosnippet.vim'
-" Plugin 'vim-scripts/phpfolding.vim'
-Plugin 'klen/python-mode'
-Plugin 'mattn/emmet-vim'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'freitass/todo.txt-vim'
+NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'Shougo/neosnippet.vim'
+" NeoBundle 'vim-scripts/phpfolding.vim'
+NeoBundle 'klen/python-mode'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'freitass/todo.txt-vim'
 
 " View
-" Plugin 'sjl/gundo.vim'
-Plugin 'jlanzarotta/bufexplorer'
-Plugin 'kien/ctrlp.vim'
-Plugin 'vim-scripts/dbext.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'majutsushi/tagbar'
-" Plugin 'vim-php/tagbar-phpctags.vim'
-Plugin 'bling/vim-airline'
-" Plugin 'altercation/vim-colors-solarized'
-Plugin 'tomasr/molokai'
-Plugin 'tpope/vim-fugitive'
-Plugin 'mhinz/vim-signify'
-Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'scrooloose/syntastic'
-Plugin 'Shougo/neocomplete.vim'
-Plugin 'mileszs/ack.vim'
+" NeoBundle 'sjl/gundo.vim'
+NeoBundle 'jlanzarotta/bufexplorer'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'vim-scripts/dbext.vim'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'jistr/vim-nerdtree-tabs'
+NeoBundle 'majutsushi/tagbar'
+" NeoBundle 'vim-php/tagbar-phpctags.vim'
+NeoBundle 'bling/vim-airline'
+" NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'tomasr/molokai'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'mhinz/vim-signify'
+NeoBundle 'bronson/vim-trailing-whitespace'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'mileszs/ack.vim'
 
 " Formatting
-Plugin 'csscomb/csscomb-for-vim'
-" Plugin 'maksimr/vim-jsbeautify'
+NeoBundle 'csscomb/csscomb-for-vim'
+" NeoBundle 'maksimr/vim-jsbeautify'
 
 " Syntax
 " CSS
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'groenewege/vim-less'
-Plugin 'wavded/vim-stylus'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'groenewege/vim-less'
+NeoBundle 'wavded/vim-stylus'
 
 " JavaScript
-Plugin 'pangloss/vim-javascript'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'alarie/requirejs.vim'
-Plugin 'kchmck/vim-coffee-script'
-" Plugin 'marijnh/tern_for_vim'
-Plugin 'heavenshell/vim-jsdoc'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'othree/javascript-libraries-syntax.vim'
+NeoBundle 'alarie/requirejs.vim'
+NeoBundle 'kchmck/vim-coffee-script'
+" NeoBundle 'marijnh/tern_for_vim'
+NeoBundle 'heavenshell/vim-jsdoc'
 
 " HTML
-Plugin 'digitaltoad/vim-jade'
-Plugin 'tpope/vim-markdown'
-Plugin 'AndrewRadev/vim-eco'
+NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'tpope/vim-markdown'
+NeoBundle 'AndrewRadev/vim-eco'
 
 " PHP
-Plugin 'shawncplus/phpcomplete.vim'
-
+NeoBundle 'shawncplus/phpcomplete.vim'
 
 "" Plugins end
+
+
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
 
 
 
@@ -95,8 +117,6 @@ syntax on
 " au BufNewFile * set fileformat=unix
 
 " Automatically indent when adding a curly bracket, etc.
-" required! by vundle
-filetype plugin indent on
 set autoindent
 set smartindent
 
@@ -378,9 +398,6 @@ let g:pymode_rope_lookup_project = 0
 "
 
 " Plugin 'mattn/emmet-vim'
-"
-
-" Plugin 'terryma/vim-multiple-cursors'
 "
 
 
