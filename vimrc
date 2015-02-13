@@ -316,12 +316,16 @@ set foldlevelstart=99
 map <Leader>n <esc>:tabprev<CR>
 map <Leader>m <esc>:tabnext<CR>
 
+" Go Insert mode, C-v and then S-F3 prints this code
 if &term =~ '^screen'
   set <S-F3>=[1;2R
 endif
 if &term =~ '^xterm-256color'
   " set <S-F3>=O1;2R
   set <S-F3>=[1;2R
+endif
+if &term =~ '^screen-256color'
+  set <S-F3>=[25~
 endif
 
 " Shift + F3 - open buffer

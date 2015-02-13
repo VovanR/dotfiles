@@ -63,6 +63,18 @@ export LESS_TERMCAP_us=$'\033[01;36m'
 
 
 # Variable to use colorful MC and VIM
-export TERM=xterm-256color
+# Deprecated: Used from `Xresources`
+# export TERM=xterm-256color
 
 export EDITOR=/usr/bin/vim
+
+# big history
+export HISTFILESIZE=20000
+export HISTSIZE=20000
+# When the shell exits, append to the history file instead of overwriting it
+shopt -s histappend
+# Combine multiline commands into one in history
+shopt -s cmdhist
+# Avoid duplicates
+export HISTCONTROL=ignoredups:erasedups
+export HISTIGNORE="&:ls:[bf]g:exit"

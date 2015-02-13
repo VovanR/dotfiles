@@ -17,7 +17,7 @@ alias ln='ln -i'
 
 # Some more ls aliases
 alias ll='ls -lahF'
-alias la='ls -ahF'
+alias la='ls -AhF'
 alias l='ls -CF'
 
 # tree aliaces
