@@ -34,9 +34,9 @@ git config --global user.email "mail@gmail.com"
 
 ### Vim
 
-Install [Vundle](https://github.com/gmarik/Vundle.vim):
+Install [NeoBundle](https://github.com/Shougo/neobundle.vim):
 ```
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 ```
 
 ```
@@ -46,7 +46,7 @@ ln -s ~/.config/dotfiles/snippets ~/.vim/
 
 Install Plugins:
 ```
-vim +PluginInstall +qall
+vim +NeoBundleInstall +qall
 ```
 
 Install [ack](http://beyondgrep.com/install/)
@@ -62,5 +62,5 @@ ln -s ~/.config/dotfiles/ackrc ~/.ackrc
 ```
 cd ~/.config/dotfiles
 git pull
-vim +PluginUpdate +qall
+vim +NeoBundleUpdate +qall
 ```

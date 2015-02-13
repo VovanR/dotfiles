@@ -40,7 +40,7 @@ alias sitestart="mkdir makets; fnd; apre"
 alias sourcer="source ~/.bash_profile"
 alias bashaliases="vim ~/.bash_aliases"
 
-alias v-upgrade="sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove && vim +PluginUpdate +qall"
+alias v-upgrade="sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove && vim +NeoBundleUpdate +qall"
 alias v-lint="gulp lint --src"
 
 alias open="xdg-open"
