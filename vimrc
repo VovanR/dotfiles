@@ -209,7 +209,7 @@ set wildignore+=*.psd,*.svg
 " Ignore less cache
 set wildignore+=*/LESS_CACHE/*,*/CACHE/*
 " Ignore env
-set wildignore+=*/env/*,*/node_modules/*,*/cache/*,*/built/*
+set wildignore+=*/env/*,*/node_modules/*,*/cache/*,*/built/*,*/bower_components/*,*/vendor/*
 
 " Show the current mode
 set showmode
@@ -325,7 +325,9 @@ if &term =~ '^xterm-256color'
   set <S-F3>=[1;2R
 endif
 if &term =~ '^screen-256color'
-  set <S-F3>=[25~
+  set <S-F3>=[1;2R
+  set <F3>=OR
+  set <F2>=OQ
 endif
 
 " Shift + F3 - open buffer

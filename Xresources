@@ -77,3 +77,25 @@ urxvt*color12: #5f5fee
 urxvt*color13: #bb88dd
 urxvt*color14: #4eb4fa
 urxvt*color15: #d0d0d0
+
+! urxvt*keysym.F1: \033[11~
+! urxvt*keysym.F2: \033[12~
+! urxvt*keysym.F3: \033[13~
+! urxvt*keysym.F4: \033[14~
+urxvt*keysym.F1: \033OP
+urxvt*keysym.F2: \033OQ
+urxvt*keysym.F3: \033OR
+urxvt*keysym.F4: \033OS
+
+urxvt*keysym.S-F1: \033[1;2P
+urxvt*keysym.S-F2: \033[1;2Q
+urxvt*keysym.S-F3: \033[1;2R
+urxvt*keysym.S-F4: \033[1;2S
+urxvt*keysym.S-F5: \033[15;2~
+urxvt*keysym.S-F6: \033[17;2~
+urxvt*keysym.S-F7: \033[18;2~
+urxvt*keysym.S-F8: \033[19;2~
+urxvt*keysym.S-F9: \033[20;2~
+urxvt*keysym.S-F10: \033[21;2~
+urxvt*keysym.S-F11: \033[23;2~
+urxvt*keysym.S-F12: \033[24;2~
