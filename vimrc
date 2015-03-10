@@ -439,7 +439,7 @@ let opts = {'key': 'd', 'quickhelpText': 'delete node', 'callback': 'NERDTreeDel
 call NERDTreeAddKeyMap(opts)
 let NERDTreeWinSize=35
 " Ignore files
-let NERDTreeIgnore=['.sublime-project$[[file]]', '.sublime-workspace$[[file]]', '.pyc$[[file]]']
+let NERDTreeIgnore=['.sublime-project$[[file]]', '.sublime-workspace$[[file]]', '.pyc$[[file]]', '__pycache__$[[dir]]']
 "
 
 " Plugin 'jistr/vim-nerdtree-tabs'
