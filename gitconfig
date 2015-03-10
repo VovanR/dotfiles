@@ -1,5 +1,14 @@
-[credential]
-	helper = cache
+# Inspired by:
+# https://github.com/sapegin/dotfiles
+
+
+[color]
+	ui = auto
+[color "diff"]
+	meta = blue
+	frag = white
+	old = red bold
+	new = green bold
 [core]
 	autocrlf = input
 	safecrlf = true
@@ -12,7 +21,14 @@
 	hist = log --pretty=format:\"%h %ad | [%an] %s%d\" --graph --date=short
 	type = cat-file -t
 	dump = cat-file -p
-[color]
-	ui = true
 [push]
 	default = simple
+[credential]
+	helper = cache
+
+# Include local settings
+# Requires Git 1.7.10
+# git config -f ~/.gitlocal user.email "artem@sapegin.ru"
+# git config -f ~/.gitlocal user.name "Artem Sapegin"
+[include]
+	path = .gitlocal

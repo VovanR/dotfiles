@@ -78,3 +78,6 @@ shopt -s cmdhist
 # Avoid duplicates
 export HISTCONTROL=ignoredups:erasedups
 export HISTIGNORE="&:ls:[bf]g:exit"
+
+# Load extra (private) settings
+[ -f ~/.bashlocal ] && source ~/.bashlocal

@@ -26,10 +26,10 @@ source ~/.bash_profile
 ### Git
 
 ```
+git config -f ~/.gitlocal user.name "Username"
+git config -f ~/.gitlocal user.email "mail@gmail.com"
 ln -s ~/.config/dotfiles/gitconfig ~/.gitconfig
 ln -s ~/.config/dotfiles/gitignore_global ~/.gitignore_global
-git config --global user.name "Username"
-git config --global user.email "mail@gmail.com"
 ```
 
 ### Vim
@@ -64,3 +64,8 @@ cd ~/.config/dotfiles
 git pull
 vim +NeoBundleUpdate +qall
 ```
+
+## Further customization
+- Add any Bash profile customizations to `~/.bashlocal`
+- Add your git username/email/etc. to `~/.gitlocal`
+- Just fork this repo and hack on.
