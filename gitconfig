@@ -10,6 +10,7 @@
 	old = red bold
 	new = green bold
 [core]
+	editor = vim
 	autocrlf = input
 	safecrlf = true
 	excludesfile = ~/.gitignore_global
