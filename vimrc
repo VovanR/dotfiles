@@ -88,6 +88,7 @@ NeoBundle 'heavenshell/vim-jsdoc'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'AndrewRadev/vim-eco'
+NeoBundle 'mustache/vim-mustache-handlebars'
 
 " PHP
 NeoBundle 'shawncplus/phpcomplete.vim'
@@ -144,9 +145,9 @@ imap <F1> <Esc>
 " Show special characters
 " set listchars=tab:—\ ,trail:·,eol:¬,nbsp:_
 if v:version >= 700
-    set list listchars=tab:>-,trail:·,extends:>,nbsp:_
+    set list listchars=tab:\ \ ,trail:·,extends:>,nbsp:_
 else
-    set list listchars=tab:>-,trail:·,extends:>
+    set list listchars=tab:\ \ ,trail:·,extends:>
 endif
 
 " Don't break up long lines, but visually wrap them.
