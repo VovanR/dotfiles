@@ -78,6 +78,7 @@ NeoBundle 'wavded/vim-stylus'
 
 " JavaScript
 NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'SevInf/vim-bemhtml'
 NeoBundle 'othree/javascript-libraries-syntax.vim'
 NeoBundle 'alarie/requirejs.vim'
 NeoBundle 'kchmck/vim-coffee-script'
@@ -327,8 +328,8 @@ if &term =~ '^xterm-256color'
 endif
 if &term =~ '^screen-256color'
   set <S-F3>=[1;2R
-  set <F3>=OR
-  set <F2>=OQ
+  set <F3>=[13~
+  set <F2>=[12~
 endif
 
 " Shift + F3 - open buffer
