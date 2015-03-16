@@ -1,0 +1,28 @@
+# Source: https://github.com/honza/vim-snippets/blob/master/snippets/html.snippets
+
+snippet html5
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width">
+			<title>${1:`substitute(vim_snippets#Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
+			${2:link}
+		</head>
+		<body>
+			${0:body}
+		</body>
+	</html>
+
+# comment
+snippet //
+	<!-- ${1} -->${0}
+
+snippet .
+	class="${1}"
+snippet #
+	id="${1}"
+snippet data
+	data-${1}="${2:$1}"
+snippet href
+	href="${1:#}"

@@ -1,0 +1,239 @@
+# Source: https://github.com/honza/vim-snippets/blob/master/snippets/css.snippets
+# Source: https://github.com/shuvalov-anton/vim-snippets/blob/master/snippets/css.snippets
+
+snippet !
+	 !important
+snippet @i
+	@import url(${0});
+snippet bg
+	background: ${0};
+snippet bg+
+	background: #${1:FFF} url(${2}) ${3:0} ${4:0} ${0:no-repeat};
+snippet bg:n
+	background: none;
+snippet bgc
+	background-color: #${0:FFF};
+snippet bgc:t
+	background-color: transparent;
+snippet bgi
+	background-image: url(${0});
+snippet bgi:n
+	background-image: none;
+snippet bd
+	border: ${0};
+snippet bd:n
+	border: none;
+snippet b
+	bottom: ${0};
+snippet bxsh
+	box-shadow: ${0};
+snippet bxsh:n
+	box-shadow: none;
+snippet bxz
+	box-sizing: ${0};
+snippet bxz:bb
+	box-sizing: border-box;
+snippet bxz:cb
+	box-sizing: content-box;
+snippet cl
+	clear: ${0};
+snippet cl:b
+	clear: both;
+snippet cl:n
+	clear: none;
+snippet c
+	color: #${0:000};
+snippet cur
+	cursor: ${0};
+snippet cur:p
+	cursor: pointer;
+snippet d
+	display: ${0};
+snippet d:b
+	display: block;
+snippet d:ib
+	display: inline-block;
+snippet d:i
+	display: inline;
+snippet d:n
+	display: none;
+snippet fl
+	float: ${0};
+snippet fl:l
+	float: left;
+snippet fl:n
+	float: none;
+snippet fl:r
+	float: right;
+snippet ff
+	font-family: ${0};
+snippet ff:c
+	font-family: ${0:'Monotype Corsiva','Comic Sans MS'},cursive;
+snippet ff:f
+	font-family: ${0:Capitals,Impact},fantasy;
+snippet ff:m
+	font-family: ${0:Monaco,'Courier New'},monospace;
+snippet ff:ss
+	font-family: ${0:Helvetica,Arial},sans-serif;
+snippet ff:s
+	font-family: ${0:Georgia,'Times New Roman'},serif;
+snippet fz
+	font-size: ${0};
+snippet fs
+	font-style: ${0};
+snippet fs:i
+	font-style: italic;
+snippet fs:n
+	font-style: normal;
+snippet fw
+	font-weight: ${0};
+snippet fw:b
+	font-weight: bold;
+snippet fw:n
+	font-weight: normal;
+snippet f
+	font: ${0};
+snippet h
+	height: ${0};
+snippet l
+	left: ${0};
+snippet lh
+	line-height: ${0};
+snippet list:n
+	list-style-type: none;
+snippet mb
+	margin-bottom: ${0};
+snippet ml
+	margin-left: ${0};
+snippet mr
+	margin-right: ${0};
+snippet mt
+	margin-top: ${0};
+snippet m
+	margin: ${0};
+snippet m:0
+	margin: 0;
+snippet m:0a
+	margin: 0 auto;
+snippet mah
+	max-height: ${0};
+snippet maw
+	max-width: ${0};
+snippet mih
+	min-height: ${0};
+snippet miw
+	min-width: ${0};
+snippet op
+	opacity: ${0};
+snippet o
+	outline: ${0};
+snippet ov
+	overflow: ${0};
+snippet ov:h
+	overflow: hidden;
+snippet pb
+	padding-bottom: ${0};
+snippet pl
+	padding-left: ${0};
+snippet pr
+	padding-right: ${0};
+snippet pt
+	padding-top: ${0};
+snippet p
+	padding: ${0};
+snippet p:0
+	padding: 0;
+snippet pos:a
+	position: absolute;
+snippet pos:f
+	position: fixed;
+snippet pos:r
+	position: relative;
+snippet pos:s
+	position: static;
+snippet r
+	right: ${0};
+snippet ta
+	text-align: ${0};
+snippet ta:c
+	text-align: center;
+snippet ta:l
+	text-align: left;
+snippet ta:r
+	text-align: right;
+snippet td
+	text-decoration: ${0};
+snippet td:l
+	text-decoration: line-through;
+snippet td:n
+	text-decoration: none;
+snippet td:o
+	text-decoration: overline;
+snippet td:u
+	text-decoration: underline;
+snippet tsh
+	text-shadow: ${0};
+snippet tt
+	text-transform: ${0};
+snippet tt:l
+	text-transform: lowercase;
+snippet tt:n
+	text-transform: none;
+snippet tt:u
+	text-transform: uppercase;
+snippet t
+	top: ${0};
+snippet va
+	vertical-align: ${0};
+snippet va:bl
+	vertical-align: baseline;
+snippet va:b
+	vertical-align: bottom;
+snippet va:m
+	vertical-align: middle;
+snippet va:sub
+	vertical-align: sub;
+snippet va:sup
+	vertical-align: super;
+snippet va:tb
+	vertical-align: text-bottom;
+snippet va:tt
+	vertical-align: text-top;
+snippet va:t
+	vertical-align: top;
+snippet v
+	visibility: ${0};
+snippet v:h
+	visibility: hidden;
+snippet v:v
+	visibility: visible;
+snippet whs
+	white-space: ${0};
+snippet whs:n
+	white-space: normal;
+snippet whs:nw
+	white-space: nowrap;
+snippet w
+	width: ${0};
+snippet z
+	z-index: ${0};
+snippet :h
+	:hover
+snippet :fc
+	:first-child
+snippet :lc
+	:last-child
+snippet :nc
+	:nth-child(${0})
+snippet :nlc
+	:nth-last-child(${0})
+snippet :oc
+	:only-child
+snippet :a
+	:after
+snippet :b
+	:before
+snippet ::a
+	::after
+snippet ::b
+	::before
