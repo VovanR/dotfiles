@@ -78,14 +78,14 @@ urxvt*color13: #bb88dd
 urxvt*color14: #4eb4fa
 urxvt*color15: #d0d0d0
 
-! urxvt*keysym.F1: \033[11~
-! urxvt*keysym.F2: \033[12~
-! urxvt*keysym.F3: \033[13~
-! urxvt*keysym.F4: \033[14~
-urxvt*keysym.F1: \033OP
-urxvt*keysym.F2: \033OQ
-urxvt*keysym.F3: \033OR
-urxvt*keysym.F4: \033OS
+urxvt*keysym.F1: \033[11~
+urxvt*keysym.F2: \033[12~
+urxvt*keysym.F3: \033[13~
+urxvt*keysym.F4: \033[14~
+! urxvt*keysym.F1: \033OP
+! urxvt*keysym.F2: \033OQ
+! urxvt*keysym.F3: \033OR
+! urxvt*keysym.F4: \033OS
 
 urxvt*keysym.S-F1: \033[1;2P
 urxvt*keysym.S-F2: \033[1;2Q
