@@ -1,7 +1,7 @@
 ! See: http://scarygliders.net/2011/12/01/customize-xterm-the-original-and-best-terminal/
 ! Use a nice truetype font and size by default...
-xterm*faceName: Ubuntu Mono
-xterm*faceSize: 13
+xterm*faceName: Monospace
+xterm*faceSize: 10
 
 xterm*utf8: 1
 xterm*locale: true
@@ -48,7 +48,7 @@ xterm*color14: #4eb4fa
 xterm*color15: #d0d0d0
 
 ! urxvt
-urxvt.font: xft:Ubuntu Mono:size=12
+urxvt.font: xft:Monospace:size=9
 urxvt*scrollBar: false
 urxvt*scrollKey: false
 urxvt*scrollTtyOutput: false
