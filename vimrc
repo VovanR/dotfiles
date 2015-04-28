@@ -45,7 +45,9 @@ NeoBundle 'Shougo/neosnippet.vim'
 " NeoBundle 'vim-scripts/phpfolding.vim'
 NeoBundle 'klen/python-mode'
 NeoBundle 'mattn/emmet-vim'
-NeoBundle 'freitass/todo.txt-vim'
+" NeoBundle 'freitass/todo.txt-vim'
+NeoBundle 'Raimondi/delimitMate'
+NeoBundle 'tpope/vim-surround'
 
 " View
 " NeoBundle 'sjl/gundo.vim'
