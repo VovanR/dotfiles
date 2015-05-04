@@ -69,10 +69,17 @@ export EDITOR=/usr/bin/vim
 # big history
 export HISTFILESIZE=20000
 export HISTSIZE=20000
-# When the shell exits, append to the history file instead of overwriting it
+
+# append to the history file, don't overwrite it
 shopt -s histappend
+
 # Combine multiline commands into one in history
 shopt -s cmdhist
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
 # Avoid duplicates
 export HISTCONTROL=ignoredups:erasedups
 export HISTIGNORE="&:ls:[bf]g:exit"
