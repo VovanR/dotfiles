@@ -58,7 +58,7 @@ ln -s ~/.config/dotfiles/ackrc ~/.ackrc
 ```
 
 ## Node
-Use [`nvm`](https://github.com/creationix/nvm).
+Install [nvm](https://github.com/creationix/nvm)
 ```
 npm set init-author-email mail@gmail.com
 npm set init-author-name "User Name"
