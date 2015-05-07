@@ -57,6 +57,16 @@ sudo apt-get install ack-grep
 ln -s ~/.config/dotfiles/ackrc ~/.ackrc
 ```
 
+## Node
+Use [`nvm`](https://github.com/creationix/nvm).
+```
+npm set init-author-email mail@gmail.com
+npm set init-author-name "User Name"
+npm set init-author-url http://mysite.com/
+npm set init-license MIT
+npm set init-version 0.0.0
+```
+
 ## Upgrade
 
 ```
