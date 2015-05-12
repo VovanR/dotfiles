@@ -61,6 +61,7 @@ NeoBundle 'majutsushi/tagbar'
 NeoBundle 'bling/vim-airline'
 " NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
+NeoBundle 'gorodinskiy/vim-coloresque'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'mhinz/vim-signify'
 NeoBundle 'bronson/vim-trailing-whitespace'
@@ -69,7 +70,7 @@ NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'mileszs/ack.vim'
 
 " Formatting
-NeoBundle 'csscomb/csscomb-for-vim'
+NeoBundle 'csscomb/vim-csscomb'
 " NeoBundle 'maksimr/vim-jsbeautify'
 
 " Syntax
@@ -86,12 +87,15 @@ NeoBundle 'alarie/requirejs.vim'
 NeoBundle 'kchmck/vim-coffee-script'
 " NeoBundle 'marijnh/tern_for_vim'
 NeoBundle 'heavenshell/vim-jsdoc'
+NeoBundle 'leshill/vim-json'
 
 " HTML
+NeoBundle 'othree/html5.vim'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'AndrewRadev/vim-eco'
 NeoBundle 'mustache/vim-mustache-handlebars'
+NeoBundle 'gregsexton/MatchTag'
 
 " PHP
 NeoBundle 'shawncplus/phpcomplete.vim'
@@ -365,6 +369,9 @@ set updatetime=2000
 " Save on buffer switch
 set autowrite
 
+" <Esc><Esc>
+" Clear the search highlight in Normal mode
+nnoremap <silent> <Esc><Esc> :nohlsearch<CR><Esc>
 
 " Plugins " {{{
 
