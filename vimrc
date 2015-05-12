@@ -369,10 +369,6 @@ set updatetime=2000
 " Save on buffer switch
 set autowrite
 
-" <Esc><Esc>
-" Clear the search highlight in Normal mode
-nnoremap <silent> <Esc><Esc> :nohlsearch<CR><Esc>
-
 " Plugins " {{{
 
 
