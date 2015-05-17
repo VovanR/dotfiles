@@ -53,7 +53,7 @@ NeoBundle 'tpope/vim-surround'
 " NeoBundle 'sjl/gundo.vim'
 NeoBundle 'jlanzarotta/bufexplorer'
 NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'vim-scripts/dbext.vim'
+" NeoBundle 'vim-scripts/dbext.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'majutsushi/tagbar'
@@ -424,7 +424,7 @@ let g:pymode_rope_lookup_project = 0
 "
 
 " Plugin 'vim-scripts/dbext.vim'
-let g:dbext_default_SQLITE_bin = 'sqlite3'
+" let g:dbext_default_SQLITE_bin = 'sqlite3'
 "
 
 " Plugin 'scrooloose/nerdtree'
