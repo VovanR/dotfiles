@@ -9,6 +9,19 @@ cd ~/.config
 git clone https://github.com/VovanR/dotfiles.git
 ```
 
+### Font
+Download [Input font](http://input.fontbureau.com/)
+Copy it to `~/.fonts/truetype/InputMono/`
+```sh
+$ tree ~/.fonts/truetype/
+~/.fonts/truetype/
+└── InputMono
+    ├── InputMono-BoldItalic.ttf
+    ├── InputMono-Bold.ttf
+    ├── InputMono-Italic.ttf
+    └── InputMono-Regular.ttf
+```
+
 ### Bash
 
 ```
