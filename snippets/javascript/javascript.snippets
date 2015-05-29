@@ -102,3 +102,10 @@ snippet /**
 snippet /**p
 	/** ${0:why?}
 	 *  @private */
+
+snippet aclick
+	${1}.on('click', function (e) {
+		${0}
+
+	    e.preventDefault();
+	});
