@@ -470,7 +470,8 @@ let g:tagbar_sort=0
 "
 
 " Plugin 'bling/vim-airline'
-let g:airline_section_z='%l/%L:%03c'    " line number/total lines:column number
+let g:airline_section_b=airline#section#create(['']) " Hide git branch
+let g:airline_section_z='%l/%L:%03c' " line number/total lines:column number
 
 let g:airline_left_sep=''
 let g:airline_right_sep=''
