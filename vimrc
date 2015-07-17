@@ -41,7 +41,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Editing
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'SirVer/ultisnips'
 " NeoBundle 'vim-scripts/phpfolding.vim'
 NeoBundle 'klen/python-mode'
 NeoBundle 'mattn/emmet-vim'
@@ -65,7 +65,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'mhinz/vim-signify'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'mileszs/ack.vim'
 
 " Formatting
@@ -382,15 +382,9 @@ let NERDRemoveExtraSpaces=1
 "
 
 
-" Plugin 'Shougo/neosnippet.vim'
-" Tell Neosnippet about the other snippets
-let g:neosnippet#snippets_directory='~/.vim/snippets'
-" Enable snipMate compatibility feature.
-let g:neosnippet#enable_snipmate_compatibility = 1
-" Plugin key-mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
+" Plugin 'SirVer/ultisnips'
+let g:UltiSnipsExpandTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
 "
 
 
@@ -510,10 +504,7 @@ let g:signify_vcs_list = [ 'git' ]
 " let g:syntastic_javascript_checkers = ['jslint']
 "
 
-" Plugin 'Shougo/neocomplete.vim'
-let g:neocomplete#enable_at_startup = 1
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" Plugin 'Valloric/YouCompleteMe'
 "
 
 

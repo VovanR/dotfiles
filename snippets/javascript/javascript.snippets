@@ -1,44 +1,44 @@
 # Source: https://github.com/shuvalov-anton/vim-snippets/blob/master/snippets/javascript.snippets
 snippet timeoutc
-    setTimeout(function (that) {
-        ${0}
-    }, ${1}, this);
+	setTimeout(function (that) {
+		${0}
+	}, ${1}, this);
 
 snippet timeout
-    setTimeout(function () {
-        ${0}
-    }, ${1});
+	setTimeout(function () {
+		${0}
+	}, ${1});
 
 snippet intervalc
-    setInterval(function (that) {
-        ${0}
-    }, ${1}, this);
+	setInterval(function (that) {
+		${0}
+	}, ${1}, this);
 
 snippet interval
-    setInterval(function () {
-        ${0}
-    }, ${1});
+	setInterval(function () {
+		${0}
+	}, ${1});
 
 snippet cl
-    console.log(${0});
+	console.log(${0});
 
 snippet cw
-    console.warn(${0});
+	console.warn(${0});
 
 snippet ce
-    console.error(${0});
-    return;
+	console.error(${0});
+	return;
 
 snippet ci
-    console.info(${0});
+	console.info(${0});
 
 snippet cd
-    console.dir(${0});
+	console.dir(${0});
 
 snippet method
-    ${1}: function () {
-        ${0}
-    },
+	${1}: function () {
+		${0}
+	},
 
 # Require
 snippet req
@@ -107,5 +107,5 @@ snippet aclick
 	${1}.on('click', function (e) {
 		${0}
 
-	    e.preventDefault();
+		e.preventDefault();
 	});
