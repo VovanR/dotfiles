@@ -552,6 +552,11 @@ let g:signify_vcs_list = [ 'git' ]
 " Plugin 'heavenshell/vim-jsdoc'
 " Не подсвечивать jsDoc
 let g:javascript_ignore_javaScriptdoc=0
+
+nmap <silent> <C-l> <Plug>(jsdoc)
+let g:jsdoc_return=0
+let g:jsdoc_access_descriptions=1
+let g:jsdoc_underscore_private=1
 "
 
 
