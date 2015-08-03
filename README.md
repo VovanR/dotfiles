@@ -70,6 +70,13 @@ sudo apt-get install ack-grep
 ln -s ~/.config/dotfiles/ackrc ~/.ackrc
 ```
 
+### Tmux
+
+Install [Tmuxinator](https://github.com/tmuxinator/tmuxinator):
+```sh
+sudo gem install tmuxinator
+```
+
 ## Node
 Install [nvm](https://github.com/creationix/nvm)
 ```sh
