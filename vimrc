@@ -65,7 +65,14 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'mhinz/vim-signify'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'Valloric/YouCompleteMe', {
+     \ 'build'      : {
+        \ 'mac'     : './install.sh',
+        \ 'unix'    : './install.sh',
+        \ 'windows' : './install.sh',
+        \ 'cygwin'  : './install.sh'
+        \ }
+     \ }
 NeoBundle 'mileszs/ack.vim'
 
 " Formatting
@@ -505,6 +512,7 @@ let g:signify_vcs_list = [ 'git' ]
 "
 
 " Plugin 'Valloric/YouCompleteMe'
+let g:neobundle#install_process_timeout = 1500
 "
 
 
