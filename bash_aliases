@@ -34,8 +34,6 @@ alias -- -="cd -" # The alias is `-`, not `--`
 # Helpers
 alias fndf="sudo find ./ -type f -exec chmod 664 {} \;"
 alias fndd="sudo find ./ -type d -exec chmod 775 {} \;"
-alias fnd="fndd; fndf"
-alias sitestart="mkdir makets; fnd; apre"
 
 alias sourcer="source ~/.bash_profile"
 alias bashaliases="vim ~/.bash_aliases"
@@ -47,6 +45,7 @@ alias open="xdg-open"
 alias o="xdg-open"
 alias e="sublime"
 
+# Play sound Done!
 alias alert-done="paplay /usr/share/sounds/freedesktop/stereo/complete.oga"
 
 # Add an "alert" alias for long running commands.  Use like so:

@@ -62,6 +62,8 @@ NeoBundle 'bling/vim-airline'
 " NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'low-ghost/nerdtree-fugitive'
+NeoBundle 'Xuyuanp/nerdtree-git-plugin'
 NeoBundle 'mhinz/vim-signify'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'scrooloose/syntastic'
@@ -73,6 +75,7 @@ NeoBundle 'Valloric/YouCompleteMe', {
         \ 'cygwin'  : './install.sh'
         \ }
      \ }
+" NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'mileszs/ack.vim'
 
 " Formatting
@@ -495,6 +498,12 @@ colorscheme molokai
 " Plugin 'tpope/vim-fugitive'
 "
 
+" Plugin 'low-ghost/nerdtree-fugitive'
+"
+
+" Plugin 'Xuyuanp/nerdtree-git-plugin'
+"
+
 " Plugin 'mhinz/vim-signify'
 " Подсветка измененных строк
 let g:signify_vcs_list = [ 'git' ]
@@ -513,6 +522,9 @@ let g:signify_vcs_list = [ 'git' ]
 
 " Plugin 'Valloric/YouCompleteMe'
 let g:neobundle#install_process_timeout = 1500
+"
+
+" Plugin 'Yggdroot/indentLine'
 "
 
 

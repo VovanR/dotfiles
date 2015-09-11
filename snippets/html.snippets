@@ -13,11 +13,9 @@ snippet html5
 			${0:body}
 		</body>
 	</html>
-
 # comment
 snippet //
 	<!-- ${1} -->${0}
-
 snippet .
 	class="${1}"
 snippet #
@@ -26,32 +24,25 @@ snippet data
 	data-${1}="${2:$1}"
 snippet href
 	href="${1:#}"
-
-
 # Django
 snippet trans
 	{% trans '${0}' %}
-
 snippet blocktrans
 	{% blocktrans %}
 		${0}
 	{% endblocktrans %}
-
 snippet %
 	{% ${1} %}
-
 snippet block
 	{% block ${1} %}
 		${0}
 	{% endblock ${1} %}
-
 snippet #
 	{# ${0:comment} #}
 snippet comment
 	{% comment %}
 		${0}
 	{% endcomment %}
-
 snippet spaceless
 	{% spaceless %}
 		${0}
