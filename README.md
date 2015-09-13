@@ -1,6 +1,7 @@
 # dotfiles
 
-My configs: bash, SVN, Git, Vim
+My configs: bash, Git, Vim, Tmux, Node.
+My system is Xubuntu.
 
 ## Install
 
@@ -10,16 +11,16 @@ git clone https://github.com/VovanR/dotfiles.git
 ```
 
 ### Font
-Download [Input font](http://input.fontbureau.com/)
-Copy it to `~/.fonts/truetype/InputMono/`
+Download [Hack](https://github.com/chrissimpkins/Hack)
+Copy it to `~/.fonts/truetype/Hack/`
 ```sh
 $ tree ~/.fonts/truetype/
 ~/.fonts/truetype/
-└── InputMono
-    ├── InputMono-BoldItalic.ttf
-    ├── InputMono-Bold.ttf
-    ├── InputMono-Italic.ttf
-    └── InputMono-Regular.ttf
+└── Hack
+    ├── Hack-BoldItalic.ttf
+    ├── Hack-Bold.ttf
+    ├── Hack-Italic.ttf
+    └── Hack-Regular.ttf
 ```
 
 ### Bash

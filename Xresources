@@ -51,10 +51,10 @@ xterm*color15: #d0d0d0
 ! urxvt.font: xft:Monospace:size=9
 
 ! See: http://input.fontbureau.com/
-urxvt.font: xft:Input Mono:pixelsize=12:style=Regular:antialias=true:hinting=true
-urxvt.italicFont: xft:Input Mono:style=Italic:pixelsize=12:antialias=true:hinting=true
-urxvt.boldFont: xft:Input Mono:style=Bold:pixelsize=12:antialias=true:hinting=true
-urxvt.boldItalicFont: xft:Input Mono:style=Bold Italic:pixelsize=12:antialias=true:hinting=true
+urxvt.font: xft:Hack:pixelsize=12:style=Regular:antialias=true:hinting=true
+urxvt.italicFont: xft:Hack:style=Italic:pixelsize=12:antialias=true:hinting=true
+urxvt.boldFont: xft:Hack:style=Bold:pixelsize=12:antialias=true:hinting=true
+urxvt.boldItalicFont: xft:Hack:style=Bold Italic:pixelsize=12:antialias=true:hinting=true
 
 urxvt*scrollBar: false
 urxvt*scrollKey: false
