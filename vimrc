@@ -87,6 +87,7 @@ NeoBundle 'csscomb/vim-csscomb'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'wavded/vim-stylus'
+NeoBundle 'leafgarland/typescript-vim'
 
 " JavaScript
 NeoBundle 'pangloss/vim-javascript'
