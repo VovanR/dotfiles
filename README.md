@@ -88,6 +88,11 @@ npm set init-license MIT
 npm set init-version 0.0.0
 ```
 
+## Plymouth
+```
+ls /lib/plymouth/themes/xubuntu-logo/wallpaper.png && ls /usr/share/xfce4/backdrops/cloudbreaker.jpg && sudo convert /usr/share/xfce4/backdrops/cloudbreaker.jpg /lib/plymouth/themes/xubuntu-logo/wallpaper.png
+```
+
 ## Upgrade
 
 ```sh
