@@ -1,7 +1,6 @@
 # dotfiles
 
-My configs: bash, Git, Vim, Tmux, Node.
-My system is Xubuntu.
+> My configs: bash, Git, Vim, Tmux, Node, Plymouth. Xubuntu.
 
 ## Install
 
