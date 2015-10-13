@@ -8,10 +8,9 @@
 # Global Variables #
 ####################
 
-# NVM
-if [ -s ~/.nvm/nvm.sh ]; then
-    export NVM_DIR=~/.nvm
-    source ~/.nvm/nvm.sh
+# npm
+if [ -d ~/.npm-global ]; then
+	export PATH=~/.npm-global/bin:$PATH
 fi
 
 # bash prompt

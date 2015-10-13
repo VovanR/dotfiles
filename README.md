@@ -78,7 +78,12 @@ sudo gem install tmuxinator
 ```
 
 ## Node
-Install [nvm](https://github.com/creationix/nvm)
+[Change npm's default directory to another directory](https://docs.npmjs.com/getting-started/fixing-npm-permissions):
+```
+mkdir -p ~/.npm-global/bin
+npm config set prefix '~/.npm-global'
+```
+Defaults:
 ```sh
 npm set init-author-email mail@gmail.com
 npm set init-author-name "User Name"
