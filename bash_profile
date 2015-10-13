@@ -10,7 +10,8 @@
 
 # npm
 if [ -d ~/.npm-global ]; then
-	export PATH=~/.npm-global/bin:$PATH
+    export PATH=~/.npm-global/bin:$PATH
+    export NODE_PATH=$NODE_PATH:~/.npm-global/lib/node_modules
 fi
 
 # bash prompt
