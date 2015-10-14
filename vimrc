@@ -50,6 +50,7 @@ NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'tpope/vim-surround'
 
 " View
+NeoBundle 'gcavallanti/vim-noscrollbar'
 " NeoBundle 'sjl/gundo.vim'
 NeoBundle 'jlanzarotta/bufexplorer'
 NeoBundle 'kien/ctrlp.vim'
@@ -475,7 +476,7 @@ let g:tagbar_sort=0
 "
 
 " Plugin 'bling/vim-airline'
-let g:airline_section_b=airline#section#create(['']) " Hide git branch
+let g:airline_section_b='%{noscrollbar#statusline(20, "—", "|")}' " Hide git branch and show scrollbar
 let g:airline_section_z='%l/%L:%03c' " line number/total lines:column number
 
 let g:airline_left_sep=''
