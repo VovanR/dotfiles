@@ -102,7 +102,8 @@ NeoBundle 'heavenshell/vim-jsdoc'
 " HTML
 NeoBundle 'othree/html5.vim'
 NeoBundle 'digitaltoad/vim-jade'
-NeoBundle 'tpope/vim-markdown'
+NeoBundle 'godlygeek/tabular'
+NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'AndrewRadev/vim-eco'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'gregsexton/MatchTag'
@@ -584,10 +585,6 @@ let g:jsdoc_underscore_private=1
 
 " HTML
 " Plugin 'digitaltoad/vim-jade'
-"
-
-
-" Plugin 'tpope/vim-markdown'
 "
 
 
