@@ -98,6 +98,7 @@ NeoBundle 'alarie/requirejs.vim'
 NeoBundle 'kchmck/vim-coffee-script'
 " NeoBundle 'marijnh/tern_for_vim'
 NeoBundle 'heavenshell/vim-jsdoc'
+NeoBundle 'jason0x43/vim-js-indent'
 
 " HTML
 NeoBundle 'othree/html5.vim'
