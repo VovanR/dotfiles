@@ -57,8 +57,6 @@ NeoBundle 'kien/ctrlp.vim'
 " NeoBundle 'vim-scripts/dbext.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'jistr/vim-nerdtree-tabs'
-NeoBundle 'majutsushi/tagbar'
-" NeoBundle 'vim-php/tagbar-phpctags.vim'
 NeoBundle 'bling/vim-airline'
 " NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
@@ -460,22 +458,6 @@ let NERDTreeIgnore=['.sublime-project$[[file]]', '.sublime-workspace$[[file]]', 
 " let g:nerdtree_tabs_open_on_console_startup=1
 "
 
-" Plugin 'majutsushi/tagbar'
-map <F4> :TagbarToggle<CR>
-" Автоматически открывать tagbar
-" autocmd VimEnter * nested :TagbarOpen
-" Не закрывать тагбар после перехода к функции
-let g:tagbar_autoclose=0
-let g:tagbar_compact=1
-let g:tagbar_iconchars=['+', '-']
-let g:tagbar_width=30
-" Не сортировать функции по имени
-let g:tagbar_sort=0
-"
-
-" Plugin 'vim-php/tagbar-phpctags.vim'
-" let g:tagbar_phpctags_bin='~/phpctags/phpctags'
-"
 
 " Plugin 'bling/vim-airline'
 let g:airline_section_b='%{noscrollbar#statusline(20, "—", "|")}' " Hide git branch and show scrollbar
