@@ -18,7 +18,7 @@ alias ln='ln -i'
 # Some more ls aliases
 alias ll='ls -lahF'
 alias la='ls -AhF'
-alias l='ls -CF'
+alias l='ll'
 
 # tree aliaces
 alias tree='tree --dirsfirst'
