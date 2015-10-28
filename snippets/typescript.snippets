@@ -1,11 +1,13 @@
 snippet component
-	interface ${1}Props extends React.Props<any> {
+	import React from 'lib/react';
+
+	interface $1Props extends React.Props<any> {
 	}
-	export default class ${1} extends React.Component<${1}Props, any> {
+	export default class $1 extends React.Component<$1Props, any> {
 		render() {
 			return (
 				<div>
-					${1}
+					${1:ClassName}
 				</div>
 			);
 		}
