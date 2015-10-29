@@ -60,6 +60,7 @@ NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'bling/vim-airline'
 " NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
+NeoBundle 'lloeki/vim-one-colorschemes'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'low-ghost/nerdtree-fugitive'
 NeoBundle 'Xuyuanp/nerdtree-git-plugin'
@@ -478,7 +479,8 @@ let g:airline#extensions#hunks#enabled = 0
 "
 
 " Plugin 'tomasr/molokai'
-colorscheme molokai
+set background=light
+colorscheme one-light
 "
 
 " Plugin 'tpope/vim-fugitive'
