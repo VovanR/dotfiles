@@ -25,3 +25,27 @@ snippet cd
 	console.dir(${0});
 snippet imp
 	import ${1} from '${2}';
+snippet map
+	{this.props.collection.map(model => {
+		return (
+			<${1:div}
+				key={model.id}
+			/>
+		);
+	})}
+snippet prevent
+	e.preventDefault();
+snippet stop
+	e.stopPropagation();
+snippet ifx
+	{${1} ? (
+		${0}
+	) : false}
+snippet ifex
+	{${1}
+	? (
+		${2}
+	)
+	: (
+		${0}
+	)}
