@@ -174,7 +174,7 @@ set wrap
 
 " Minimal number of screen lines to keep above and below the cursor.
 " Start scrolling three lines before the horizontal window border
-set scrolloff=3
+set scrolloff=0
 " This keeps the cursor always in the vertical middle of the screen.
 " set scrolloff=999
 "
@@ -299,6 +299,7 @@ set secure
 
 " Enable line numbers
 set number
+set relativenumber
 
 " Highlight current line
 set cursorline
@@ -461,8 +462,11 @@ let NERDTreeIgnore=['.sublime-project$[[file]]', '.sublime-workspace$[[file]]', 
 
 
 " Plugin 'bling/vim-airline'
-let g:airline_section_b='%{noscrollbar#statusline(20, "—", "|")}' " Hide git branch and show scrollbar
-let g:airline_section_z='%l/%L:%03c' " line number/total lines:column number
+" Hide git branch and show scrollbar
+" line number/total lines:column number
+let g:airline_section_b='%{noscrollbar#statusline(20, "—", "|")}%l/%L:%03c'
+" Hide right section
+let g:airline_section_z=airline#section#create([''])
 
 let g:airline_left_sep=''
 let g:airline_right_sep=''
