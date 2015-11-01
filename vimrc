@@ -13,7 +13,7 @@ set nocompatible
 
 " NeoBundle.vim
 " Note: Skip initialization for vim-tiny or vim-small.
-if !1 | finish | endif
+if 0 | endif
 
 if has('vim_starting')
     if &compatible
@@ -341,8 +341,8 @@ if &term =~ '^screen'
   set <S-F3>=[1;2R
 endif
 if &term =~ '^xterm-256color'
-  " set <S-F3>=O1;2R
-  set <S-F3>=[1;2R
+  set <F3>=OR
+  set <F2>=OQ
 endif
 if &term =~ '^screen-256color'
   set <S-F3>=[1;2R
@@ -359,8 +359,8 @@ map <S-F3> :BufExplorer<CR>
 "from http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
 :set completeopt=menuone,longest,preview
 
-:nmap <Leader>sv :source ~/.vimrc<CR>
-:nmap <Leader>v :e ~/.vimrc<CR>
+:nmap <Leader>sv :source ~/.vim/vimrc<CR>
+:nmap <Leader>v :e ~/.vim/vimrc<CR>
 
 " Don't stop visual mode after indenting
 vnoremap < <gv

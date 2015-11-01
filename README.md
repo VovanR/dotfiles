@@ -47,19 +47,30 @@ ln -s ~/.config/dotfiles/gitignore_global ~/.gitignore_global
 
 ### Vim
 
+Dirs
+```sh
+mkdir -p ~/.vim/{backups,bundle,swaps,undo}
+```
+
+```sh
+ln -s ~/.config/dotfiles/vimrc ~/.vim/vimrc
+ln -s ~/.config/dotfiles/snippets ~/.vim/
+```
+
 Install [NeoBundle](https://github.com/Shougo/neobundle.vim):
 ```sh
 git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 ```
 
-```sh
-ln -s ~/.config/dotfiles/vimrc ~/.vimrc
-ln -s ~/.config/dotfiles/snippets ~/.vim/
-```
-
 Install Plugins:
 ```sh
 vim +NeoBundleInstall +qall
+```
+
+Neovim
+```sh
+ln -s ~/.vim ~/.config/nvim
+ln -s ~/.config/nvim/vimrc ~/.config/nvim/init.vim
 ```
 
 Install [ack](http://beyondgrep.com/install/)
