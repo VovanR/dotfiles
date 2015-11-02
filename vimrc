@@ -494,6 +494,17 @@ colorscheme one-light
 "
 
 " Plugin 'Xuyuanp/nerdtree-git-plugin'
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "•",
+    \ "Staged"    : "+",
+    \ "Untracked" : "¤",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "×",
+    \ "Dirty"     : "×",
+    \ "Clean"     : "v",
+    \ "Unknown"   : "?"
+    \ }
 "
 
 " Plugin 'mhinz/vim-signify'
