@@ -37,6 +37,11 @@ snippet prevent
 	e.preventDefault();
 snippet stop
 	e.stopPropagation();
+snippet constructor
+	constructor($1) {
+		super(${1:props});
+		${0}
+	}
 snippet ifx
 	{${1} ? (
 		${0}
