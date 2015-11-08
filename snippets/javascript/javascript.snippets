@@ -121,3 +121,11 @@ snippet ifex
 	)}
 snippet imp
 	import ${1} from '${2}';
+snippet mapx
+	{this.props.collection.map(model => {
+		return (
+			<${1:div}
+				key={model.id}
+			/>
+		);
+	})}
