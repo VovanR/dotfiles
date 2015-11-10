@@ -21,7 +21,6 @@ snippet cw
 	console.warn(${0});
 snippet ce
 	console.error(${0});
-	return;
 snippet ci
 	console.info(${0});
 snippet cd
@@ -30,68 +29,58 @@ snippet method
 	${1}: function () {
 		${0}
 	},
-# Require
 snippet req
 	require('${1}');
-# Prototype
 snippet proto
 	${1:class_name}.prototype.${2:method_name} = function(${3}) {
 		${0}
 	};
-# Anonymous Function
 snippet f
 	function(${1}) {
 		${0}
 	}
-# Object Method
 snippet :f
 	${1}: function (${2}) {
 		${0}
 	}${3:,}
-# Named Function
 snippet fn
 	function ${1} (${2}) {
 		${0}
 	};
-# Generator Function
 snippet g
 	function * (${1}) {
 		${0}
 	}
-# Generator Object
 snippet :g
 	${1}: function * (${2}) {
 		${0}
 	}${3:,}
-# Generator Function
 snippet gn
 	function *${1} (${2}) {
 		${0}
 	}
-# Flow control
-# if
 snippet if
 	if (${1:true}) {
 		${0};
 	}
-# if ... else
 snippet ife
 	if (${1:true}) {
 		${2};
 	} else {
 		${0};
 	}
-# tertiary conditional
 snippet ?
 	${1} ? ${2} : ${0};
-# Documentation
-# docstring
 snippet /**
-	/** ${0:why?} */
-# docstring with @private
+	/**
+	* ${0:why?}
+	*/
 snippet /**p
-	/** ${0:why?}
-	 *  @private */
+	/**
+	* ${0:why?}
+	*
+	* @private
+	*/
 snippet aclick
 	${1}.on('click', function (e) {
 		${0}
@@ -129,3 +118,16 @@ snippet mapx
 			/>
 		);
 	})}
+snippet stateless
+	import React from 'lib/react';
+
+	let $1 = (props) => (
+		<div>
+			${1:ClassName}
+		</div>
+	);
+
+	// $1.propTypes = {};
+	// $1.defaultProps = {};
+
+	export default $1;

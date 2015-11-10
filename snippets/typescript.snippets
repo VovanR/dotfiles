@@ -18,7 +18,6 @@ snippet cw
 	console.warn(${0});
 snippet ce
 	console.error(${0});
-	return;
 snippet ci
 	console.info(${0});
 snippet cd
@@ -54,3 +53,17 @@ snippet ifex
 	: (
 		${0}
 	)}
+snippet stateless
+	import React from 'lib/react';
+
+	let $1 = (props) => (
+		<div>
+			${1:ClassName}
+		</div>
+	);
+
+	// $1.propTypes = {};
+	// $1.defaultProps = {};
+
+	export default $1;
+
