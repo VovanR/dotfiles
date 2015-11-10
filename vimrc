@@ -521,6 +521,7 @@ let g:signify_vcs_list = [ 'git' ]
 
 " Plugin 'scrooloose/syntastic'
 " let g:syntastic_javascript_checkers = ['jslint']
+let g:syntastic_typescript_checkers = []
 "
 
 " Plugin 'Valloric/YouCompleteMe'
