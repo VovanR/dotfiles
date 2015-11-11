@@ -67,6 +67,15 @@ Install Plugins:
 vim +NeoBundleInstall +qall
 ```
 
+Compile YouCompleteMe
+```sh
+sudo apt-get install build-essential cmake python-dev libboost-all-dev
+mkdir ~/ycm_build
+cd ~/ycm_build
+cmake -DUSE_SYSTEM_BOOST=ON -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
+make
+```
+
 Neovim
 ```sh
 ln -s ~/.vim ~/.config/nvim
