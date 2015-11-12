@@ -45,6 +45,12 @@ ln -s ~/.config/dotfiles/gitconfig ~/.gitconfig
 ln -s ~/.config/dotfiles/gitignore_global ~/.gitignore_global
 ```
 
+### Atom
+
+```sh
+ln -s ~/.config/dotfiles/atom/snippets.cson ~/.atom/snippets.cson
+```
+
 ### Vim
 
 Dirs
