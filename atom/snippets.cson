@@ -20,6 +20,9 @@
 # Atom Flight Manual:
 # https://atom.io/docs/latest/using-atom-basic-customization#cson
 
+
+
+# PHP
 '.text.php':
   'Div':
     'prefix': 'di'
@@ -36,3 +39,131 @@
       <!-- begin $1 -->
       <!-- end $1 -->
       """
+
+
+
+# TypeScript
+'.source.ts':
+  'component':
+    'prefix': 'component'
+    'body': """
+        import React from 'lib/react';
+
+        interface $1Props extends React.Props<any> {
+        }
+        export default class $1 extends React.Component<$1Props, any> {
+            render() {
+                return (
+                    <div>
+                        ${1:ClassName}
+                    </div>
+                );
+            }
+        }
+      """
+
+  'console log':
+    'prefix': 'cl'
+    'body': 'console.log($1);'
+
+  'console warn':
+    'prefix': 'cw'
+    'body': 'console.warn($1);'
+
+  'console error':
+    'prefix': 'ce'
+    'body': """
+      console.error(${0});
+      """
+
+  'console info':
+    'prefix': 'ci'
+    'body': """
+      console.info(${0});
+      """
+
+  'console dir':
+    'prefix': 'cd'
+    'body': """
+      console.dir(${0});
+      """
+
+  'import':
+    'prefix': 'imp'
+    'body': """
+      import ${1} from '${2}';
+      """
+
+  'map collection in JSX':
+    'prefix': 'mapx'
+    'body': """
+      {this.props.collection.map(model => {
+        return (
+          <${1:div}
+            key={model.id}
+          />
+        );
+      })}
+      """
+
+  'preventDefault':
+    'prefix': 'prevent'
+    'body': """
+      e.preventDefault();
+      """
+
+  'stopPropagation':
+    'prefix': 'stop'
+    'body': """
+      e.stopPropagation();
+      """
+
+  'constructor':
+    'prefix': 'constr'
+    'body': """
+      constructor(${1}) {
+        super(${1:props});
+        ${0}
+      }
+      """
+
+  'JSX if':
+    'prefix': 'ifx'
+    'body': """
+      {${1} ? (
+        ${0}
+      ) : false}
+      """
+
+  'JSX ife':
+    'prefix': 'ifex'
+    'body': """
+      {${1}
+      ? (
+        ${2}
+      )
+      : (
+        ${0}
+      )}
+      """
+
+  'stateless':
+    'prefix': 'stateless'
+    'body': """
+      import React from 'lib/react';
+
+      let $1 = (props) => (
+        <div>
+          ${1:ClassName}
+        </div>
+      );
+
+      // $1.propTypes = {};
+      // $1.defaultProps = {};
+
+      export default $1;
+      """
+
+  'setstate':
+    'prefix': 'setstate'
+    'body': 'this.setState({$0})'
