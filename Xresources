@@ -26,83 +26,54 @@ xterm*scrollKey: true
 xterm*scrollTtyOutput: false
 
 
-! Atom One Light theme
-xterm*background: #f9f9f9
-xterm*foreground: #383a42
-xterm*cursorColor: #d0d0d0
-xterm*color0: #000000
-xterm*color1: #E45649
-xterm*color2: #50A14F
-xterm*color3: #986801
-xterm*color4: #4078F2
-xterm*color5: #A626A4
-xterm*color6: #0184BC
-xterm*color7: #A0A1A7
-xterm*color8: #5c6370
-xterm*color9: #e06c75
-xterm*color10: #50A14F
-xterm*color11: #986801
-xterm*color12: #4078F2
-xterm*color13: #A626A4
-xterm*color14: #0184BC
-xterm*color15: #ffffff
 
-! urxvt
-! urxvt.font: xft:Monospace:size=9
+! Base16 Atelier Forest
+! Scheme: Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/forest)
 
-! See: http://input.fontbureau.com/
-urxvt.font: xft:Hack:pixelsize=12:style=Regular:antialias=true:hinting=true
-urxvt.italicFont: xft:Hack:style=Italic:pixelsize=12:antialias=true:hinting=true
-urxvt.boldFont: xft:Hack:style=Bold:pixelsize=12:antialias=true:hinting=true
-urxvt.boldItalicFont: xft:Hack:style=Bold Italic:pixelsize=12:antialias=true:hinting=true
+#define base00 #1b1918
+#define base01 #2c2421
+#define base02 #68615e
+#define base03 #766e6b
+#define base04 #9c9491
+#define base05 #a8a19f
+#define base06 #e6e2e0
+#define base07 #f1efee
+#define base08 #f22c40
+#define base09 #df5320
+#define base0A #d5911a
+#define base0B #5ab738
+#define base0C #00ad9c
+#define base0D #407ee7
+#define base0E #6666ea
+#define base0F #c33ff3
 
-urxvt*scrollBar: false
-urxvt*scrollKey: false
-urxvt*scrollTtyOutput: false
-urxvt*scrollTtyKeypress: true
-urxvt.iconFile: /usr/share/icons/elementary-xfce/apps/48/terminal.png
-urxvt*termName: screen-256color
+*.foreground:   base02
+*.background:   base07
+*.cursorColor:  base02
 
-! Molokai theme
-! See: https://gist.github.com/vreon/845878
-urxvt*background: #f9f9f9
-urxvt*foreground: #383a42
-urxvt*cursorColor: #d0d0d0
-urxvt*color0: #000000
-urxvt*color1: #E45649
-urxvt*color2: #50A14F
-urxvt*color3: #986801
-urxvt*color4: #4078F2
-urxvt*color5: #A626A4
-urxvt*color6: #0184BC
-urxvt*color7: #A0A1A7
-urxvt*color8: #5c6370
-urxvt*color9: #e06c75
-urxvt*color10: #50A14F
-urxvt*color11: #986801
-urxvt*color12: #4078F2
-urxvt*color13: #A626A4
-urxvt*color14: #0184BC
-urxvt*color15: #ffffff
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
 
-urxvt*keysym.F1: \033[11~
-urxvt*keysym.F2: \033[12~
-urxvt*keysym.F3: \033[13~
-urxvt*keysym.F4: \033[14~
-! urxvt*keysym.F1: \033OP
-! urxvt*keysym.F2: \033OQ
-! urxvt*keysym.F3: \033OR
-! urxvt*keysym.F4: \033OS
+*.color8:       base03
+*.color9:       base08
+*.color10:      base0B
+*.color11:      base0A
+*.color12:      base0D
+*.color13:      base0E
+*.color14:      base0C
+*.color15:      base07
 
-urxvt*keysym.S-F1: \033[1;2P
-urxvt*keysym.S-F2: \033[1;2Q
-urxvt*keysym.S-F3: \033[1;2R
-urxvt*keysym.S-F4: \033[1;2S
-urxvt*keysym.S-F5: \033[15;2~
-urxvt*keysym.S-F6: \033[17;2~
-urxvt*keysym.S-F7: \033[18;2~
-urxvt*keysym.S-F8: \033[19;2~
-urxvt*keysym.S-F9: \033[20;2~
-urxvt*keysym.S-F10: \033[21;2~
-urxvt*keysym.S-F11: \033[23;2~
-urxvt*keysym.S-F12: \033[24;2~
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*.color16:      base09
+*.color17:      base0F
+*.color18:      base01
+*.color19:      base02
+*.color20:      base04
+*.color21:      base06

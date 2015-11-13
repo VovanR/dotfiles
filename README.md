@@ -24,6 +24,9 @@ $ tree ~/.fonts/truetype/
 
 ### Bash
 
+Install [Base16 Shell](https://github.com/chriskempson/base16-shell#installation)
+git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+
 ```sh
 ln -s ~/.config/dotfiles/bash_functions ~/.bash_functions
 ln -s ~/.config/dotfiles/bash_aliases ~/.bash_aliases

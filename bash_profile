@@ -24,6 +24,10 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/base16-atelierforest.light.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
 
 
 # Path #
