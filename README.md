@@ -4,7 +4,7 @@
 
 ## Install
 
-```sh
+```bash
 cd ~/.config
 git clone https://github.com/VovanR/dotfiles.git
 ```
@@ -12,7 +12,7 @@ git clone https://github.com/VovanR/dotfiles.git
 ### Font
 Download [Hack](https://github.com/chrissimpkins/Hack)
 Copy it to `~/.fonts/truetype/Hack/`
-```sh
+```bash
 $ tree ~/.fonts/truetype/
 ~/.fonts/truetype/
 └── Hack
@@ -22,12 +22,15 @@ $ tree ~/.fonts/truetype/
     └── Hack-Regular.ttf
 ```
 
+### Color scheme
+Install [Base16 Shell](https://github.com/chriskempson/base16-shell#installation)
+```bash
+git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+```
+
 ### Bash
 
-Install [Base16 Shell](https://github.com/chriskempson/base16-shell#installation)
-git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
-
-```sh
+```bash
 ln -s ~/.config/dotfiles/bash_functions ~/.bash_functions
 ln -s ~/.config/dotfiles/bash_aliases ~/.bash_aliases
 ln -s ~/.config/dotfiles/bash_prompt ~/.bash_prompt
@@ -41,7 +44,7 @@ source ~/.bash_profile
 
 ### Git
 
-```sh
+```bash
 git config -f ~/.gitlocal user.name "Username"
 git config -f ~/.gitlocal user.email "mail@gmail.com"
 ln -s ~/.config/dotfiles/gitconfig ~/.gitconfig
@@ -50,34 +53,34 @@ ln -s ~/.config/dotfiles/gitignore_global ~/.gitignore_global
 
 ### Atom
 
-```sh
+```bash
 ln -s ~/.config/dotfiles/atom/snippets.cson ~/.atom/snippets.cson
 ```
 
 ### Vim
 
 Dirs
-```sh
+```bash
 mkdir -p ~/.vim/{backups,bundle,swaps,undo}
 ```
 
-```sh
+```bash
 ln -s ~/.config/dotfiles/vimrc ~/.vim/vimrc
 ln -s ~/.config/dotfiles/snippets ~/.vim/
 ```
 
 Install [NeoBundle](https://github.com/Shougo/neobundle.vim):
-```sh
+```bash
 git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 ```
 
 Install Plugins:
-```sh
+```bash
 vim +NeoBundleInstall +qall
 ```
 
 Compile YouCompleteMe
-```sh
+```bash
 sudo apt-get install build-essential cmake python-dev libboost-all-dev
 mkdir ~/ycm_build
 cd ~/ycm_build
@@ -86,7 +89,7 @@ make
 ```
 
 Neovim
-```sh
+```bash
 ln -s ~/.vim ~/.config/nvim
 ln -s ~/.config/nvim/vimrc ~/.config/nvim/init.vim
 ```
@@ -94,7 +97,7 @@ ln -s ~/.config/nvim/vimrc ~/.config/nvim/init.vim
 Install [ack](http://beyondgrep.com/install/)
 
 in Ubuntu:
-```sh
+```bash
 sudo apt-get install ack-grep
 ln -s ~/.config/dotfiles/ackrc ~/.ackrc
 ```
@@ -102,18 +105,18 @@ ln -s ~/.config/dotfiles/ackrc ~/.ackrc
 ### Tmux
 
 Install [Tmuxinator](https://github.com/tmuxinator/tmuxinator):
-```sh
+```bash
 sudo gem install tmuxinator
 ```
 
 ## Node
 [Change npm's default directory to another directory](https://docs.npmjs.com/getting-started/fixing-npm-permissions):
-```
+```bash
 mkdir -p ~/.npm-global/bin
 npm config set prefix '~/.npm-global'
 ```
 Defaults:
-```sh
+```bash
 npm set init-author-email mail@gmail.com
 npm set init-author-name "User Name"
 npm set init-author-url http://mysite.com/
@@ -122,13 +125,13 @@ npm set init-version 0.0.0
 ```
 
 ## Plymouth
-```
+```bash
 ls /lib/plymouth/themes/xubuntu-logo/wallpaper.png && ls /usr/share/xfce4/backdrops/cloudbreaker.jpg && sudo convert /usr/share/xfce4/backdrops/cloudbreaker.jpg /lib/plymouth/themes/xubuntu-logo/wallpaper.png
 ```
 
 ## Upgrade
 
-```sh
+```bash
 cd ~/.config/dotfiles
 git pull
 vim +NeoBundleUpdate +qall
