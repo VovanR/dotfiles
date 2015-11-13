@@ -72,27 +72,19 @@
 
   'console error':
     'prefix': 'ce'
-    'body': """
-      console.error(${0});
-      """
+    'body': 'console.error($1);'
 
   'console info':
     'prefix': 'ci'
-    'body': """
-      console.info(${0});
-      """
+    'body': 'console.info($1);'
 
   'console dir':
     'prefix': 'cd'
-    'body': """
-      console.dir(${0});
-      """
+    'body': 'console.dir($1);'
 
   'import':
     'prefix': 'imp'
-    'body': """
-      import ${1} from '${2}';
-      """
+    'body': 'import ${1} from \'${2}\';'
 
   'map collection in JSX':
     'prefix': 'mapx'
@@ -108,15 +100,11 @@
 
   'preventDefault':
     'prefix': 'prevent'
-    'body': """
-      e.preventDefault();
-      """
+    'body': 'e.preventDefault();'
 
   'stopPropagation':
     'prefix': 'stop'
-    'body': """
-      e.stopPropagation();
-      """
+    'body': 'e.stopPropagation();'
 
   'constructor':
     'prefix': 'constr'
@@ -132,17 +120,15 @@
     'body': """
       {${1} ? (
         ${0}
-      ) : false}
+      ) : null}
       """
 
   'JSX ife':
     'prefix': 'ifex'
     'body': """
-      {${1}
-      ? (
+      {${1} ? (
         ${2}
-      )
-      : (
+      ) : (
         ${0}
       )}
       """
