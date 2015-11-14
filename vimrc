@@ -42,10 +42,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'SirVer/ultisnips'
-" NeoBundle 'vim-scripts/phpfolding.vim'
 NeoBundle 'klen/python-mode'
 NeoBundle 'mattn/emmet-vim'
-" NeoBundle 'freitass/todo.txt-vim'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'tpope/vim-surround'
 
@@ -54,13 +52,9 @@ NeoBundle 'gcavallanti/vim-noscrollbar'
 " NeoBundle 'sjl/gundo.vim'
 NeoBundle 'jlanzarotta/bufexplorer'
 NeoBundle 'kien/ctrlp.vim'
-" NeoBundle 'vim-scripts/dbext.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'bling/vim-airline'
-" NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'tomasr/molokai'
-NeoBundle 'lloeki/vim-one-colorschemes'
 NeoBundle 'chriskempson/base16-vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'low-ghost/nerdtree-fugitive'
@@ -403,9 +397,6 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 "
 
 
-" Plugin 'vim-scripts/phpfolding.vim'
-"
-
 " Plugin 'klen/python-mode'
 let g:pymode_lint = 0
 let g:pymode_lint_on_write = 0
@@ -430,10 +421,6 @@ let g:pymode_rope_lookup_project = 0
 "
 
 " Plugin 'kien/ctrlp.vim'
-"
-
-" Plugin 'vim-scripts/dbext.vim'
-" let g:dbext_default_SQLITE_bin = 'sqlite3'
 "
 
 " Plugin 'scrooloose/nerdtree'
@@ -477,13 +464,7 @@ let g:airline#extensions#hunks#enabled = 0
 "
 
 
-" Plugin 'altercation/vim-colors-solarized'
-" let g:solarized_termcolors=256
-" set background=dark
-" colorscheme solarized
-"
-
-" Plugin 'tomasr/molokai'
+" Plugin 'chriskempson/base16-vim'
 set background=light
 let base16colorspace=256  " Access colors present in 256 colorspace
 colorscheme base16-default
