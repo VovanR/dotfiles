@@ -1,6 +1,6 @@
 # dotfiles
 
-> My configs: bash, Git, Vim, Tmux, Node, Plymouth. Xubuntu.
+> My configs: bash, Git, Vim, Atom, Tmux, Node, Plymouth. Xubuntu.
 
 ## Install
 
