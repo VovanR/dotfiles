@@ -465,7 +465,7 @@ let g:airline#extensions#hunks#enabled = 0
 
 
 " Plugin 'chriskempson/base16-vim'
-set background=light
+set background=dark
 let base16colorspace=256  " Access colors present in 256 colorspace
 colorscheme base16-default
 "
