@@ -174,6 +174,8 @@ set scrolloff=0
 " set scrolloff=999
 "
 " Use UTF-8 without BOM
+set fileencodings-=latin1
+set fileencodings+=cp1251
 set encoding=utf-8 nobomb
 
 " Status line
@@ -279,14 +281,6 @@ set ttyfast
 " Change mapleader
 let mapleader="\\"
 
-" Don’t add empty newlines at the end of files
-set binary
-set noeol
-
-
-" Respect modeline in files
-set modeline
-set modelines=4
 
 " Enable per-directory .vimrc files and disable unsafe commands in them
 set exrc
