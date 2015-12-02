@@ -1,0 +1,15 @@
+snippet inc
+	include ../$1/${1}
+snippet mix
+	mixin $1
+		.${1}
+			${0}
+snippet dummy
+	img(src="http://dummyimage.com/${1}x${2}/000/fff.png" alt="")
+snippet each
+	each item in ${1}
+		${0}
+snippet btn:b
+	button(type="button")
+snippet btn:s
+	button(type="submit")
