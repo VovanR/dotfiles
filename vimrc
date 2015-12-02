@@ -88,6 +88,7 @@ NeoBundle 'leafgarland/typescript-vim'
 " JavaScript
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'SevInf/vim-bemhtml'
+NeoBundle 'mxw/vim-jsx'
 NeoBundle 'othree/javascript-libraries-syntax.vim'
 NeoBundle 'alarie/requirejs.vim'
 NeoBundle 'kchmck/vim-coffee-script'
@@ -554,6 +555,11 @@ let g:neobundle#install_process_timeout = 1500
 
 " JavaScript
 " Plugin 'pangloss/vim-javascript'
+"
+
+" vim-jsx
+" Plugin 'mxw/vim-jsx'
+let g:jsx_ext_required = 0
 "
 
 " Plugin 'othree/javascript-libraries-syntax.vim'
