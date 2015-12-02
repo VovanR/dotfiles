@@ -4,6 +4,7 @@
 " https://github.com/mislav/vimfiles/blob/master/vimrc
 " https://github.com/gmarik/vimfiles
 " https://github.com/swaroopch/dotvim/blob/master/vimrc
+" https://github.com/madundead/stuff/blob/master/dotfiles/vim/vimrc.symlink
 
 "" Vim, not Vi.
 " This must be first, because it changes other options as a side effect.
@@ -62,6 +63,7 @@ NeoBundle 'Xuyuanp/nerdtree-git-plugin'
 NeoBundle 'mhinz/vim-signify'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'ervandew/supertab'
 NeoBundle 'Valloric/YouCompleteMe', {
      \ 'build'      : {
         \ 'mac'     : './install.sh',
@@ -210,6 +212,8 @@ set ignorecase
 set gdefault
 " Highlight searches
 set hlsearch
+" do not redraw while running macros
+set lazyredraw
 
 " Show autocomplete menus
 set wildmenu
@@ -223,11 +227,14 @@ set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 " Ignore bin files
 set wildignore+=*.pyc
 " Images
-set wildignore+=*.psd,*.svg
+set wildignore+=*.psd,*.svg,*.png,*.jpg,*.gif
 " Ignore less cache
 set wildignore+=*/LESS_CACHE/*,*/CACHE/*
+" Ignore Sass cache
+set wildignore+=*sass_cache*
 " Ignore env
 set wildignore+=*/env/*,*/node_modules/*,*/cache/*,*/built/*,*/bower_components/*,*/vendor/*,*/__pycache__/*
+set wildignore+=log/**,tmp/**
 
 " Show the current mode
 set showmode
@@ -388,8 +395,9 @@ let NERDRemoveExtraSpaces=1
 
 
 " Plugin 'SirVer/ultisnips'
-let g:UltiSnipsExpandTrigger="<c-k>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 "
 
 
@@ -525,6 +533,10 @@ let g:syntastic_typescript_checkers = []
 
 " Plugin 'Valloric/YouCompleteMe'
 let g:neobundle#install_process_timeout = 1500
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
 "
 
 " Plugin 'Yggdroot/indentLine'
