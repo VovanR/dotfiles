@@ -11,8 +11,8 @@
 	new = green bold
 [core]
 	editor = vim
-	autocrlf = input
-	safecrlf = true
+	autocrlf = false
+	safecrlf = false
 	excludesfile = ~/.gitignore_global
 [alias]
 	co = checkout
@@ -23,7 +23,7 @@
 	type = cat-file -t
 	dump = cat-file -p
 [push]
-	default = simple
+	default = current
 [credential]
 	helper = cache
 
