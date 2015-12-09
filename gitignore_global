@@ -72,6 +72,5 @@ framework
 tmp
 cache
 __pycache__
-data
 info.php
 .tern-project
