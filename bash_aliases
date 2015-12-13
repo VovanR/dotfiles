@@ -60,6 +60,9 @@ alias v-size="identify -format '%wx%h\nwidth: %wpx;\nheight: %hpx;\nwidth %wpx\n
 # Show my IP
 alias myip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | awk '{print \$2}'"
 
+# Show my distribution version
+alias mydist="lsb_release -rc"
+
 # Download file and save it with filename of remote file
 alias get="curl -O"
 
