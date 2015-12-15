@@ -74,6 +74,7 @@ NeoBundle 'Valloric/YouCompleteMe', {
      \ }
 " NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'mileszs/ack.vim'
+NeoBundle 'MattesGroeger/vim-bookmarks'
 
 " Formatting
 NeoBundle 'csscomb/vim-csscomb'
