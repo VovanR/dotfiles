@@ -255,3 +255,11 @@ snippet media-lg
 	}
 snippet inh
 	inherit
+snippet clearfix
+	/* Clear fix */
+	${1}:before, $1:after { content: " "; display: table; }
+	$1:after { clear: both; }
+	$1 { zoom: 1; } /* IE6/7 (trigger hasLayout) */
+snippet hidetext
+	/* Hide text */
+	${0} { font: 0/0 a; color: transparent; text-shadow: none; }
