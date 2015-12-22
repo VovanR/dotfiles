@@ -1,63 +1,93 @@
 # Source: https://github.com/honza/vim-snippets/blob/master/snippets/html.snippets
 
 snippet html5
-	<!DOCTYPE html>
-	<html>
-		<head>
-			<meta charset="utf-8">
-			<meta name="viewport" content="width=device-width">
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
 			<title>${1:`substitute(vim_snippets#Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
-			${2:link}
-		</head>
-		<body>
-			${0:body}
-		</body>
-	</html>
-# comment
+		${2:link}
+	</head>
+	<body>
+		${0:body}
+	</body>
+</html>
+endsnippet
+
 snippet //
-	<!-- ${1} -->${0}
+<!-- ${1} -->${0}
+endsnippet
+
 snippet .
-	class="${1}"
+class="${1}"
+endsnippet
+
 snippet #
-	id="${1}"
+id="${1}"
+endsnippet
+
 snippet data
-	data-${1}="${2:$1}"
+data-${1}="${2:$1}"
+endsnippet
+
 snippet href
-	href="${1:#}"
+href="${1:#}"
 # Django
+endsnippet
+
 snippet trans
-	{% trans '${0}' %}
+{% trans '${0}' %}
+endsnippet
+
 snippet blocktrans
-	{% blocktrans %}
-		${0}
-	{% endblocktrans %}
+{% blocktrans %}
+	${0}
+{% endblocktrans %}
+endsnippet
+
 snippet %
-	{% ${1} %}
+{% ${1} %}
+endsnippet
+
 snippet block
-	{% block ${1} %}
-		${0}
-	{% endblock ${1} %}
+{% block ${1} %}
+	${0}
+{% endblock ${1} %}
+endsnippet
+
 snippet #
-	{# ${0:comment} #}
+{# ${0:comment} #}
+endsnippet
+
 snippet comment
-	{% comment %}
-		${0}
-	{% endcomment %}
+{% comment %}
+	${0}
+{% endcomment %}
+endsnippet
+
 snippet spaceless
-	{% spaceless %}
-		${0}
-	{% endspaceless %}
+{% spaceless %}
+	${0}
+{% endspaceless %}
+endsnippet
+
 snippet di
-	<!-- begin $1 -->
-	<div class="$1">
-		$0
-	</div>
-	<!-- end $1 -->
+<!-- begin $1 -->
+<div class="$1">
+	$0
+</div>
+<!-- end $1 -->
+endsnippet
+
 snippet bl
-	<!-- begin $1 -->
-	<!-- end $1 -->
+<!-- begin $1 -->
+<!-- end $1 -->
+endsnippet
+
 snippet fig
-	<figure>
-		<figcaption>${1}</figcaption>
-		<img src="${2}" alt="">
-	</figure>
+<figure>
+	<figcaption>${1}</figcaption>
+	<img src="${2}" alt="">
+</figure>
+endsnippet

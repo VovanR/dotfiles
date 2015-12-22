@@ -1,16 +1,27 @@
 snippet inc
-	include ../$1/${1}
-	+$1(${2})${0}
+include ../$1/${1}
++$1(${2})${0}
+endsnippet
+
 snippet mix
-	mixin $1
-		.${1}
-			| $1
+mixin $1
+	.${1}
+		| $1
+endsnippet
+
 snippet dummy
-	img(src="http://dummyimage.com/${1}x${2}/000/fff.png" alt="")
+img(src="http://dummyimage.com/${1}x${2}/000/fff.png" alt="")
+endsnippet
+
 snippet each
-	each item in ${1}
-		${0}
+each item in ${1}
+	${0}
+endsnippet
+
 snippet btn:b
-	button(type="button")
+button(type="button")
+endsnippet
+
 snippet btn:s
-	button(type="submit")
+button(type="submit")
+endsnippet

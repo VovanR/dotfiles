@@ -1,17 +1,22 @@
 snippet describe
-	describe('${1}', function () {
-		${0}
-	});
+describe('${1}', function () {
+	${0}
+});
+endsnippet
+
 snippet it
-	it('should ${1}', function () {
-		var m = module();
-		${0}
-	});
+it('should ${1}', function () {
+	var m = module();
+	${0}
+});
+endsnippet
+
 snippet itasync
-	it('should ${1}', function (done) {
-		var m = module();
-		${0}
-		setTimeout(function () {
-			done();
-		});
+it('should ${1}', function (done) {
+	var m = module();
+	${0}
+	setTimeout(function () {
+		done();
 	});
+});
+endsnippet

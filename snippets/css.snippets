@@ -2,264 +2,515 @@
 # Source: https://github.com/shuvalov-anton/vim-snippets/blob/master/snippets/css.snippets
 
 snippet !
-	 !important
+ !important
+endsnippet
+
 snippet @i
-	@import url(${0});
+@import url(${0});
+endsnippet
+
 snippet bg
-	background: ${0};
+background: ${0};
+endsnippet
+
 snippet bg+
-	background: #${1:FFF} url(${2}) ${3:0} ${4:0} ${0:no-repeat};
+background: #${1:FFF} url(${2}) ${3:0} ${4:0} ${0:no-repeat};
+endsnippet
+
 snippet bg:n
-	background: none;
+background: none;
+endsnippet
+
 snippet bgc
-	background-color: #${0:FFF};
+background-color: #${0:FFF};
+endsnippet
+
 snippet bgc:t
-	background-color: transparent;
+background-color: transparent;
+endsnippet
+
 snippet bgi
-	background-image: url(${0});
+background-image: url(${0});
+endsnippet
+
 snippet bgi:n
-	background-image: none;
+background-image: none;
+endsnippet
+
 snippet bd
-	border: ${0};
+border: ${0};
+endsnippet
+
 snippet bd:n
-	border: none;
+border: none;
+endsnippet
+
 snippet bdr
-	border-radius: ${0:5px};
+border-radius: ${0:5px};
+endsnippet
+
 snippet b
-	bottom: ${0};
+bottom: ${0};
+endsnippet
+
 snippet bxsh
-	box-shadow: ${0};
+box-shadow: ${0};
+endsnippet
+
 snippet bxsh:n
-	box-shadow: none;
+box-shadow: none;
+endsnippet
+
 snippet bxz
-	box-sizing: ${0};
+box-sizing: ${0};
+endsnippet
+
 snippet bxz:bb
-	box-sizing: border-box;
+box-sizing: border-box;
+endsnippet
+
 snippet bxz:cb
-	box-sizing: content-box;
+box-sizing: content-box;
+endsnippet
+
 snippet cl
-	clear: ${0};
+clear: ${0};
+endsnippet
+
 snippet cl:b
-	clear: both;
+clear: both;
+endsnippet
+
 snippet cl:n
-	clear: none;
+clear: none;
+endsnippet
+
 snippet c
-	color: #${0:000};
+color: #${0:000};
+endsnippet
+
 snippet cur
-	cursor: ${0};
+cursor: ${0};
+endsnippet
+
 snippet cur:p
-	cursor: pointer;
+cursor: pointer;
+endsnippet
+
 snippet d
-	display: ${0};
+display: ${0};
+endsnippet
+
 snippet d:b
-	display: block;
+display: block;
+endsnippet
+
 snippet d:ib
-	display: inline-block;
+display: inline-block;
+endsnippet
+
 snippet d:i
-	display: inline;
+display: inline;
+endsnippet
+
 snippet d:n
-	display: none;
+display: none;
+endsnippet
+
 snippet fl
-	float: ${0};
+float: ${0};
+endsnippet
+
 snippet fl:l
-	float: left;
+float: left;
+endsnippet
+
 snippet fl:n
-	float: none;
+float: none;
+endsnippet
+
 snippet fl:r
-	float: right;
+float: right;
+endsnippet
+
 snippet ff
-	font-family: ${0};
+font-family: ${0};
+endsnippet
+
 snippet ff:c
-	font-family: ${0:'Monotype Corsiva','Comic Sans MS'},cursive;
+font-family: ${0:'Monotype Corsiva','Comic Sans MS'},cursive;
+endsnippet
+
 snippet ff:f
-	font-family: ${0:Capitals,Impact},fantasy;
+font-family: ${0:Capitals,Impact},fantasy;
+endsnippet
+
 snippet ff:m
-	font-family: ${0:Monaco,'Courier New'},monospace;
+font-family: ${0:Monaco,'Courier New'},monospace;
+endsnippet
+
 snippet ff:ss
-	font-family: ${0:Helvetica,Arial},sans-serif;
+font-family: ${0:Helvetica,Arial},sans-serif;
+endsnippet
+
 snippet ff:s
-	font-family: ${0:Georgia,'Times New Roman'},serif;
+font-family: ${0:Georgia,'Times New Roman'},serif;
+endsnippet
+
 snippet fz
-	font-size: ${0};
+font-size: ${0};
+endsnippet
+
 snippet fs
-	font-style: ${0};
+font-style: ${0};
+endsnippet
+
 snippet fs:i
-	font-style: italic;
+font-style: italic;
+endsnippet
+
 snippet fs:n
-	font-style: normal;
+font-style: normal;
+endsnippet
+
 snippet fw
-	font-weight: ${0};
+font-weight: ${0};
+endsnippet
+
 snippet fw:b
-	font-weight: bold;
+font-weight: bold;
+endsnippet
+
 snippet fw:n
-	font-weight: normal;
+font-weight: normal;
+endsnippet
+
 snippet f
-	font: ${0};
+font: ${0};
+endsnippet
+
 snippet h
-	height: ${0};
+height: ${0};
+endsnippet
+
 snippet l
-	left: ${0};
+left: ${0};
+endsnippet
+
 snippet lh
-	line-height: ${0};
+line-height: ${0};
+endsnippet
+
 snippet list:n
-	list-style-type: none;
+list-style-type: none;
+endsnippet
+
 snippet mb
-	margin-bottom: ${0};
+margin-bottom: ${0};
+endsnippet
+
 snippet ml
-	margin-left: ${0};
+margin-left: ${0};
+endsnippet
+
 snippet mr
-	margin-right: ${0};
+margin-right: ${0};
+endsnippet
+
 snippet mt
-	margin-top: ${0};
+margin-top: ${0};
+endsnippet
+
 snippet m
-	margin: ${0};
+margin: ${0};
+endsnippet
+
 snippet m:0
-	margin: 0;
+margin: 0;
+endsnippet
+
 snippet m:0a
-	margin: 0 auto;
+margin: 0 auto;
+endsnippet
+
 snippet mah
-	max-height: ${0};
+max-height: ${0};
+endsnippet
+
 snippet maw
-	max-width: ${0};
+max-width: ${0};
+endsnippet
+
 snippet mih
-	min-height: ${0};
+min-height: ${0};
+endsnippet
+
 snippet miw
-	min-width: ${0};
+min-width: ${0};
+endsnippet
+
 snippet op
-	opacity: ${0};
+opacity: ${0};
+endsnippet
+
 snippet o
-	outline: ${0};
+outline: ${0};
+endsnippet
+
 snippet ov
-	overflow: ${0};
+overflow: ${0};
+endsnippet
+
 snippet ov:h
-	overflow: hidden;
+overflow: hidden;
+endsnippet
+
 snippet pb
-	padding-bottom: ${0};
+padding-bottom: ${0};
+endsnippet
+
 snippet pl
-	padding-left: ${0};
+padding-left: ${0};
+endsnippet
+
 snippet pr
-	padding-right: ${0};
+padding-right: ${0};
+endsnippet
+
 snippet pt
-	padding-top: ${0};
+padding-top: ${0};
+endsnippet
+
 snippet p
-	padding: ${0};
+padding: ${0};
+endsnippet
+
 snippet p:0
-	padding: 0;
+padding: 0;
+endsnippet
+
 snippet pos:a
-	position: absolute;
+position: absolute;
+endsnippet
+
 snippet pos:f
-	position: fixed;
+position: fixed;
+endsnippet
+
 snippet pos:r
-	position: relative;
+position: relative;
+endsnippet
+
 snippet pos:s
-	position: static;
+position: static;
+endsnippet
+
 snippet r
-	right: ${0};
+right: ${0};
+endsnippet
+
 snippet ta
-	text-align: ${0};
+text-align: ${0};
+endsnippet
+
 snippet ta:c
-	text-align: center;
+text-align: center;
+endsnippet
+
 snippet ta:l
-	text-align: left;
+text-align: left;
+endsnippet
+
 snippet ta:r
-	text-align: right;
+text-align: right;
+endsnippet
+
 snippet td
-	text-decoration: ${0};
+text-decoration: ${0};
+endsnippet
+
 snippet td:l
-	text-decoration: line-through;
+text-decoration: line-through;
+endsnippet
+
 snippet td:n
-	text-decoration: none;
+text-decoration: none;
+endsnippet
+
 snippet td:o
-	text-decoration: overline;
+text-decoration: overline;
+endsnippet
+
 snippet td:u
-	text-decoration: underline;
+text-decoration: underline;
+endsnippet
+
 snippet tsh
-	text-shadow: ${0};
+text-shadow: ${0};
+endsnippet
+
 snippet tt
-	text-transform: ${0};
+text-transform: ${0};
+endsnippet
+
 snippet tt:l
-	text-transform: lowercase;
+text-transform: lowercase;
+endsnippet
+
 snippet tt:n
-	text-transform: none;
+text-transform: none;
+endsnippet
+
 snippet tt:u
-	text-transform: uppercase;
+text-transform: uppercase;
+endsnippet
+
 snippet t
-	top: ${0};
+top: ${0};
+endsnippet
+
 snippet va
-	vertical-align: ${0};
+vertical-align: ${0};
+endsnippet
+
 snippet va:bl
-	vertical-align: baseline;
+vertical-align: baseline;
+endsnippet
+
 snippet va:b
-	vertical-align: bottom;
+vertical-align: bottom;
+endsnippet
+
 snippet va:m
-	vertical-align: middle;
+vertical-align: middle;
+endsnippet
+
 snippet va:sub
-	vertical-align: sub;
+vertical-align: sub;
+endsnippet
+
 snippet va:sup
-	vertical-align: super;
+vertical-align: super;
+endsnippet
+
 snippet va:tb
-	vertical-align: text-bottom;
+vertical-align: text-bottom;
+endsnippet
+
 snippet va:tt
-	vertical-align: text-top;
+vertical-align: text-top;
+endsnippet
+
 snippet va:t
-	vertical-align: top;
+vertical-align: top;
+endsnippet
+
 snippet v
-	visibility: ${0};
+visibility: ${0};
+endsnippet
+
 snippet v:h
-	visibility: hidden;
+visibility: hidden;
+endsnippet
+
 snippet v:v
-	visibility: visible;
+visibility: visible;
+endsnippet
+
 snippet whs
-	white-space: ${0};
+white-space: ${0};
+endsnippet
+
 snippet whs:n
-	white-space: normal;
+white-space: normal;
+endsnippet
+
 snippet whs:nw
-	white-space: nowrap;
+white-space: nowrap;
+endsnippet
+
 snippet w
-	width: ${0};
+width: ${0};
+endsnippet
+
 snippet z
-	z-index: ${0};
+z-index: ${0};
+endsnippet
+
 snippet :h
-	:hover
+:hover
+endsnippet
+
 snippet :fc
-	:first-child
+:first-child
+endsnippet
+
 snippet :lc
-	:last-child
+:last-child
+endsnippet
+
 snippet :nc
-	:nth-child(${0})
+:nth-child(${0})
+endsnippet
+
 snippet :nlc
-	:nth-last-child(${0})
+:nth-last-child(${0})
+endsnippet
+
 snippet :oc
-	:only-child
+:only-child
+endsnippet
+
 snippet :a
-	:after
+:after
+endsnippet
+
 snippet :b
-	:before
+:before
+endsnippet
+
 snippet ::a
-	::after
+::after
+endsnippet
+
 snippet ::b
-	::before
+::before
+endsnippet
+
 snippet to
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
-	width: 100%;
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+width: 100%;
+endsnippet
+
 snippet media-sm
-	@media (min-width: 768px) {
-	}
+@media (min-width: 768px) {
+}
+endsnippet
+
 snippet media-md
-	@media (min-width: 992px) {
-	}
+@media (min-width: 992px) {
+}
+endsnippet
+
 snippet media-lg
-	@media (min-width: 1200px) {
-	}
+@media (min-width: 1200px) {
+}
+endsnippet
+
 snippet inh
-	inherit
+inherit
+endsnippet
+
 snippet clearfix
-	/* Clear fix */
-	${1}:before, $1:after { content: " "; display: table; }
-	$1:after { clear: both; }
-	$1 { zoom: 1; } /* IE6/7 (trigger hasLayout) */
+/* Clear fix */
+${1}:before, $1:after { content: " "; display: table; }
+$1:after { clear: both; }
+$1 { zoom: 1; } /* IE6/7 (trigger hasLayout) */
+endsnippet
+
 snippet hidetext
-	/* Hide text */
-	${0} { font: 0/0 a; color: transparent; text-shadow: none; }
+/* Hide text */
+${0} { font: 0/0 a; color: transparent; text-shadow: none; }
+endsnippet

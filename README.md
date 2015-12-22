@@ -66,7 +66,7 @@ mkdir -p ~/.vim/{backups,bundle,swaps,undo}
 
 ```bash
 ln -s ~/.config/dotfiles/vimrc ~/.vim/vimrc
-ln -s ~/.config/dotfiles/snippets ~/.vim/
+ln -s ~/.config/dotfiles/snippets ~/.vim/UltiSnips
 ```
 
 Install [NeoBundle](https://github.com/Shougo/neobundle.vim):

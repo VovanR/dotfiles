@@ -1,133 +1,196 @@
 # Source: https://github.com/shuvalov-anton/vim-snippets/blob/master/snippets/javascript.snippets
 snippet timeoutc
-	setTimeout(function (that) {
-		${0}
-	}, ${1}, this);
+setTimeout(function (that) {
+	${0}
+}, ${1}, this);
+endsnippet
+
 snippet timeout
-	setTimeout(function () {
-		${0}
-	}, ${1});
+setTimeout(function () {
+	${0}
+}, ${1});
+endsnippet
+
 snippet intervalc
-	setInterval(function (that) {
-		${0}
-	}, ${1}, this);
+setInterval(function (that) {
+	${0}
+}, ${1}, this);
+endsnippet
+
 snippet interval
-	setInterval(function () {
-		${0}
-	}, ${1});
+setInterval(function () {
+	${0}
+}, ${1});
+endsnippet
+
 snippet cl
-	console.log(${0});
+console.log(${0});
+endsnippet
+
 snippet cw
-	console.warn(${0});
+console.warn(${0});
+endsnippet
+
 snippet ce
-	console.error(${0});
+console.error(${0});
+endsnippet
+
 snippet ci
-	console.info(${0});
+console.info(${0});
+endsnippet
+
 snippet cd
-	console.dir(${0});
+console.dir(${0});
+endsnippet
+
 snippet method
-	${1}: function () {
-		${0}
-	},
+${1}: function () {
+	${0}
+},
+endsnippet
+
 snippet req
-	require('${1}');
+require('${1}');
+endsnippet
+
 snippet proto
-	${1:class_name}.prototype.${2:method_name} = function(${3}) {
-		${0}
-	};
+${1:class_name}.prototype.${2:method_name} = function(${3}) {
+	${0}
+};
+endsnippet
+
 snippet f
-	function(${1}) {
-		${0}
-	}
+function(${1}) {
+	${0}
+}
+endsnippet
+
 snippet :f
-	${1}: function (${2}) {
-		${0}
-	}${3:,}
+${1}: function (${2}) {
+	${0}
+}${3:,}
+endsnippet
+
 snippet fn
-	function ${1} (${2}) {
-		${0}
-	};
+function ${1} (${2}) {
+	${0}
+};
+endsnippet
+
 snippet g
-	function * (${1}) {
-		${0}
-	}
+function * (${1}) {
+	${0}
+}
+endsnippet
+
 snippet :g
-	${1}: function * (${2}) {
-		${0}
-	}${3:,}
+${1}: function * (${2}) {
+	${0}
+}${3:,}
+endsnippet
+
 snippet gn
-	function *${1} (${2}) {
-		${0}
-	}
+function *${1} (${2}) {
+	${0}
+}
+endsnippet
+
 snippet if
-	if (${1:true}) {
-		${0};
-	}
+if (${1:true}) {
+	${0};
+}
+endsnippet
+
 snippet ife
-	if (${1:true}) {
-		${2};
-	} else {
-		${0};
-	}
+if (${1:true}) {
+	${2};
+} else {
+	${0};
+}
+endsnippet
+
 snippet ?
-	${1} ? ${2} : ${0};
+${1} ? ${2} : ${0};
+endsnippet
+
 snippet /**
-	/**
-	* ${0:why?}
-	*/
+/**
+* ${0:why?}
+*/
+endsnippet
+
 snippet /**p
-	/**
-	* ${0:why?}
-	*
-	* @private
-	*/
+/**
+* ${0:why?}
+*
+* @private
+*/
+endsnippet
+
 snippet aclick
-	${1}.on('click', function (e) {
-		${0}
+${1}.on('click', function (e) {
+	${0}
 
-		e.preventDefault();
-	});
-snippet prevent
 	e.preventDefault();
+});
+endsnippet
+
+snippet prevent
+e.preventDefault();
+endsnippet
+
 snippet stop
-	e.stopPropagation();
+e.stopPropagation();
+endsnippet
+
 snippet constructor
-	constructor($1) {
-		super(${1:props});
-		${0}
-	}
+constructor($1) {
+	super(${1:props});
+	${0}
+}
+endsnippet
+
 snippet ifx
-	{${1} ? (
-		${0}
-	) : false}
+{${1} ? (
+	${0}
+) : false}
+endsnippet
+
 snippet ifex
-	{${1}
-	? (
-		${2}
-	)
-	: (
-		${0}
-	)}
+{${1}
+? (
+	${2}
+)
+: (
+	${0}
+)}
+endsnippet
+
 snippet imp
-	import ${1} from '${2}';
+import ${1} from '${2}';
+endsnippet
+
 snippet mapx
-	{this.props.collection.map(model => {
-		return (
-			<${1:div}
-				key={model.id}
-			/>
-		);
-	})}
-snippet stateless
-	import React from 'lib/react';
-
-	let $1 = (props) => (
-		<div>
-			${1:ClassName}
-		</div>
+{this.props.collection.map(model => {
+	return (
+		<${1:div}
+			key={model.id}
+		/>
 	);
+})}
+endsnippet
 
-	// $1.propTypes = {};
-	// $1.defaultProps = {};
+snippet stateless
+import React from 'lib/react';
 
-	export default $1;
+let $1 = (props) => (
+	<div>
+		${1:ClassName}
+	</div>
+);
+
+// $1.propTypes = {};
+// $1.defaultProps = {};
+
+export default $1;
+endsnippet

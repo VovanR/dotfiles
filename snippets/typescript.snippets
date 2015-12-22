@@ -1,69 +1,95 @@
 snippet component
-	import React from 'lib/react';
+import React from 'lib/react';
 
-	interface $1Props extends React.Props<any> {
-	}
-	export default class $1 extends React.Component<$1Props, any> {
-		render() {
-			return (
-				<div>
-					${1:ClassName}
-				</div>
-			);
-		}
-	}
-snippet cl
-	console.log(${0});
-snippet cw
-	console.warn(${0});
-snippet ce
-	console.error(${0});
-snippet ci
-	console.info(${0});
-snippet cd
-	console.dir(${0});
-snippet imp
-	import ${1} from '${2}';
-snippet mapx
-	{this.props.collection.map(model => {
+interface $1Props extends React.Props<any> {
+}
+export default class $1 extends React.Component<$1Props, any> {
+	render() {
 		return (
-			<${1:div}
-				key={model.id}
-			/>
+			<div>
+				${1:ClassName}
+			</div>
 		);
-	})}
-snippet prevent
-	e.preventDefault();
-snippet stop
-	e.stopPropagation();
-snippet constructor
-	constructor($1) {
-		super(${1:props});
-		${0}
 	}
-snippet ifx
-	{${1} ? (
-		${0}
-	) : false}
-snippet ifex
-	{${1}
-	? (
-		${2}
-	)
-	: (
-		${0}
-	)}
-snippet stateless
-	import React from 'lib/react';
+}
+endsnippet
 
-	let $1 = (props) => (
-		<div>
-			${1:ClassName}
-		</div>
+snippet cl
+console.log(${0});
+endsnippet
+
+snippet cw
+console.warn(${0});
+endsnippet
+
+snippet ce
+console.error(${0});
+endsnippet
+
+snippet ci
+console.info(${0});
+endsnippet
+
+snippet cd
+console.dir(${0});
+endsnippet
+
+snippet imp
+import ${1} from '${2}';
+endsnippet
+
+snippet mapx
+{this.props.collection.map(model => {
+	return (
+		<${1:div}
+			key={model.id}
+		/>
 	);
+})}
+endsnippet
 
-	// $1.propTypes = {};
-	// $1.defaultProps = {};
+snippet prevent
+e.preventDefault();
+endsnippet
 
-	export default $1;
+snippet stop
+e.stopPropagation();
+endsnippet
 
+snippet constructor
+constructor($1) {
+	super(${1:props});
+	${0}
+}
+endsnippet
+
+snippet ifx
+{${1} ? (
+	${0}
+) : false}
+endsnippet
+
+snippet ifex
+{${1}
+? (
+	${2}
+)
+: (
+	${0}
+)}
+endsnippet
+
+snippet stateless
+import React from 'lib/react';
+
+let $1 = (props) => (
+	<div>
+		${1:ClassName}
+	</div>
+);
+
+// $1.propTypes = {};
+// $1.defaultProps = {};
+
+export default $1;
+endsnippet
