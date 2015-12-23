@@ -39,6 +39,16 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 "" Plugins begin
 
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
+
 " Editing
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'scrooloose/nerdcommenter'
