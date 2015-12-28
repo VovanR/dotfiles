@@ -25,6 +25,9 @@ xterm*scrollKey: true
 ! stop output to terminal from jumping down to bottom of scroll again
 xterm*scrollTtyOutput: false
 
+! fix `A-.` and `A-0`
+! See: https://bugs.launchpad.net/ubuntu/+source/xterm/+bug/1049569
+xterm*metaSendsEscape: true
 
 
 ! xscreensaver ---------------------------------------------------------------
