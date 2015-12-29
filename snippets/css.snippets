@@ -17,7 +17,7 @@ snippet bg+
 background: #${1:FFF} url(${2}) ${3:0} ${4:0} ${0:no-repeat};
 endsnippet
 
-snippet bg:n
+snippet bgn
 background: none;
 endsnippet
 
@@ -25,7 +25,7 @@ snippet bgc
 background-color: #${0:FFF};
 endsnippet
 
-snippet bgc:t
+snippet bgct
 background-color: transparent;
 endsnippet
 
@@ -33,7 +33,7 @@ snippet bgi
 background-image: url(${0});
 endsnippet
 
-snippet bgi:n
+snippet bgin
 background-image: none;
 endsnippet
 
@@ -41,11 +41,27 @@ snippet bd
 border: ${0};
 endsnippet
 
-snippet bd:n
-border: none;
+snippet bdt
+border-top: ${0};
 endsnippet
 
 snippet bdr
+border-rigth: ${0};
+endsnippet
+
+snippet bdb
+border-bottom: ${0};
+endsnippet
+
+snippet bdl
+border-left: ${0};
+endsnippet
+
+snippet bdn
+border: none;
+endsnippet
+
+snippet bdra
 border-radius: ${0:5px};
 endsnippet
 
@@ -57,7 +73,7 @@ snippet bxsh
 box-shadow: ${0};
 endsnippet
 
-snippet bxsh:n
+snippet bxshn
 box-shadow: none;
 endsnippet
 
@@ -65,11 +81,11 @@ snippet bxz
 box-sizing: ${0};
 endsnippet
 
-snippet bxz:bb
+snippet bxzbb
 box-sizing: border-box;
 endsnippet
 
-snippet bxz:cb
+snippet bxzcb
 box-sizing: content-box;
 endsnippet
 
@@ -77,11 +93,11 @@ snippet cl
 clear: ${0};
 endsnippet
 
-snippet cl:b
+snippet clb
 clear: both;
 endsnippet
 
-snippet cl:n
+snippet cln
 clear: none;
 endsnippet
 
@@ -93,7 +109,7 @@ snippet cur
 cursor: ${0};
 endsnippet
 
-snippet cur:p
+snippet curp
 cursor: pointer;
 endsnippet
 
@@ -101,19 +117,19 @@ snippet d
 display: ${0};
 endsnippet
 
-snippet d:b
+snippet db
 display: block;
 endsnippet
 
-snippet d:ib
+snippet dib
 display: inline-block;
 endsnippet
 
-snippet d:i
+snippet di
 display: inline;
 endsnippet
 
-snippet d:n
+snippet dn
 display: none;
 endsnippet
 
@@ -121,15 +137,15 @@ snippet fl
 float: ${0};
 endsnippet
 
-snippet fl:l
+snippet fll
 float: left;
 endsnippet
 
-snippet fl:n
+snippet fln
 float: none;
 endsnippet
 
-snippet fl:r
+snippet flr
 float: right;
 endsnippet
 
@@ -137,23 +153,23 @@ snippet ff
 font-family: ${0};
 endsnippet
 
-snippet ff:c
+snippet ffc
 font-family: ${0:'Monotype Corsiva','Comic Sans MS'},cursive;
 endsnippet
 
-snippet ff:f
+snippet fff
 font-family: ${0:Capitals,Impact},fantasy;
 endsnippet
 
-snippet ff:m
+snippet ffm
 font-family: ${0:Monaco,'Courier New'},monospace;
 endsnippet
 
-snippet ff:ss
+snippet ffss
 font-family: ${0:Helvetica,Arial},sans-serif;
 endsnippet
 
-snippet ff:s
+snippet ffs
 font-family: ${0:Georgia,'Times New Roman'},serif;
 endsnippet
 
@@ -165,11 +181,11 @@ snippet fs
 font-style: ${0};
 endsnippet
 
-snippet fs:i
+snippet fsi
 font-style: italic;
 endsnippet
 
-snippet fs:n
+snippet fsn
 font-style: normal;
 endsnippet
 
@@ -177,11 +193,11 @@ snippet fw
 font-weight: ${0};
 endsnippet
 
-snippet fw:b
+snippet fwb
 font-weight: bold;
 endsnippet
 
-snippet fw:n
+snippet fwn
 font-weight: normal;
 endsnippet
 
@@ -201,7 +217,7 @@ snippet lh
 line-height: ${0};
 endsnippet
 
-snippet list:n
+snippet listn
 list-style-type: none;
 endsnippet
 
@@ -225,11 +241,11 @@ snippet m
 margin: ${0};
 endsnippet
 
-snippet m:0
+snippet m0
 margin: 0;
 endsnippet
 
-snippet m:0a
+snippet m0a
 margin: 0 auto;
 endsnippet
 
@@ -261,7 +277,7 @@ snippet ov
 overflow: ${0};
 endsnippet
 
-snippet ov:h
+snippet ovh
 overflow: hidden;
 endsnippet
 
@@ -285,23 +301,23 @@ snippet p
 padding: ${0};
 endsnippet
 
-snippet p:0
+snippet p0
 padding: 0;
 endsnippet
 
-snippet pos:a
+snippet posa
 position: absolute;
 endsnippet
 
-snippet pos:f
+snippet posf
 position: fixed;
 endsnippet
 
-snippet pos:r
+snippet posr
 position: relative;
 endsnippet
 
-snippet pos:s
+snippet poss
 position: static;
 endsnippet
 
@@ -313,15 +329,15 @@ snippet ta
 text-align: ${0};
 endsnippet
 
-snippet ta:c
+snippet tac
 text-align: center;
 endsnippet
 
-snippet ta:l
+snippet tal
 text-align: left;
 endsnippet
 
-snippet ta:r
+snippet tar
 text-align: right;
 endsnippet
 
@@ -329,19 +345,19 @@ snippet td
 text-decoration: ${0};
 endsnippet
 
-snippet td:l
+snippet tdl
 text-decoration: line-through;
 endsnippet
 
-snippet td:n
+snippet tdn
 text-decoration: none;
 endsnippet
 
-snippet td:o
+snippet tdo
 text-decoration: overline;
 endsnippet
 
-snippet td:u
+snippet tdu
 text-decoration: underline;
 endsnippet
 
@@ -353,15 +369,15 @@ snippet tt
 text-transform: ${0};
 endsnippet
 
-snippet tt:l
+snippet ttl
 text-transform: lowercase;
 endsnippet
 
-snippet tt:n
+snippet ttn
 text-transform: none;
 endsnippet
 
-snippet tt:u
+snippet ttu
 text-transform: uppercase;
 endsnippet
 
@@ -373,35 +389,35 @@ snippet va
 vertical-align: ${0};
 endsnippet
 
-snippet va:bl
+snippet vabl
 vertical-align: baseline;
 endsnippet
 
-snippet va:b
+snippet vab
 vertical-align: bottom;
 endsnippet
 
-snippet va:m
+snippet vam
 vertical-align: middle;
 endsnippet
 
-snippet va:sub
+snippet vasub
 vertical-align: sub;
 endsnippet
 
-snippet va:sup
+snippet vasup
 vertical-align: super;
 endsnippet
 
-snippet va:tb
+snippet vatb
 vertical-align: text-bottom;
 endsnippet
 
-snippet va:tt
+snippet vatt
 vertical-align: text-top;
 endsnippet
 
-snippet va:t
+snippet vat
 vertical-align: top;
 endsnippet
 
@@ -409,11 +425,11 @@ snippet v
 visibility: ${0};
 endsnippet
 
-snippet v:h
+snippet vh
 visibility: hidden;
 endsnippet
 
-snippet v:v
+snippet vv
 visibility: visible;
 endsnippet
 
@@ -421,11 +437,11 @@ snippet whs
 white-space: ${0};
 endsnippet
 
-snippet whs:n
+snippet whsn
 white-space: normal;
 endsnippet
 
-snippet whs:nw
+snippet whsnw
 white-space: nowrap;
 endsnippet
 
