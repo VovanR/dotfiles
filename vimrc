@@ -64,7 +64,7 @@ NeoBundle 'gcavallanti/vim-noscrollbar'
 NeoBundle 'jlanzarotta/bufexplorer'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'jistr/vim-nerdtree-tabs'
+" NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'chriskempson/base16-vim'
 NeoBundle 'tpope/vim-fugitive'
@@ -84,10 +84,10 @@ NeoBundle 'Valloric/YouCompleteMe', {
      \ }
 " NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'mileszs/ack.vim'
-NeoBundle 'MattesGroeger/vim-bookmarks'
+" NeoBundle 'MattesGroeger/vim-bookmarks'
 
 " Formatting
-NeoBundle 'csscomb/vim-csscomb'
+" NeoBundle 'csscomb/vim-csscomb'
 " NeoBundle 'maksimr/vim-jsbeautify'
 
 " Syntax
