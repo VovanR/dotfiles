@@ -74,3 +74,5 @@ cache
 __pycache__
 info.php
 .tern-project
+node_modules
+bower_components
