@@ -117,6 +117,7 @@ NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'AndrewRadev/vim-eco'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'gregsexton/MatchTag'
+NeoBundle 'Glench/Vim-Jinja2-Syntax'
 
 " PHP
 NeoBundle 'shawncplus/phpcomplete.vim'
