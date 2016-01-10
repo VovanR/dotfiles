@@ -565,33 +565,17 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " Syntax
 
-" CSS
-" Plugin 'hail2u/vim-css3-syntax'
+" Plugin 'sheerun/vim-polyglot'
+" let g:polyglot_disabled = ['jinja']
 "
-
-" Plugin 'groenewege/vim-less'
-"
-
-" Plugin 'wavded/vim-stylus'
-"
-
 
 " JavaScript
-" Plugin 'pangloss/vim-javascript'
-"
-
 " vim-jsx
 " Plugin 'mxw/vim-jsx'
-let g:jsx_ext_required = 0
+let g:jsx_ext_required = 1
 "
 
 " Plugin 'othree/javascript-libraries-syntax.vim'
-"
-
-" Plugin 'alarie/requirejs.vim'
-"
-
-" Plugin 'kchmck/vim-coffee-script'
 "
 
 " Plugin 'marijnh/tern_for_vim'
