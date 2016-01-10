@@ -91,36 +91,34 @@ NeoBundle 'mileszs/ack.vim'
 " NeoBundle 'maksimr/vim-jsbeautify'
 
 " Syntax
+NeoBundle 'sheerun/vim-polyglot'
+
 " CSS
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'tpope/vim-haml'
-NeoBundle 'groenewege/vim-less'
-NeoBundle 'wavded/vim-stylus'
-NeoBundle 'leafgarland/typescript-vim'
+" NeoBundle 'hail2u/vim-css3-syntax'
+" NeoBundle 'tpope/vim-haml'
+" NeoBundle 'groenewege/vim-less'
+" NeoBundle 'wavded/vim-stylus'
+" NeoBundle 'leafgarland/typescript-vim'
 
 " JavaScript
-NeoBundle 'pangloss/vim-javascript'
+" NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'SevInf/vim-bemhtml'
-NeoBundle 'mxw/vim-jsx'
+" NeoBundle 'mxw/vim-jsx'
 NeoBundle 'othree/javascript-libraries-syntax.vim'
-NeoBundle 'alarie/requirejs.vim'
-NeoBundle 'kchmck/vim-coffee-script'
+" NeoBundle 'kchmck/vim-coffee-script'
 " NeoBundle 'marijnh/tern_for_vim'
 NeoBundle 'heavenshell/vim-jsdoc'
 NeoBundle 'jason0x43/vim-js-indent'
 
 " HTML
-NeoBundle 'othree/html5.vim'
-NeoBundle 'digitaltoad/vim-jade'
+" NeoBundle 'othree/html5.vim'
+" NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'godlygeek/tabular'
-NeoBundle 'plasticboy/vim-markdown'
-NeoBundle 'AndrewRadev/vim-eco'
-NeoBundle 'mustache/vim-mustache-handlebars'
+" NeoBundle 'plasticboy/vim-markdown'
+" NeoBundle 'AndrewRadev/vim-eco'
+" NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'gregsexton/MatchTag'
-NeoBundle 'Glench/Vim-Jinja2-Syntax'
-
-" PHP
-NeoBundle 'shawncplus/phpcomplete.vim'
+" NeoBundle 'Glench/Vim-Jinja2-Syntax'
 
 "" Plugins end
 
