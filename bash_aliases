@@ -114,3 +114,6 @@ alias gg='git gui&'
 alias gtree='git log --graph --full-history --all --color --pretty=format:"%x1b[33m%h%x09%x09%x1b[32m%d%x1b[0m %x1b[34m%an%x1b[0m   %s" "$@"'
 alias gpull='git pull'
 alias gpush='git push'
+
+
+alias v-nvimupdate='cd ~/work/neovim && gpull && make distclean && make && notify-send "v-nvimupdate" && sudo checkinstall; alert'
