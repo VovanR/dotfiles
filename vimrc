@@ -77,14 +77,14 @@ NeoBundle 'ervandew/supertab'
 NeoBundle 'Valloric/YouCompleteMe', {
      \ 'build'      : {
         \ 'mac'     : './install.sh',
-        \ 'unix'    : './install.sh',
+        \ 'unix'    : './install.sh --tern-completer --system-boost',
         \ 'windows' : './install.sh',
         \ 'cygwin'  : './install.sh'
         \ }
      \ }
 " NeoBundle 'Yggdroot/indentLine'
+" NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'mileszs/ack.vim'
-" NeoBundle 'MattesGroeger/vim-bookmarks'
 
 " Formatting
 " NeoBundle 'csscomb/vim-csscomb'
@@ -106,9 +106,9 @@ NeoBundle 'SevInf/vim-bemhtml'
 " NeoBundle 'mxw/vim-jsx'
 NeoBundle 'othree/javascript-libraries-syntax.vim'
 " NeoBundle 'kchmck/vim-coffee-script'
-" NeoBundle 'marijnh/tern_for_vim'
-NeoBundle 'heavenshell/vim-jsdoc'
-NeoBundle 'jason0x43/vim-js-indent'
+NeoBundle 'ternjs/tern_for_vim'
+" NeoBundle 'heavenshell/vim-jsdoc'
+" NeoBundle 'jason0x43/vim-js-indent'
 
 " HTML
 " NeoBundle 'othree/html5.vim'
@@ -578,30 +578,25 @@ let g:jsx_ext_required = 1
 " Plugin 'othree/javascript-libraries-syntax.vim'
 "
 
-" Plugin 'marijnh/tern_for_vim'
-" let g:tern_map_keys=1
-" let g:tern_show_argument_hints='on_hold'
+" Plugin 'ternjs/tern_for_vim'
+let g:tern_show_argument_hints='no'
+let g:tern_show_signature_in_pum=0
 "
 
 
 " Plugin 'heavenshell/vim-jsdoc'
 " Не подсвечивать jsDoc
-let g:javascript_ignore_javaScriptdoc=0
+" let g:javascript_ignore_javaScriptdoc=0
 
-nmap <silent> <C-l> <Plug>(jsdoc)
-let g:jsdoc_return=0
-let g:jsdoc_access_descriptions=1
-let g:jsdoc_underscore_private=1
+" nmap <silent> <C-l> <Plug>(jsdoc)
+" let g:jsdoc_return=0
+" let g:jsdoc_access_descriptions=1
+" let g:jsdoc_underscore_private=1
 "
 
 
 " HTML
 " Plugin 'digitaltoad/vim-jade'
-"
-
-
-" PHP
-" Plugin 'shawncplus/phpcomplete.vim'
 "
 
 
