@@ -116,4 +116,16 @@ alias gpull='git pull'
 alias gpush='git push'
 
 
+# npm aliases
+alias npmr="npm run"
+alias npms="npm start"
+alias npmb="npmr build"
+alias npmt="npmr test"
+alias npmi="npm i"
+alias npmig="npmi -g"
+alias npmid="npmi -D"
+alias npmis="npmi -S"
+alias npmu="npm-upgrade"
+
+
 alias v-nvimupdate='cd ~/work/neovim && gpull && make distclean && make && notify-send "v-nvimupdate" && sudo checkinstall; alert'
