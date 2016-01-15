@@ -77,7 +77,7 @@ NeoBundle 'ervandew/supertab'
 NeoBundle 'Valloric/YouCompleteMe', {
      \ 'build'      : {
         \ 'mac'     : './install.sh',
-        \ 'unix'    : './install.sh --tern-completer --system-boost',
+        \ 'unix'    : './install.sh --tern-completer',
         \ 'windows' : './install.sh',
         \ 'cygwin'  : './install.sh'
         \ }
