@@ -82,7 +82,7 @@ vim +NeoBundleInstall +qall
 Compile YouCompleteMe
 ```bash
 sudo apt-get install build-essential cmake python-dev libboost-all-dev
-cd ~/.vim/bundle/YouCompleteMe && ./install.sh --tern-completer --system-boost
+cd ~/.vim/bundle/YouCompleteMe && ./install.sh --tern-completer
 ```
 
 Neovim
