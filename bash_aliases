@@ -100,20 +100,24 @@ alias stc="st | grep ^C"
 # Git aliases
 alias glog="git log --pretty=format:'%h %ad | [%an] %s%d' --graph --date=short"
 alias ghist="git hist"
-alias ghistp="git hist -p"
-alias ghists="git hist --stat"
-alias gs='git status '
-alias ga='git add '
-alias gb='git branch '
-alias gc='git commit'
-alias gd='git diff'
-alias gdc='gd --cached'
-alias go='git checkout '
-alias gk='gitk --all&'
-alias gg='git gui&'
+alias ghistp="ghist -p"
+alias ghists="ghist --stat"
+alias gs="git status"
+alias ga="git add"
+alias gb="git branch"
+alias gba="gb -a"
+alias gc="git commit"
+alias gcm="gc -m"
+alias gcam="gc -am"
+alias gd="git diff"
+alias gdc="gd --cached"
+alias go="git checkout"
+alias gk="gitk --all&"
+alias gg="git gui&"
 alias gtree='git log --graph --full-history --all --color --pretty=format:"%x1b[33m%h%x09%x09%x1b[32m%d%x1b[0m %x1b[34m%an%x1b[0m   %s" "$@"'
-alias gpull='git pull'
-alias gpush='git push'
+alias gpull="git pull"
+alias gpullr="gpull --rebase"
+alias gpush="git push"
 
 
 # npm aliases
