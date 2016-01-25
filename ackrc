@@ -4,7 +4,8 @@
 --type-add=css=.styl
 --type-add=js=.coffee
 --type-set=md=.markdown,.md
---type-add=jinja2=.jinja2
+--type-add=jinja=.jinja,.jinja2
+--type-add=py=.py
 --ignore-dir=.idea
 --ignore-dir=build
 --ignore-dir=built
