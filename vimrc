@@ -57,6 +57,7 @@ NeoBundle 'klen/python-mode'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'vim-scripts/YankRing.vim'
 
 " View
 NeoBundle 'gcavallanti/vim-noscrollbar'
@@ -109,6 +110,7 @@ NeoBundle 'othree/javascript-libraries-syntax.vim'
 NeoBundle 'ternjs/tern_for_vim'
 " NeoBundle 'heavenshell/vim-jsdoc'
 " NeoBundle 'jason0x43/vim-js-indent'
+NeoBundle 'posva/vim-vue'
 
 " HTML
 " NeoBundle 'othree/html5.vim'
