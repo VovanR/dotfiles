@@ -9,19 +9,126 @@ mixin $1
 		| $1
 endsnippet
 
-snippet dummy
-img(src="http://dummyimage.com/${1}x${2}/000/fff.png" alt="")
-endsnippet
-
 snippet each
 each item in ${1}
 	${0}
 endsnippet
 
-snippet btn:b
-button(type="button")
+snippet case
+case ${1:condition}
+	when ${2:condition}
+		${3://- code}
+	default
+		${4://- code}
 endsnippet
 
-snippet btn:s
-button(type="submit")
+snippet if
+if ${1:condition}
+	${2://- code}
+endsnippet
+
+snippet ife
+if ${1:condition}
+	${2://- code}
+else
+	${3://- code}
+endsnippet
+
+snippet dummy
+img(src='http://dummyimage.com/${1}x${2}/000/fff.png' alt='')
+endsnippet
+
+snippet img
+img(src='${1}', alt='')
+endsnippet
+
+snippet btnb
+button(type='button')
+endsnippet
+
+snippet btns
+button(type='submit')
+endsnippet
+
+snippet html5
+doctype html
+html(lang='ru')
+	head
+		meta(charset='utf-8')
+		meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimal-ui')
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+
+		//- http://realfavicongenerator.net/faq#why_ico_not_declared
+
+		title=''
+		meta(name='description' content='')
+		meta(name='keywords' content='')
+
+		link(href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet')
+		link(href='style.css' rel='stylesheet')
+	body
+endsnippet
+
+snippet ie
+// if ${1:lt} IE ${2:9}
+	${3:// new line}
+endsnippet
+
+snippet form
+form(id='${1}', method='${2}', action='${3}')
+endsnippet
+
+snippet link
+link(rel='stylesheet', ${1:type='text/css',} href='${2}')
+endsnippet
+
+snippet stylei
+style.
+	${0}
+endsnippet
+
+snippet ga
+//- TODO : Google Analytics: change UA-XXXXX-X to be your site\'s ID.
+script.
+	(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+	function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+	e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+	e.src='//www.google-analytics.com/analytics.js';
+	r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+	ga('create','UA-XXXXX-X');ga('send','pageview');
+endsnippet
+
+snippet script
+script(src='${1}')
+endsnippet
+
+snippet scripti
+script.
+	${0}
+endsnippet
+
+snippet a
+a(href='${0}')
+endsnippet
+
+snippet target
+target='_blank'
+endsnippet
+
+snippet rows
+.row
+	-o = o || {}
+	-var n = 0
+	while n < (o.count || 7)
+		.col-xs-3
+			a.embed-responsive(href='#')
+				img.embed-responsive-item(src='http://dummyimage.com/210x130/000/fff.png' alt='')
+				- n++
+.row
+	-var n = 0
+	while n < (o.count || 1)
+		.col-xs-3
+			span.embed-responsive
+				img.embed-responsive-item(src='http://dummyimage.com/210x130/fff/fff.png' alt='')
+				- n++
 endsnippet
