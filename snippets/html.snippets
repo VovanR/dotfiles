@@ -3,15 +3,18 @@
 snippet html5
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
-			<title>${1:`substitute(vim_snippets#Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
-		${2:link}
-	</head>
-	<body>
-		${0:body}
-	</body>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title></title>
+</head>
+<body>
+
+${0}
+
+</body>
 </html>
 endsnippet
 
