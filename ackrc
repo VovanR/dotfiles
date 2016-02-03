@@ -15,3 +15,4 @@
 --ignore-dir=vendor
 --ignore-dir=makets
 --sort-files
+--ignore-case
