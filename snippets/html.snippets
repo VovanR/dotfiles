@@ -18,6 +18,10 @@ ${0}
 </html>
 endsnippet
 
+snippet link
+<link href="${0}" rel="stylesheet">
+endsnippet
+
 snippet //
 <!-- ${1} -->${0}
 endsnippet
@@ -36,43 +40,6 @@ endsnippet
 
 snippet href
 href="${1:#}"
-# Django
-endsnippet
-
-snippet trans
-{% trans '${0}' %}
-endsnippet
-
-snippet blocktrans
-{% blocktrans %}
-	${0}
-{% endblocktrans %}
-endsnippet
-
-snippet %
-{% ${1} %}
-endsnippet
-
-snippet block
-{% block $1 %}
-	${0}
-{% endblock ${1} %}
-endsnippet
-
-snippet #
-{# ${0:comment} #}
-endsnippet
-
-snippet comment
-{% comment %}
-	${0}
-{% endcomment %}
-endsnippet
-
-snippet spaceless
-{% spaceless %}
-	${0}
-{% endspaceless %}
 endsnippet
 
 snippet di
