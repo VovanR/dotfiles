@@ -70,6 +70,7 @@ sessions
 makets
 framework
 tmp
+env
 cache
 __pycache__
 info.php
