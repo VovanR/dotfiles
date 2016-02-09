@@ -73,6 +73,11 @@ alias adhosts='sudo vim /etc/apache2/sites-available/`whoami`.conf'
 alias edhosts='sudo vim /etc/hosts'
 alias apre="sudo service apache2 restart"
 
+alias v-nr="sudo service nginx restart"
+alias v-ar="sudo service apache2 restart"
+alias v-ns="sudo service apache2 stop && v-nr"
+alias v-as="sudo service nginx stop && v-ar"
+
 # SVN aliases
 alias sr="svn resolved"
 alias st="svn st"
