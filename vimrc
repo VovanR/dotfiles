@@ -114,7 +114,7 @@ NeoBundle 'posva/vim-vue'
 
 " HTML
 " NeoBundle 'othree/html5.vim'
-" NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'digitaltoad/vim-pug'
 NeoBundle 'godlygeek/tabular'
 " NeoBundle 'plasticboy/vim-markdown'
 " NeoBundle 'AndrewRadev/vim-eco'
@@ -598,8 +598,6 @@ let g:tern_show_signature_in_pum=0
 
 
 " HTML
-" Plugin 'digitaltoad/vim-jade'
-"
 
 
 " " }}}
