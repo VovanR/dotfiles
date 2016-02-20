@@ -53,11 +53,10 @@ NeoBundle 'Shougo/vimproc.vim', {
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'SirVer/ultisnips'
-NeoBundle 'klen/python-mode'
+" NeoBundle 'klen/python-mode'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'tpope/vim-surround'
-" NeoBundle 'vim-scripts/YankRing.vim'
 
 " View
 NeoBundle 'gcavallanti/vim-noscrollbar'
@@ -73,12 +72,12 @@ NeoBundle 'low-ghost/nerdtree-fugitive'
 NeoBundle 'Xuyuanp/nerdtree-git-plugin'
 NeoBundle 'mhinz/vim-signify'
 NeoBundle 'bronson/vim-trailing-whitespace'
-NeoBundle 'scrooloose/syntastic'
+" NeoBundle 'scrooloose/syntastic'
 NeoBundle 'ervandew/supertab'
 NeoBundle 'Valloric/YouCompleteMe', {
      \ 'build'      : {
         \ 'mac'     : './install.sh',
-        \ 'unix'    : './install.sh --tern-completer',
+        \ 'unix'    : './install.sh',
         \ 'windows' : './install.sh',
         \ 'cygwin'  : './install.sh'
         \ }
@@ -92,22 +91,22 @@ NeoBundle 'mileszs/ack.vim'
 " NeoBundle 'maksimr/vim-jsbeautify'
 
 " Syntax
-NeoBundle 'sheerun/vim-polyglot'
+" NeoBundle 'sheerun/vim-polyglot'
 
 " CSS
 " NeoBundle 'hail2u/vim-css3-syntax'
 " NeoBundle 'tpope/vim-haml'
 " NeoBundle 'groenewege/vim-less'
-" NeoBundle 'wavded/vim-stylus'
-" NeoBundle 'leafgarland/typescript-vim'
+NeoBundle 'wavded/vim-stylus'
 
 " JavaScript
+" NeoBundle 'leafgarland/typescript-vim'
 " NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'SevInf/vim-bemhtml'
+" NeoBundle 'SevInf/vim-bemhtml'
 " NeoBundle 'mxw/vim-jsx'
 NeoBundle 'othree/javascript-libraries-syntax.vim'
 " NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'ternjs/tern_for_vim'
+" NeoBundle 'ternjs/tern_for_vim'
 " NeoBundle 'heavenshell/vim-jsdoc'
 " NeoBundle 'jason0x43/vim-js-indent'
 NeoBundle 'posva/vim-vue'
