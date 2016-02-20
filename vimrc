@@ -395,9 +395,6 @@ set autowrite
 
 " Editing
 
-" Plugin 'editorconfig/editorconfig-vim'
-"
-
 " Plugin 'scrooloose/nerdcommenter'
 " Добавлять и удалять пробелы после символов комментирования
 let NERDSpaceDelims=1
@@ -424,20 +421,8 @@ let g:pymode_rope = 0
 let g:pymode_rope_lookup_project = 0
 "
 
-" Plugin 'mattn/emmet-vim'
-"
-
 
 " View
-
-" Plugin 'sjl/gundo.vim'
-"
-
-" Plugin 'jlanzarotta/bufexplorer'
-"
-
-" Plugin 'kien/ctrlp.vim'
-"
 
 " Plugin 'scrooloose/nerdtree'
 " Open a NERDTree automatically when vim starts up if no files were specified
@@ -479,12 +464,6 @@ call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 "
 
-" Plugin 'jistr/vim-nerdtree-tabs'
-" To run NERDTreeTabs on console vim startup
-" let g:nerdtree_tabs_open_on_console_startup=1
-"
-
-
 " Plugin 'bling/vim-airline'
 " Hide git branch and show scrollbar
 " line number/total lines:column number
@@ -506,12 +485,6 @@ let base16colorspace=256  " Access colors present in 256 colorspace
 colorscheme base16-default
 "
 
-" Plugin 'tpope/vim-fugitive'
-"
-
-" Plugin 'low-ghost/nerdtree-fugitive'
-"
-
 " Plugin 'Xuyuanp/nerdtree-git-plugin'
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "•",
@@ -527,20 +500,7 @@ let g:NERDTreeIndicatorMapCustom = {
 "
 
 " Plugin 'mhinz/vim-signify'
-" Подсветка измененных строк
 let g:signify_vcs_list = [ 'git' ]
-" let g:signify_update_on_bufenter = 1
-" let g:signify_update_on_focusgained = 1
-" let g:signify_cursorhold_normal = 1
-" let g:signify_cursorhold_insert = 1
-"
-
-" Plugin 'bronson/vim-trailing-whitespace'
-"
-
-" Plugin 'scrooloose/syntastic'
-" let g:syntastic_javascript_checkers = ['jslint']
-let g:syntastic_typescript_checkers = []
 "
 
 " Plugin 'Valloric/YouCompleteMe'
@@ -551,32 +511,16 @@ let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
 "
 
-" Plugin 'Yggdroot/indentLine'
-"
-
 
 " Formatting
 
-" Plugin 'csscomb/csscomb-for-vim'
-"
-
-" Plugin 'maksimr/vim-jsbeautify'
-"
-
 
 " Syntax
-
-" Plugin 'sheerun/vim-polyglot'
-" let g:polyglot_disabled = ['jinja']
-"
 
 " JavaScript
 " vim-jsx
 " Plugin 'mxw/vim-jsx'
 let g:jsx_ext_required = 1
-"
-
-" Plugin 'othree/javascript-libraries-syntax.vim'
 "
 
 " Plugin 'ternjs/tern_for_vim'
@@ -594,9 +538,5 @@ let g:tern_show_signature_in_pum=0
 " let g:jsdoc_access_descriptions=1
 " let g:jsdoc_underscore_private=1
 "
-
-
-" HTML
-
 
 " " }}}
