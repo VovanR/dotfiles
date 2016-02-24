@@ -54,3 +54,21 @@ endsnippet
 snippet ext
 {% extends "${0}" %}
 endsnippet
+
+snippet for
+{% for ${1} in ${2} %}
+{% endfor %}
+endsnippet
+
+snippet fore
+{% for ${1} in ${2} %}
+{% empty %}
+{% endfor %}
+endsnippet
+
+snippet forf
+{% for ${1} in ${2} %}
+	{% if forloop.first %}
+	{% endif %}
+{% endfor %}
+endsnippet
