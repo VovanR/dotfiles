@@ -106,6 +106,11 @@ Install [Tmuxinator](https://github.com/tmuxinator/tmuxinator):
 sudo gem install tmuxinator
 ```
 
+Add [completion](https://github.com/tmuxinator/tmuxinator#completion)
+```bash
+wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash -P ~/.local/bin/
+```
+
 ## Node
 [Change npm's default directory to another directory](https://docs.npmjs.com/getting-started/fixing-npm-permissions):
 ```bash
