@@ -85,6 +85,7 @@ NeoBundle 'Valloric/YouCompleteMe', {
 " NeoBundle 'Yggdroot/indentLine'
 " NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'mileszs/ack.vim'
+NeoBundle 'haya14busa/incsearch.vim'
 
 " Formatting
 " NeoBundle 'csscomb/vim-csscomb'
@@ -509,6 +510,12 @@ let g:neobundle#install_process_timeout = 1500
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
+"
+
+" Plugin 'haya14busa/incsearch.vim'
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
 "
 
 
