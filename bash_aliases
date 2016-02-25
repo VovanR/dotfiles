@@ -36,12 +36,18 @@ alias fndf="sudo find ./ -type f -exec chmod 664 {} \;"
 alias fndd="sudo find ./ -type d -exec chmod 775 {} \;"
 
 alias sourcer="source ~/.bash_profile"
-alias bashaliases="vim ~/.bash_aliases"
+alias bashaliases="$EDITOR ~/.bash_aliases"
 
-alias v-upgrade="sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove && vim +NeoBundleUpdate +qall"
+alias v-upgrade=" \
+        sudo apt-get update && \
+        sudo apt-get upgrade && \
+        sudo apt-get dist-upgrade && \
+        sudo apt-get autoremove && \
+        vim +NeoBundleUpdate +qall \
+    "
 
 alias open="xdg-open"
-alias o="xdg-open"
+alias o="open"
 alias e="atom"
 
 # Play sound Done!
@@ -69,8 +75,8 @@ alias get="curl -O"
 # MySQL dump
 alias md='mysqldump -h localhost -u root --skip-opt --add-locks --lock-tables --extended-insert --create-options -cq'
 
-alias adhosts='sudo vim /etc/apache2/sites-available/`whoami`.conf'
-alias edhosts='sudo vim /etc/hosts'
+alias adhosts="sudo $EDITOR /etc/apache2/sites-available/`whoami`.conf"
+alias edhosts="sudo $EDITOR /etc/hosts"
 alias apre="sudo service apache2 restart"
 
 alias v-nr="sudo service nginx restart"
@@ -98,7 +104,7 @@ alias sa="svn add"
 alias sad="st | grep ^?"
 alias sadd="st | awk '/^[?]/{ print \$2 }' | xargs svn add"
 alias stc="st | grep ^C"
-# Открыть конфликтные файлы в Netbeans
+# Open conflicts in Netbeans
 # alias stcn="st | awk '/^C/{ print \$2 }' | xargs '~/netbeans-7.2/bin/netbeans'"
 
 
@@ -116,7 +122,8 @@ alias gcm="gc -m"
 alias gcam="gc -am"
 alias gd="git diff"
 alias gdc="gd --cached"
-alias go="git checkout"
+alias gco="git checkout"
+alias gcob="git branch -a | ipt | xargs git checkout"
 alias gk="gitk --all&"
 alias gg="git gui&"
 alias gtree='git log --graph --full-history --all --color --pretty=format:"%x1b[33m%h%x09%x09%x1b[32m%d%x1b[0m %x1b[34m%an%x1b[0m   %s" "$@"'
@@ -137,4 +144,13 @@ alias npmis="npmi -S"
 alias npmu="npm-upgrade"
 
 
-alias v-nvimupdate='cd ~/work/neovim && gpull && make distclean && make && notify-send "v-nvimupdate" && sudo checkinstall; alert'
+# Update neovim
+alias v-nvimupdate=" \
+        cd ~/work/neovim && \
+        gpull && \
+        make distclean && \
+        make && \
+        notify-send 'v-nvimupdate' 'install' && \
+        sudo make install; \
+        alert \
+    "
