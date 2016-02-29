@@ -530,6 +530,10 @@ map g/ <Plug>(incsearch-stay)
 let g:jsx_ext_required = 1
 "
 
+" Plugin 'othree/javascript-libraries-syntax.vim'
+let g:used_javascript_libs = 'jquery,underscore,react'
+"
+
 " Plugin 'ternjs/tern_for_vim'
 let g:tern_show_argument_hints='no'
 let g:tern_show_signature_in_pum=0
