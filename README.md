@@ -91,12 +91,11 @@ ln -s ~/.vim ~/.config/nvim
 ln -s ~/.config/nvim/vimrc ~/.config/nvim/init.vim
 ```
 
-Install [ack](http://beyondgrep.com/install/)
+Install [The Silver Searcher](https://github.com/ggreer/the_silver_searcher#installing)
 
 in Ubuntu:
 ```bash
-sudo apt-get install ack-grep
-ln -s ~/.config/dotfiles/ackrc ~/.ackrc
+sudo apt-get install silversearcher-ag
 ```
 
 ### Tmux

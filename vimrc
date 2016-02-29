@@ -84,7 +84,7 @@ NeoBundle 'Valloric/YouCompleteMe', {
      \ }
 " NeoBundle 'Yggdroot/indentLine'
 " NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'mileszs/ack.vim'
+NeoBundle 'rking/ag.vim'
 NeoBundle 'haya14busa/incsearch.vim'
 
 " Formatting
