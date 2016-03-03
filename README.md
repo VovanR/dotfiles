@@ -89,11 +89,12 @@ Install [The Silver Searcher](https://github.com/ggreer/the_silver_searcher#inst
 sudo apt-get install silversearcher-ag
 ```
 
-[**Neovim**](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+#### [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 ```bash
 ln -s ~/.vim ~/.config/nvim
 ln -s ~/.config/nvim/vimrc ~/.config/nvim/init.vim
 ```
+Check [Quickstart](https://neovim.io/doc/user/nvim_python.html) section to using Vim Python 2/3 plugins with Nvim
 
 ### Tmux
 
