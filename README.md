@@ -10,7 +10,9 @@ git clone https://github.com/VovanR/dotfiles.git
 ```
 
 ### Font
-Download [Hack](https://github.com/chrissimpkins/Hack)
+
+Download [Hack](https://github.com/chrissimpkins/Hack) or [Input](http://input.fontbureau.com/)
+
 Copy it to `~/.fonts/truetype/Hack/`
 ```bash
 $ tree ~/.fonts/truetype/
@@ -23,6 +25,7 @@ $ tree ~/.fonts/truetype/
 ```
 
 ### Color scheme
+
 Install [Base16 Shell](https://github.com/chriskempson/base16-shell#installation)
 ```bash
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
@@ -59,48 +62,42 @@ ln -s ~/.config/dotfiles/atom/snippets.cson ~/.atom/snippets.cson
 
 ### Vim
 
-Dirs
 ```bash
 mkdir -p ~/.vim/{backups,bundle,swaps,undo}
-```
-
-```bash
 ln -s ~/.config/dotfiles/vimrc ~/.vim/vimrc
 ln -s ~/.config/dotfiles/snippets ~/.vim/UltiSnips
 ```
 
-Install [NeoBundle](https://github.com/Shougo/neobundle.vim):
+Install [NeoBundle](https://github.com/Shougo/neobundle.vim)
 ```bash
 git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 ```
 
-Install Plugins:
+Install Plugins
 ```bash
 vim +NeoBundleInstall +qall
 ```
 
-Compile YouCompleteMe
+Compile [YouCompleteMe](https://github.com/Valloric/YouCompleteMe#installation)
 ```bash
 sudo apt-get install build-essential cmake python-dev libboost-all-dev
-cd ~/.vim/bundle/YouCompleteMe && ./install.sh --tern-completer
+cd ~/.vim/bundle/YouCompleteMe && ./install.sh
 ```
 
-Neovim
+Install [The Silver Searcher](https://github.com/ggreer/the_silver_searcher#installing)
+```bash
+sudo apt-get install silversearcher-ag
+```
+
+[**Neovim**](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 ```bash
 ln -s ~/.vim ~/.config/nvim
 ln -s ~/.config/nvim/vimrc ~/.config/nvim/init.vim
 ```
 
-Install [The Silver Searcher](https://github.com/ggreer/the_silver_searcher#installing)
-
-in Ubuntu:
-```bash
-sudo apt-get install silversearcher-ag
-```
-
 ### Tmux
 
-Install [Tmuxinator](https://github.com/tmuxinator/tmuxinator):
+Install [Tmuxinator](https://github.com/tmuxinator/tmuxinator)
 ```bash
 sudo gem install tmuxinator
 ```
@@ -110,22 +107,26 @@ Add [completion](https://github.com/tmuxinator/tmuxinator#completion)
 wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash -P ~/.local/bin/
 ```
 
-## Node
-[Change npm's default directory to another directory](https://docs.npmjs.com/getting-started/fixing-npm-permissions):
+### Node
+
+[Change npm's default directory to another directory](https://docs.npmjs.com/getting-started/fixing-npm-permissions)
 ```bash
 mkdir -p ~/.npm-global/bin
 npm config set prefix '~/.npm-global'
 ```
-Defaults:
+
+Defaults
 ```bash
 npm set init-author-email mail@gmail.com
 npm set init-author-name "User Name"
-npm set init-author-url http://mysite.com/
+npm set init-author-url https://mysite.com/
 npm set init-license MIT
 npm set init-version 0.0.0
 ```
 
-## Plymouth
+### Plymouth
+
+Change background wallpaper
 ```bash
 ls /lib/plymouth/themes/xubuntu-logo/wallpaper.png && ls /usr/share/xfce4/backdrops/cloudbreaker.jpg && sudo convert /usr/share/xfce4/backdrops/cloudbreaker.jpg /lib/plymouth/themes/xubuntu-logo/wallpaper.png
 ```
@@ -139,6 +140,11 @@ vim +NeoBundleUpdate +qall
 ```
 
 ## Further customization
+
 - Add any Bash profile customizations to `~/.bashlocal`
 - Add your git username/email/etc. to `~/.gitlocal`
 - Just fork this repo and hack on.
+
+## Resources
+
+- [GitHub ❤ ~/](http://dotfiles.github.io/)
