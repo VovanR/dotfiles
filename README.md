@@ -72,6 +72,7 @@ Install [NeoBundle](https://github.com/Shougo/neobundle.vim)
 ```bash
 curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh
 sh ./install.sh
+rm ./install.sh
 ```
 
 Install Plugins
