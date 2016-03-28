@@ -83,7 +83,7 @@ vim +NeoBundleInstall +qall
 Compile [YouCompleteMe](https://github.com/Valloric/YouCompleteMe#installation)
 ```bash
 sudo apt-get install build-essential cmake python-dev libboost-all-dev
-cd ~/.vim/bundle/YouCompleteMe && ./install.sh
+cd ~/.vim/bundle/YouCompleteMe && ./install.py
 ```
 
 Install [The Silver Searcher](https://github.com/ggreer/the_silver_searcher#installing)
