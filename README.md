@@ -70,7 +70,8 @@ ln -s ~/.config/dotfiles/snippets ~/.vim/UltiSnips
 
 Install [NeoBundle](https://github.com/Shougo/neobundle.vim)
 ```bash
-git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh
+sh ./install.sh
 ```
 
 Install Plugins
