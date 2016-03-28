@@ -5,8 +5,7 @@
 ## Install
 
 ```bash
-cd ~/.config
-git clone https://github.com/VovanR/dotfiles.git
+git clone https://github.com/VovanR/dotfiles.git ~/.config/dotfiles
 ```
 
 ### Font
