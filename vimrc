@@ -12,127 +12,102 @@ set nocompatible
 
 
 
-" NeoBundle.vim
-" Note: Skip initialization for vim-tiny or vim-small.
-if 0 | endif
-
-if has('vim_starting')
-    if &compatible
-        set nocompatible               " Be iMproved
-    endif
-
-    " Required:
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
+" Dein.vim
+if &compatible
+    set nocompatible
 endif
+set runtimepath^=~/.vim/bundle/repos/github.com/Shougo/dein.vim/
 
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
+call dein#begin(expand('~/.vim/bundle/'))
 
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
+call dein#add('Shougo/dein.vim')
 
 " My Bundles here:
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
 
 
 "" Plugins begin
 
-NeoBundle 'Shougo/vimproc.vim', {
-\ 'build' : {
-\     'windows' : 'tools\\update-dll-mingw',
-\     'cygwin' : 'make -f make_cygwin.mak',
-\     'mac' : 'make',
-\     'linux' : 'make',
-\     'unix' : 'gmake',
-\    },
-\ }
+call dein#add('Shougo/vimproc.vim')
 
 " Editing
-NeoBundle 'editorconfig/editorconfig-vim'
-NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'SirVer/ultisnips'
-" NeoBundle 'klen/python-mode'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'Raimondi/delimitMate'
-NeoBundle 'tpope/vim-surround'
+call dein#add('editorconfig/editorconfig-vim')
+call dein#add('scrooloose/nerdcommenter')
+call dein#add('SirVer/ultisnips')
+" call dein#add('klen/python-mode')
+call dein#add('mattn/emmet-vim')
+call dein#add('Raimondi/delimitMate')
+call dein#add('tpope/vim-surround')
 
 " View
-NeoBundle 'gcavallanti/vim-noscrollbar'
-" NeoBundle 'sjl/gundo.vim'
-NeoBundle 'jlanzarotta/bufexplorer'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'jistr/vim-nerdtree-tabs'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'chriskempson/base16-vim'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'low-ghost/nerdtree-fugitive'
-NeoBundle 'Xuyuanp/nerdtree-git-plugin'
-NeoBundle 'mhinz/vim-signify'
-NeoBundle 'bronson/vim-trailing-whitespace'
-" NeoBundle 'scrooloose/syntastic'
-NeoBundle 'ervandew/supertab'
-NeoBundle 'Valloric/YouCompleteMe', {
-     \ 'build'      : {
-        \ 'mac'     : './install.sh',
-        \ 'unix'    : './install.sh',
-        \ 'windows' : './install.sh',
-        \ 'cygwin'  : './install.sh'
-        \ }
-     \ }
-" NeoBundle 'Yggdroot/indentLine'
-" NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'rking/ag.vim'
-NeoBundle 'haya14busa/incsearch.vim'
+call dein#add('gcavallanti/vim-noscrollbar')
+" call dein#add('sjl/gundo.vim')
+call dein#add('jlanzarotta/bufexplorer')
+call dein#add('kien/ctrlp.vim')
+call dein#add('scrooloose/nerdtree')
+call dein#add('jistr/vim-nerdtree-tabs')
+call dein#add('bling/vim-airline')
+call dein#add('chriskempson/base16-vim')
+call dein#add('tpope/vim-fugitive')
+call dein#add('low-ghost/nerdtree-fugitive')
+call dein#add('Xuyuanp/nerdtree-git-plugin')
+call dein#add('mhinz/vim-signify')
+call dein#add('bronson/vim-trailing-whitespace')
+" call dein#add('scrooloose/syntastic')
+call dein#add('ervandew/supertab')
+call dein#add('Valloric/YouCompleteMe')
+" call dein#add('Yggdroot/indentLine')
+" call dein#add('nathanaelkane/vim-indent-guides')
+call dein#add('rking/ag.vim')
+call dein#add('haya14busa/incsearch.vim')
 
 " Formatting
-" NeoBundle 'csscomb/vim-csscomb'
-" NeoBundle 'maksimr/vim-jsbeautify'
+" call dein#add('csscomb/vim-csscomb')
+" call dein#add('maksimr/vim-jsbeautify')
 
 " Syntax
-" NeoBundle 'sheerun/vim-polyglot'
+" call dein#add('sheerun/vim-polyglot')
 
 " CSS
-" NeoBundle 'hail2u/vim-css3-syntax'
-" NeoBundle 'tpope/vim-haml'
-" NeoBundle 'groenewege/vim-less'
-NeoBundle 'wavded/vim-stylus'
+" call dein#add('hail2u/vim-css3-syntax')
+" call dein#add('tpope/vim-haml')
+" call dein#add('groenewege/vim-less')
+call dein#add('wavded/vim-stylus')
 
 " JavaScript
-" NeoBundle 'leafgarland/typescript-vim'
-" NeoBundle 'pangloss/vim-javascript'
-" NeoBundle 'SevInf/vim-bemhtml'
-" NeoBundle 'mxw/vim-jsx'
-NeoBundle 'othree/javascript-libraries-syntax.vim'
-" NeoBundle 'kchmck/vim-coffee-script'
-" NeoBundle 'ternjs/tern_for_vim'
-" NeoBundle 'heavenshell/vim-jsdoc'
-" NeoBundle 'jason0x43/vim-js-indent'
-NeoBundle 'posva/vim-vue'
+" call dein#add('leafgarland/typescript-vim')
+" call dein#add('pangloss/vim-javascript')
+" call dein#add('SevInf/vim-bemhtml')
+" call dein#add('mxw/vim-jsx')
+call dein#add('othree/javascript-libraries-syntax.vim')
+" call dein#add('kchmck/vim-coffee-script')
+" call dein#add('ternjs/tern_for_vim')
+" call dein#add('heavenshell/vim-jsdoc')
+" call dein#add('jason0x43/vim-js-indent')
+call dein#add('posva/vim-vue')
 
 " HTML
-" NeoBundle 'othree/html5.vim'
-NeoBundle 'digitaltoad/vim-pug'
-NeoBundle 'godlygeek/tabular'
-" NeoBundle 'plasticboy/vim-markdown'
-" NeoBundle 'AndrewRadev/vim-eco'
-" NeoBundle 'mustache/vim-mustache-handlebars'
-NeoBundle 'gregsexton/MatchTag'
-" NeoBundle 'Glench/Vim-Jinja2-Syntax'
+" call dein#add('othree/html5.vim')
+call dein#add('digitaltoad/vim-pug')
+call dein#add('godlygeek/tabular')
+" call dein#add('plasticboy/vim-markdown')
+" call dein#add('AndrewRadev/vim-eco')
+" call dein#add('mustache/vim-mustache-handlebars')
+call dein#add('gregsexton/MatchTag')
+call dein#add('Glench/Vim-Jinja2-Syntax')
 
 "" Plugins end
 
 
-call neobundle#end()
+call dein#end()
 
 " Required:
 filetype plugin indent on
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
-NeoBundleCheck
+if dein#check_install()
+    call dein#install()
+endif
 
 
 
@@ -505,7 +480,6 @@ let g:signify_vcs_list = [ 'git' ]
 "
 
 " Plugin 'Valloric/YouCompleteMe'
-let g:neobundle#install_process_timeout = 1500
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']

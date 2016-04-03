@@ -67,22 +67,27 @@ ln -s ~/.config/dotfiles/vimrc ~/.vim/vimrc
 ln -s ~/.config/dotfiles/snippets ~/.vim/UltiSnips
 ```
 
-Install [NeoBundle](https://github.com/Shougo/neobundle.vim)
+Install [Dein.vim](https://github.com/Shougo/dein.vim)
 ```bash
-curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh
-sh ./install.sh
-rm ./install.sh
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+sh ./installer.sh ~/.vim/bundle
+rm ./installer.sh
 ```
 
 Install Plugins
 ```bash
-vim +NeoBundleInstall +qall
+vim
+```
+
+Compile [vimproc](https://github.com/Shougo/vimproc.vim#building)
+```bash
+cd ~/.vim/bundle/repos/github.com/Shougo/vimproc.vim && make
 ```
 
 Compile [YouCompleteMe](https://github.com/Valloric/YouCompleteMe#installation)
 ```bash
 sudo apt-get install build-essential cmake python-dev libboost-all-dev
-cd ~/.vim/bundle/YouCompleteMe && ./install.py
+cd ~/.vim/bundle/repos/github.com/Valloric/YouCompleteMe && ./install.py
 ```
 
 Install [The Silver Searcher](https://github.com/ggreer/the_silver_searcher#installing)
