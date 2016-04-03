@@ -40,6 +40,7 @@ call dein#add('tpope/vim-surround')
 
 " View
 call dein#add('gcavallanti/vim-noscrollbar')
+call dein#add('wesQ3/vim-windowswap')
 " call dein#add('sjl/gundo.vim')
 call dein#add('jlanzarotta/bufexplorer')
 call dein#add('ctrlpvim/ctrlp.vim')
