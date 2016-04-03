@@ -143,7 +143,7 @@ ls /lib/plymouth/themes/xubuntu-logo/wallpaper.png && ls /usr/share/xfce4/backdr
 ```bash
 cd ~/.config/dotfiles
 git pull
-vim +NeoBundleUpdate +qall
+vim
 ```
 
 ## Further customization
