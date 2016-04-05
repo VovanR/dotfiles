@@ -175,7 +175,7 @@ snippet mapx
 	return (
 		<${1:div}
 			key={model.id}
-		/>
+			/>
 	);
 })}
 endsnippet
@@ -191,6 +191,25 @@ let $1 = (props) => (
 
 // $1.propTypes = {};
 // $1.defaultProps = {};
+
+export default $1;
+endsnippet
+
+snippet component
+class ${1} extends React.Component {
+	constructor() {
+		super();
+	}
+
+	render() {
+		return (
+			<div className="">
+			</div>
+		);
+	}
+}
+$1.propTypes = {
+};
 
 export default $1;
 endsnippet
