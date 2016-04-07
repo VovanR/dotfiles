@@ -197,8 +197,8 @@ endsnippet
 
 snippet component
 class ${1} extends React.Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 	}
 
 	render() {
@@ -209,6 +209,8 @@ class ${1} extends React.Component {
 	}
 }
 $1.propTypes = {
+};
+$1.defaultProps = {
 };
 
 export default $1;
