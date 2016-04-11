@@ -27,7 +27,7 @@ call dein#add('Shougo/dein.vim')
 
 "" Plugins begin
 
-call dein#add('Shougo/vimproc.vim')
+call dein#add('Shougo/vimproc.vim', {'build': 'make'})
 
 " Editing
 call dein#add('editorconfig/editorconfig-vim')
@@ -55,7 +55,7 @@ call dein#add('mhinz/vim-signify')
 call dein#add('bronson/vim-trailing-whitespace')
 " call dein#add('scrooloose/syntastic')
 call dein#add('ervandew/supertab')
-call dein#add('Valloric/YouCompleteMe')
+call dein#add('Valloric/YouCompleteMe', {'build': 'python install.py'})
 " call dein#add('Yggdroot/indentLine')
 " call dein#add('nathanaelkane/vim-indent-guides')
 call dein#add('rking/ag.vim')
