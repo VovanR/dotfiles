@@ -43,7 +43,7 @@ alias v-upgrade=" \
         sudo apt-get upgrade && \
         sudo apt-get dist-upgrade && \
         sudo apt-get autoremove && \
-        vim +NeoBundleUpdate +qall \
+        vim \"+call dein#update()\" +qall \
     "
 
 alias open="xdg-open"
