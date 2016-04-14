@@ -288,7 +288,8 @@ set number
 set relativenumber
 
 " Highlight current line
-set cursorline
+" set cursorline
+" set cursorcolumn
 
 
 
