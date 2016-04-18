@@ -277,3 +277,10 @@ snippet bl
 <${1} className="${2}">
 </$1>
 endsnippet
+
+snippet handle
+this.handle$1 = this.handle$1.bind(this);
+handle$1() {
+}
+on${1}={this.handle$1}
+endsnippet
