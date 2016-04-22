@@ -45,7 +45,6 @@ endsnippet
 
 snippet method
 ${1}: function () {
-	${0}
 },
 endsnippet
 
@@ -54,58 +53,55 @@ require('${1}');
 endsnippet
 
 snippet proto
-${1:class_name}.prototype.${2:method_name} = function(${3}) {
-	${0}
+${1}.prototype.${2} = function (${3}) {
 };
 endsnippet
 
 snippet f
-function(${1}) {
-	${0}
+function ${1}(${2}) {
 }
 endsnippet
 
 snippet :f
 ${1}: function (${2}) {
-	${0}
 }${3:,}
 endsnippet
 
 snippet fn
 function ${1} (${2}) {
-	${0}
 };
 endsnippet
 
 snippet g
 function * (${1}) {
-	${0}
 }
 endsnippet
 
 snippet :g
 ${1}: function * (${2}) {
-	${0}
 }${3:,}
 endsnippet
 
 snippet gn
 function *${1} (${2}) {
-	${0}
 }
 endsnippet
 
 snippet if
-if (${1:true}) {
-	${0};
+if (${1}) {
 }
 endsnippet
 
 snippet ife
-if (${1:true}) {
-	${2};
+if (${1}) {
 } else {
-	${0};
+}
+endsnippet
+
+snippet ifei
+if (${1}) {
+} else if () {
+} else {
 }
 endsnippet
 
@@ -113,24 +109,8 @@ snippet ?
 ${1} ? ${2} : ${0};
 endsnippet
 
-snippet /**
-/**
-* ${0:why?}
-*/
-endsnippet
-
-snippet /**p
-/**
-* ${0:why?}
-*
-* @private
-*/
-endsnippet
-
 snippet aclick
 ${1}.on('click', function (e) {
-	${0}
-
 	e.preventDefault();
 });
 endsnippet
@@ -154,6 +134,11 @@ snippet ifx
 ) : false}
 endsnippet
 
+snippet ifxf
+{${0} ? false : (
+)}
+endsnippet
+
 snippet ifex
 {${0} ? (
 ) : (
@@ -165,24 +150,23 @@ import ${1} from '${2}';
 endsnippet
 
 snippet mapx
-{this.props.collection.map(model => {
+{this.props.collection.map(item => {
 	return (
-		<${1:div}
-			key={model.id}
+		<div
+			key={item}
 			/>
 	);
 })}
 endsnippet
 
 snippet stateless
-import React from 'lib/react';
+import React from 'react';
 
-let $1 = (props) => (
+const $1 = (props) => (
 	<div>
 		${1:ClassName}
 	</div>
 );
-
 // $1.propTypes = {};
 // $1.defaultProps = {};
 
