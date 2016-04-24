@@ -33,12 +33,12 @@ git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shel
 ### Bash
 
 ```bash
-ln -s ~/.config/dotfiles/bash_functions ~/.bash_functions
 ln -s ~/.config/dotfiles/bash_aliases ~/.bash_aliases
-ln -s ~/.config/dotfiles/bash_prompt ~/.bash_prompt
+ln -s ~/.config/dotfiles/bash_functions ~/.bash_functions
 ln -s ~/.config/dotfiles/bash_profile ~/.bash_profile
-ln -s ~/.config/dotfiles/tmux.conf ~/.tmux.conf
+ln -s ~/.config/dotfiles/bash_prompt ~/.bash_prompt
 ln -s ~/.config/dotfiles/inputrc ~/.inputrc
+ln -s ~/.config/dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/.config/dotfiles/Xresources ~/.Xresources
 xrdb -merge ~/.Xresources
 source ~/.bash_profile
@@ -135,7 +135,7 @@ npm set init-version 0.0.0
 
 Change background wallpaper
 ```bash
-ls /lib/plymouth/themes/xubuntu-logo/wallpaper.png && ls /usr/share/xfce4/backdrops/cloudbreaker.jpg && sudo convert /usr/share/xfce4/backdrops/cloudbreaker.jpg /lib/plymouth/themes/xubuntu-logo/wallpaper.png
+ls /usr/share/plymouth/themes/xubuntu-logo/wallpaper.png && ls /usr/share/xfce4/backdrops/Mountainous_View_by_Sven_Scheuermeier.jpg && sudo convert /usr/share/xfce4/backdrops/Mountainous_View_by_Sven_Scheuermeier.jpg /usr/share/plymouth/themes/xubuntu-logo/wallpaper.png
 ```
 
 ## Upgrade
