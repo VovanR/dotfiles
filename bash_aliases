@@ -123,13 +123,18 @@ alias gcam="gc -am"
 alias gd="git diff"
 alias gdc="gd --cached"
 alias gco="git checkout"
-alias gcob="git branch -a | ipt | xargs git checkout"
+alias gcob="git checkout -b "
+# alias gcob="git branch -a | ipt | xargs git checkout"
 alias gk="gitk --all&"
 alias gg="git gui&"
 alias gtree='git log --graph --full-history --all --color --pretty=format:"%x1b[33m%h%x09%x09%x1b[32m%d%x1b[0m %x1b[34m%an%x1b[0m   %s" "$@"'
-alias gpull="git pull"
-alias gpullr="gpull --rebase"
+alias gpull="git pull "
+alias gpullr="git pull --rebase "
+alias gpullro="git pull --rebase origin "
+alias gfo="git fetch origin "
 alias gpush="git push"
+alias gm="git merge "
+alias gmnf="git merge --no-ff "
 
 
 # npm aliases
