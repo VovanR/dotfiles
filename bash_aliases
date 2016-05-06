@@ -147,6 +147,7 @@ alias npmig="npmi -g"
 alias npmid="npmi -D"
 alias npmis="npmi -S"
 alias npmu="npm-upgrade"
+alias npmglist="npm list --global=true --depth=0"
 
 
 # Update neovim
