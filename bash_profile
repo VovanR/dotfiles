@@ -30,7 +30,7 @@ if [ -f ~/.local/bin/tmuxinator.bash ]; then
 fi
 
 # Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/base16-atelierforest.dark.sh"
+BASE16_SHELL="$HOME/.config/base16-shell/base16-shapeshifter.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 
