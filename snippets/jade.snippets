@@ -4,9 +4,9 @@ include ../$1/${1}
 endsnippet
 
 snippet mix
-mixin $1
-	+b.${1}&attributes(attributes)
-		| $1
+mixin $0
+	+b.${0}&attributes(attributes)
+		| $0
 endsnippet
 
 snippet each
@@ -35,11 +35,11 @@ else
 endsnippet
 
 snippet dummy
-img(src='http://dummyimage.com/${1}x${2}/000/fff.png' alt='')
+img(src='http://dummyimage.com/${1}x${0}/000/fff.png' alt='')
 endsnippet
 
 snippet img
-img(src='${1}', alt='')
+img(src='${0}', alt='')
 endsnippet
 
 snippet btnb
@@ -75,11 +75,11 @@ snippet ie
 endsnippet
 
 snippet form
-form(id='${1}', method='${2}', action='${3}')
+form(id='${1}', method='${2}', action='${0}')
 endsnippet
 
 snippet link
-link(rel='stylesheet', ${1:type='text/css',} href='${2}')
+link(rel='stylesheet', ${1:type='text/css',} href='${0}')
 endsnippet
 
 snippet stylei
@@ -99,7 +99,7 @@ script.
 endsnippet
 
 snippet script
-script(src='${1}')
+script(src='${0}')
 endsnippet
 
 snippet scripti

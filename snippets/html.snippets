@@ -24,46 +24,46 @@ snippet link
 endsnippet
 
 snippet //
-<!-- ${1} -->${0}
+<!-- ${0} -->
 endsnippet
 
 snippet .
-class="${1}"
+class="${0}"
 endsnippet
 
 snippet #
-id="${1}"
+id="${0}"
 endsnippet
 
 snippet data
-data-${1}="${2:$1}"
+data-${1}="${0:$1}"
 endsnippet
 
 snippet href
-href="${1:#}"
+href="${0:#}"
 endsnippet
 
 snippet di
-<!-- begin $1 -->
-<div class="$1">
+<!-- begin ${0} -->
+<div class="$0">
 </div>
-<!-- end $1 -->
+<!-- end $0 -->
 endsnippet
 
 snippet bl
-<!-- begin $1 -->
-<!-- end $1 -->
+<!-- begin ${0} -->
+<!-- end $0 -->
 endsnippet
 
 snippet fig
 <figure>
 	<figcaption>${1}</figcaption>
-	<img src="${2}" alt="">
+	<img src="${0}" alt="">
 </figure>
 endsnippet
 
 snippet dummy
-<img src="http://dummyimage.com/${1}x${2}/000/fff.png" alt="">
+<img src="http://dummyimage.com/${1}x${0}/000/fff.png" alt="">
 endsnippet
 
 snippet template

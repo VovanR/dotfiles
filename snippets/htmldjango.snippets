@@ -21,12 +21,12 @@ snippet ife
 endsnippet
 
 snippet %
-{% ${1} %}
+{% ${0} %}
 endsnippet
 
 snippet block
-{% block $1 %}
-{% endblock ${1} %}
+{% block ${0} %}
+{% endblock $0 %}
 endsnippet
 
 snippet #
@@ -56,18 +56,18 @@ snippet ext
 endsnippet
 
 snippet for
-{% for ${1} in ${2} %}
+{% for ${1} in ${0} %}
 {% endfor %}
 endsnippet
 
 snippet fore
-{% for ${1} in ${2} %}
+{% for ${1} in ${0} %}
 {% empty %}
 {% endfor %}
 endsnippet
 
 snippet forf
-{% for ${1} in ${2} %}
+{% for ${1} in ${0} %}
 	{% if forloop.first %}
 	{% endif %}
 {% endfor %}
