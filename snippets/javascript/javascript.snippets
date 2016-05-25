@@ -44,31 +44,31 @@ console.dir(${0});
 endsnippet
 
 snippet method
-${1}: function () {
+${0}: function () {
 },
 endsnippet
 
 snippet req
-require('${1}');
+require('${0}');
 endsnippet
 
 snippet proto
-${1}.prototype.${2} = function (${3}) {
+${1}.prototype.${2} = function (${0}) {
 };
 endsnippet
 
 snippet f
-function ${1}(${2}) {
+function ${1}(${0}) {
 }
 endsnippet
 
 snippet :f
-${1}: function (${2}) {
+${1}: function (${0}) {
 }${3:,}
 endsnippet
 
 snippet fn
-function ${1} (${2}) {
+function ${1} (${0}) {
 };
 endsnippet
 
@@ -78,33 +78,33 @@ snippet sf
 endsnippet
 
 snippet g
-function * (${1}) {
+function * (${0}) {
 }
 endsnippet
 
 snippet :g
 ${1}: function * (${2}) {
-}${3:,}
+}${0:,}
 endsnippet
 
 snippet gn
-function *${1} (${2}) {
+function *${1} (${0}) {
 }
 endsnippet
 
 snippet if
-if (${1}) {
+if (${0}) {
 }
 endsnippet
 
 snippet ife
-if (${1}) {
+if (${0}) {
 } else {
 }
 endsnippet
 
 snippet ifei
-if (${1}) {
+if (${0}) {
 } else if () {
 } else {
 }
@@ -115,7 +115,7 @@ ${1} ? ${2} : ${0};
 endsnippet
 
 snippet aclick
-${1}.on('click', function (e) {
+${0}.on('click', function (e) {
 	e.preventDefault();
 });
 endsnippet
@@ -151,7 +151,7 @@ snippet ifex
 endsnippet
 
 snippet imp
-import ${1} from '${2}';
+import ${1} from '${0}';
 endsnippet
 
 snippet mapx
@@ -179,7 +179,7 @@ export default $1;
 endsnippet
 
 snippet component
-class ${1} extends React.Component {
+class ${0} extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {};
@@ -192,7 +192,7 @@ class ${1} extends React.Component {
 		);
 	}
 }
-$1.propTypes = {
+$0.propTypes = {
 };
 $1.defaultProps = {
 };
@@ -201,7 +201,7 @@ export default $1;
 endsnippet
 
 snippet reactcomponent
-const ${1} = React.createClass({
+const ${0} = React.createClass({
 	propTypes: {
 	},
 
@@ -256,30 +256,30 @@ React.PropTypes.node
 endsnippet
 
 snippet div
-<div className="${1}">
+<div className="${0}">
 </div>
 endsnippet
 
 snippet span
-<span className="${1}">
+<span className="${0}">
 </span>
 endsnippet
 
 snippet bl
-<${1} className="${2}">
+<${1} className="${0}">
 </$1>
 endsnippet
 
 snippet handle
-this.handle$2 = this.handle$2.bind(this);
-handle$2() {
+this.handle$1 = this.handle$1.bind(this);
+handle$1() {
 }
-on${1}={this.handle${2}}
+on${0}={this.handle${1}}
 endsnippet
 
 snippet switch
 switch (${1}) {
-	case ${2}: {
+	case ${0}: {
 		break;
 	}
 	default: {
