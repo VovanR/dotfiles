@@ -259,10 +259,10 @@ map <S-F2> :wa<CR>
 
 
 " set colorcolumn=+1
-set colorcolumn=81
+" set colorcolumn=81
 
 " don't try to highlight long lines
-set synmaxcol=800
+set synmaxcol=120
 
 
 
