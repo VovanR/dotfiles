@@ -165,11 +165,8 @@ snippet mapx
 endsnippet
 
 snippet stateless
-import React from 'react';
-
-const $1 = (props) => (
+const ${1} = (props) => (${0}
 	<div>
-		${1:ClassName}
 	</div>
 );
 // $1.propTypes = {};
@@ -179,7 +176,7 @@ export default $1;
 endsnippet
 
 snippet component
-class ${0} extends React.Component {
+class ${1} extends React.Component {${0}
 	constructor(props) {
 		super(props);
 		this.state = {};
@@ -192,7 +189,7 @@ class ${0} extends React.Component {
 		);
 	}
 }
-$0.propTypes = {
+$1.propTypes = {
 };
 $1.defaultProps = {
 };
@@ -201,7 +198,7 @@ export default $1;
 endsnippet
 
 snippet reactcomponent
-const ${0} = React.createClass({
+const ${1}${0} = React.createClass({
 	propTypes: {
 	},
 
