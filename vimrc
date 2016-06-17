@@ -196,6 +196,8 @@ set showcmd
 set incsearch
 " Ignore case while searching
 set ignorecase
+" Case sensitive search if upper case char
+set smartcase
 " Make /g flag default when doing :s
 set gdefault
 " Highlight searches
@@ -262,7 +264,7 @@ map <S-F2> :wa<CR>
 " set colorcolumn=81
 
 " don't try to highlight long lines
-set synmaxcol=120
+set synmaxcol=210
 
 
 
@@ -428,6 +430,7 @@ function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
 endfunction
 
 call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
+call NERDTreeHighlightFile('pug', 'green', 'none', 'green', '#151515')
 call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
 call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
 call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
