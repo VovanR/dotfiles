@@ -2,3 +2,19 @@ snippet test
 test('${0}', t => {
 });
 endsnippet
+
+snippet testa
+test('itasync', async t => {
+	function p() {
+		const p = new Promise((resolve) => {
+			setTimeout(() => {
+				resolve(333);
+			}, 200);
+		});
+
+		return p;
+	}
+
+	t.is(await p(), 333);
+});
+endsnippet

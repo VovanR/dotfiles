@@ -4,9 +4,9 @@ include ../$1/${1}
 endsnippet
 
 snippet mix
-mixin $0
-	+b.${0}&attributes(attributes)
-		| $0
+mixin $1
+	+b.${1}&attributes(attributes)${0}
+		| $1
 endsnippet
 
 snippet each
