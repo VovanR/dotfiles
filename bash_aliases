@@ -140,6 +140,7 @@ alias gmnf="git merge --no-ff "
 # npm aliases
 alias npmr="npm run"
 alias npms="npm start"
+alias npmd="npmr deploy"
 alias npmb="npmr build"
 alias npmt="npmr test"
 alias npmi="npm i"
