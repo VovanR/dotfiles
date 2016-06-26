@@ -1,25 +1,21 @@
 # Source: https://github.com/shuvalov-anton/vim-snippets/blob/master/snippets/javascript.snippets
 snippet timeoutc
-setTimeout(function (that) {
-	${0}
+setTimeout(function (that) {${0}
 }, ${1}, this);
 endsnippet
 
 snippet timeout
-setTimeout(function () {
-	${0}
+setTimeout(function () {${0}
 }, ${1});
 endsnippet
 
 snippet intervalc
-setInterval(function (that) {
-	${0}
+setInterval(function (that) {${0}
 }, ${1}, this);
 endsnippet
 
 snippet interval
-setInterval(function () {
-	${0}
+setInterval(function () {${0}
 }, ${1});
 endsnippet
 
@@ -44,7 +40,7 @@ console.dir(${0});
 endsnippet
 
 snippet method
-${0}: function () {
+${1}: function (${0}) {
 },
 endsnippet
 
@@ -64,7 +60,7 @@ endsnippet
 
 snippet :f
 ${1}: function (${0}) {
-}${3:,}
+}${2:,}
 endsnippet
 
 snippet fn
@@ -73,7 +69,7 @@ function ${1} (${0}) {
 endsnippet
 
 snippet sf
-(function () {
+(function () {${0}
 }());
 endsnippet
 
@@ -83,8 +79,8 @@ function * (${0}) {
 endsnippet
 
 snippet :g
-${1}: function * (${2}) {
-}${0:,}
+${1}: function * (${0}) {
+}${2:,}
 endsnippet
 
 snippet gn
@@ -130,7 +126,7 @@ endsnippet
 
 snippet constructor
 constructor($1) {
-	super(${1:props});
+	super(${1:props});${0}
 }
 endsnippet
 
@@ -155,21 +151,19 @@ import ${1} from '${0}';
 endsnippet
 
 snippet mapx
-{this.props.collection.map(item => {
+{${1}.map(${2:item} => {${0}
 	return (
 		<div
-			key={item}
+			key={$2.id}
 			/>
 	);
 })}
 endsnippet
 
 snippet stateless
-import React from 'react';
-
-const $1 = (props) => (
+const $1 = props => (${0}
 	<div>
-		${1:ClassName}
+		${1}
 	</div>
 );
 // $1.propTypes = {};
@@ -179,7 +173,7 @@ export default $1;
 endsnippet
 
 snippet component
-class ${0} extends React.Component {
+class ${1} extends React.Component {${0}
 	constructor(props) {
 		super(props);
 		this.state = {};
@@ -192,7 +186,7 @@ class ${0} extends React.Component {
 		);
 	}
 }
-$0.propTypes = {
+$1.propTypes = {
 };
 $1.defaultProps = {
 };
@@ -201,7 +195,7 @@ export default $1;
 endsnippet
 
 snippet reactcomponent
-const ${0} = React.createClass({
+const ${1} = React.createClass({${0}
 	propTypes: {
 	},
 
