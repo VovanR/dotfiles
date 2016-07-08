@@ -39,7 +39,7 @@ call dein#add('scrooloose/nerdcommenter')
 call dein#add('tpope/vim-surround')
 
 " View
-call dein#add('Valloric/YouCompleteMe', {'build': 'python install.py'})
+call dein#add('Shougo/deoplete.nvim')
 call dein#add('Xuyuanp/nerdtree-git-plugin')
 " call dein#add('Yggdroot/indentLine')
 call dein#add('bling/vim-airline')
@@ -485,11 +485,8 @@ let g:NERDTreeIndicatorMapCustom = {
 let g:signify_vcs_list = [ 'git' ]
 "
 
-" Plugin 'Valloric/YouCompleteMe'
-" make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
+" Plugin 'Shougo/deoplete.nvim'
+let g:deoplete#enable_at_startup = 1
 "
 
 " Plugin 'haya14busa/incsearch.vim'
