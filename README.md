@@ -84,12 +84,6 @@ Compile [vimproc](https://github.com/Shougo/vimproc.vim#building)
 cd ~/.vim/bundle/repos/github.com/Shougo/vimproc.vim && make
 ```
 
-Compile [YouCompleteMe](https://github.com/Valloric/YouCompleteMe#installation)
-```bash
-sudo apt-get install build-essential cmake python-dev libboost-all-dev
-cd ~/.vim/bundle/repos/github.com/Valloric/YouCompleteMe && ./install.py
-```
-
 Install [The Silver Searcher](https://github.com/ggreer/the_silver_searcher#installing)
 ```bash
 sudo apt-get install silversearcher-ag
