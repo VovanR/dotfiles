@@ -76,7 +76,7 @@ call dein#add('wavded/vim-stylus')
 
 " JavaScript
 " call dein#add('SevInf/vim-bemhtml')
-" call dein#add('heavenshell/vim-jsdoc')
+call dein#add('heavenshell/vim-jsdoc')
 " call dein#add('jason0x43/vim-js-indent')
 " call dein#add('kchmck/vim-coffee-script')
 " call dein#add('leafgarland/typescript-vim')
@@ -519,9 +519,9 @@ let g:tern_show_signature_in_pum=0
 
 " Plugin 'heavenshell/vim-jsdoc'
 " Не подсвечивать jsDoc
-" let g:javascript_ignore_javaScriptdoc=0
+let g:javascript_ignore_javaScriptdoc=0
 
-" nmap <silent> <C-l> <Plug>(jsdoc)
+nmap <silent> <C-l> <Plug>(jsdoc)
 " let g:jsdoc_return=0
 " let g:jsdoc_access_descriptions=1
 " let g:jsdoc_underscore_private=1
