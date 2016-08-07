@@ -84,6 +84,10 @@ snippet borra
 border-radius: ${0}
 endsnippet
 
+snippet borra0
+border-radius: 0
+endsnippet
+
 snippet borra50
 border-radius: 50%
 endsnippet
@@ -387,20 +391,36 @@ snippet ti
 text-indent: ${0}
 endsnippet
 
-snippet pb
-padding-bottom: ${0}
+snippet pt
+padding-top: ${0}
 endsnippet
 
-snippet pl
-padding-left: ${0}
+snippet pt0
+padding-top: 0
 endsnippet
 
 snippet pr
 padding-right: ${0}
 endsnippet
 
-snippet pt
-padding-top: ${0}
+snippet pr0
+padding-right: 0
+endsnippet
+
+snippet pb
+padding-bottom: ${0}
+endsnippet
+
+snippet pb0
+padding-bottom: 0
+endsnippet
+
+snippet pl
+padding-left: ${0}
+endsnippet
+
+snippet pl0
+padding-left: 0
 endsnippet
 
 snippet p
@@ -596,27 +616,31 @@ z-index: 1
 endsnippet
 
 snippet :h
-:hover
+&:hover
+endsnippet
+
+snippet :f
+&:focus
 endsnippet
 
 snippet :fc
-:first-child
+&:first-child
 endsnippet
 
 snippet :lc
-:last-child
+&:last-child
 endsnippet
 
 snippet :nc
-:nth-child(${0})
+&:nth-child(${0})
 endsnippet
 
 snippet :nlc
-:nth-last-child(${0})
+&:nth-last-child(${0})
 endsnippet
 
 snippet :oc
-:only-child
+&:only-child
 endsnippet
 
 snippet :a
@@ -656,4 +680,8 @@ ${0}
 	font: 0/0 a
 	color: transparent
 	text-shadow: none
+endsnippet
+
+snippet e
+&__
 endsnippet
