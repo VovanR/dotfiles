@@ -693,3 +693,9 @@ endsnippet
 snippet e
 &__
 endsnippet
+
+snippet gradient
+background: $1
+background: linear-gradient(to bottom, ${1}, ${2})
+filter: unquote("progid:DXImageTransform.Microsoft.gradient(startColorstr='$1', endColorstr='$2', GradientType=0)")
+endsnippet

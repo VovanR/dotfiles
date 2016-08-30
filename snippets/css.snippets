@@ -710,3 +710,9 @@ endsnippet
 snippet imp
 @import "${0}";
 endsnippet
+
+snippet gradient
+background: $1
+background: linear-gradient(to bottom, ${1}, ${2})
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$1', endColorstr='$2', GradientType=0)
+endsnippet
