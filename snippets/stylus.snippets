@@ -28,6 +28,18 @@ snippet bgc
 background-color: #${0}
 endsnippet
 
+snippet bgcf
+background-color: #fff
+endsnippet
+
+snippet bgc0
+background-color: #000
+endsnippet
+
+snippet bgct
+background-color: transparent
+endsnippet
+
 snippet bgi
 background-image: url("${0}")
 endsnippet
@@ -97,6 +109,9 @@ bottom: ${0}
 endsnippet
 snippet b0
 bottom: 0
+endsnippet
+snippet b50
+bottom: 50%
 endsnippet
 snippet b100
 bottom: 100%
@@ -300,6 +315,9 @@ endsnippet
 snippet l0
 left: 0
 endsnippet
+snippet l50
+left: 50%
+endsnippet
 snippet l100
 left: 100%
 endsnippet
@@ -461,6 +479,9 @@ endsnippet
 snippet r0
 right: 0
 endsnippet
+snippet r50
+right: 50%
+endsnippet
 snippet r100
 right: 100%
 endsnippet
@@ -518,6 +539,9 @@ top: ${0}
 endsnippet
 snippet t0
 top: 0
+endsnippet
+snippet t50
+top: 50%
 endsnippet
 snippet t100
 top: 100%
@@ -698,4 +722,12 @@ snippet gradient
 background: $1
 background: linear-gradient(to bottom, ${1}, ${2})
 filter: unquote("progid:DXImageTransform.Microsoft.gradient(startColorstr='$1', endColorstr='$2', GradientType=0)")
+endsnippet
+
+snippet rgbaf
+rgba(255, 255, 255, 0.${0})
+endsnippet
+
+snippet rgba0
+rgba(0, 0, 0, 0.${0})
 endsnippet
