@@ -49,6 +49,7 @@ alias v-upgrade=" \
 alias open="xdg-open"
 alias o="open"
 alias e="atom"
+alias v="vim"
 
 # Play sound Done!
 alias alert-done="paplay /usr/share/sounds/freedesktop/stereo/complete.oga"
