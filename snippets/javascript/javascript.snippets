@@ -161,9 +161,9 @@ snippet mapx
 endsnippet
 
 snippet stateless
-const $1 = props => (${0}
+const $1 = props => (
 	<div>
-		${1}
+		{'${1}'}
 	</div>
 );
 // $1.propTypes = {};
@@ -182,6 +182,7 @@ class ${1} extends React.Component {${0}
 	render() {
 		return (
 			<div className="">
+				{'$1'}
 			</div>
 		);
 	}
@@ -304,4 +305,8 @@ endsnippet
 snippet target
 target="_blank"
 rel="noopener noreferrer"
+endsnippet
+
+snippet bnd
+this.handle${1} = this.handle$1.bind(this);
 endsnippet
