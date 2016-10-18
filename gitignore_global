@@ -77,3 +77,6 @@ info.php
 .tern-project
 node_modules
 bower_components
+.nyc_output
+npm-debug.log
+yarn.lock
