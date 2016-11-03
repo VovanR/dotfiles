@@ -84,9 +84,10 @@ Compile [vimproc](https://github.com/Shougo/vimproc.vim#building)
 cd ~/.vim/bundle/repos/github.com/Shougo/vimproc.vim && make
 ```
 
-Install [The Silver Searcher](https://github.com/ggreer/the_silver_searcher#installing)
+Install [ack](http://beyondgrep.com/install/)
 ```bash
-sudo apt-get install silversearcher-ag
+sudo apt-get install ack-grep
+ln -s ~/.config/dotfiles/ackrc ~/.ackrc
 ```
 
 #### [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
