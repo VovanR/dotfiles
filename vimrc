@@ -16,9 +16,9 @@ set nocompatible
 if &compatible
     set nocompatible
 endif
-set runtimepath^=~/.vim/bundle/repos/github.com/Shougo/dein.vim/
+set runtimepath+=~/.vim/bundle/repos/github.com/Shougo/dein.vim
 
-call dein#begin(expand('~/.vim/bundle/'))
+call dein#begin('~/.vim/bundle')
 
 call dein#add('Shougo/dein.vim')
 
