@@ -1,6 +1,6 @@
 # dotfiles
 
-> My configs: bash, Git, Vim, Atom, Tmux, Node, Plymouth. Xubuntu.
+> My configs: bash, Git, Vim, Atom, Tmux, Node.js, Plymouth. Xubuntu.
 
 ## Install
 
@@ -109,7 +109,7 @@ Add [completion](https://github.com/tmuxinator/tmuxinator#completion)
 wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash -P ~/.local/bin/
 ```
 
-### Node
+### Node.js
 
 [Change npm's default directory to another directory](https://docs.npmjs.com/getting-started/fixing-npm-permissions)
 ```bash
