@@ -88,7 +88,7 @@ call dein#add('posva/vim-vue')
 
 " HTML
 " call dein#add('AndrewRadev/vim-eco')
-call dein#add('Glench/Vim-Jinja2-Syntax')
+" call dein#add('Glench/Vim-Jinja2-Syntax')
 call dein#add('digitaltoad/vim-pug')
 call dein#add('evidens/vim-twig')
 call dein#add('godlygeek/tabular')
