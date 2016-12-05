@@ -71,6 +71,8 @@ makets
 framework
 tmp
 env
+.env
+.venv
 cache
 __pycache__
 info.php
