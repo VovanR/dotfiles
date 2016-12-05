@@ -14,5 +14,10 @@
 --ignore-dir=cache
 --ignore-dir=vendor
 --ignore-dir=makets
+--ignore-dir=node_modules
+--ignore-dir=bower_components
+--ignore-dir=.env
+--ignore-dir=.venv
+--ignore-file=is:yarn.lock
 --sort-files
 --ignore-case
