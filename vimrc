@@ -449,7 +449,7 @@ call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 " Plugin 'bling/vim-airline'
 " Hide git branch and show scrollbar
 " line number/total lines:column number
-let g:airline_section_b='%{noscrollbar#statusline(20, "—", "|")}%l/%L:%03c'
+let g:airline_section_b='%{noscrollbar#statusline(20, "—", "|")}%l/%L:%v'
 " Hide right section
 let g:airline_section_z=airline#section#create([''])
 
