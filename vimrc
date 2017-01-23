@@ -158,7 +158,7 @@ endif
 
 " Don't break up long lines, but visually wrap them.
 set textwidth=0
-set wrap
+set nowrap
 
 " Minimal number of screen lines to keep above and below the cursor.
 " Start scrolling three lines before the horizontal window border
@@ -291,8 +291,8 @@ set number
 set relativenumber
 
 " Highlight current line
-" set cursorline
-" set cursorcolumn
+set cursorline
+set cursorcolumn
 
 
 
@@ -464,7 +464,7 @@ let g:airline#extensions#hunks#enabled = 0
 " Plugin 'chriskempson/base16-vim'
 set background=dark
 let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme base16-shapeshifter
+colorscheme base16-atelier-forest
 "
 
 " Plugin 'Xuyuanp/nerdtree-git-plugin'
