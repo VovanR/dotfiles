@@ -48,7 +48,7 @@ call dein#add('chriskempson/base16-vim')
 call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('ervandew/supertab')
 call dein#add('gcavallanti/vim-noscrollbar')
-call dein#add('haya14busa/incsearch.vim')
+" call dein#add('haya14busa/incsearch.vim')
 call dein#add('jistr/vim-nerdtree-tabs')
 call dein#add('jlanzarotta/bufexplorer')
 call dein#add('low-ghost/nerdtree-fugitive')
@@ -490,9 +490,9 @@ let g:deoplete#enable_at_startup = 1
 "
 
 " Plugin 'haya14busa/incsearch.vim'
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
+" map /  <Plug>(incsearch-forward)
+" map ?  <Plug>(incsearch-backward)
+" map g/ <Plug>(incsearch-stay)
 "
 
 
