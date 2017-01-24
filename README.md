@@ -117,6 +117,12 @@ mkdir -p ~/.npm-global/bin
 npm config set prefix '~/.npm-global'
 ```
 
+See: [TypeError: Unable to watch path](https://github.com/atom/atom/blob/master/docs/build-instructions/linux.md#typeerror-unable-to-watch-path)
+```
+sudo sysctl fs.inotify.max_user_watches=32768
+echo 32768 | sudo tee -a /proc/sys/fs/inotify/max_user_watches
+```
+
 Defaults
 ```bash
 npm set init-author-email mail@gmail.com
@@ -124,6 +130,10 @@ npm set init-author-name "User Name"
 npm set init-author-url https://mysite.com/
 npm set init-license MIT
 npm set init-version 0.0.0
+```
+
+```
+npm i -g diff-so-fancy
 ```
 
 ### Plymouth
