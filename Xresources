@@ -30,6 +30,46 @@ xterm*scrollTtyOutput: false
 xterm*metaSendsEscape: true
 
 
+urxvt.font: -misc-fixed-medium-r-normal--15-140-75-75-c-90-iso10646-1
+
+urxvt.utf8: 1
+urxvt.utf8Title: 1
+urxvt.locale: true
+urxvt.termName: xterm-256color
+urxvt.iconFile: /usr/share/icons/elementary-xfce/apps/48/terminal.png
+urxvt.internalBorder: 0
+urxvt.externalBorder: 0
+urxvt.borderColor: #1B1918
+urxvt.borderLess: false
+
+! Every shell is a login shell by default (for inclusion of all necessary environment variables)
+urxvt.loginshell: true
+
+! I like a LOT of scrollback...
+urxvt.savelines: 16384
+
+! double-click to select whole URLs :D
+urxvt.charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+! urxvt.perl-ext-common:  default,matcher,vtwheel
+! urxvt.url-launcher:     /usr/bin/chromium-browser
+! urxvt.matcher.button:   1
+
+! right hand side scrollbar...
+urxvt.rightScrollBar: true
+urxvt.scrollBar: false
+urxvt.scrollKey: true
+
+! stop output to terminal from jumping down to bottom of scroll again
+urxvt.scrollTtyOutput: false
+
+! fix `A-.` and `A-0`
+! See: https://bugs.launchpad.net/ubuntu/+source/xterm/+bug/1049569
+urxvt.metaSendsEscape: true
+
+urxvt*keysym.F4: \033OS
+
+
 ! xscreensaver ---------------------------------------------------------------
 
 !font settings
