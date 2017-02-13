@@ -48,7 +48,8 @@ alias v-upgrade=" \
 
 alias open="xdg-open"
 alias o="open"
-alias e="atom"
+alias oo="open ."
+alias e="$EDITOR"
 alias v="vim"
 
 # Play sound Done!
