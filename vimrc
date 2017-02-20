@@ -78,7 +78,7 @@ call dein#add('wavded/vim-stylus')
 " call dein#add('SevInf/vim-bemhtml')
 call dein#add('heavenshell/vim-jsdoc')
 " call dein#add('jason0x43/vim-js-indent')
-" call dein#add('kchmck/vim-coffee-script')
+call dein#add('kchmck/vim-coffee-script')
 " call dein#add('leafgarland/typescript-vim')
 " call dein#add('mxw/vim-jsx')
 call dein#add('othree/javascript-libraries-syntax.vim')
@@ -90,9 +90,9 @@ call dein#add('posva/vim-vue')
 " call dein#add('AndrewRadev/vim-eco')
 " call dein#add('Glench/Vim-Jinja2-Syntax')
 call dein#add('digitaltoad/vim-pug')
-call dein#add('evidens/vim-twig')
-call dein#add('godlygeek/tabular')
-call dein#add('gregsexton/MatchTag')
+" call dein#add('evidens/vim-twig')
+" call dein#add('godlygeek/tabular')
+" call dein#add('gregsexton/MatchTag')
 " call dein#add('mustache/vim-mustache-handlebars')
 " call dein#add('othree/html5.vim')
 " call dein#add('plasticboy/vim-markdown')
@@ -271,9 +271,6 @@ set synmaxcol=210
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed,unnamedplus
-
-" Allow cursor keys in insert mode
-set esckeys
 
 " Optimize for fast terminal connections
 set ttyfast
