@@ -1,0 +1,162 @@
+snippet setstatef
+this.setState(previousState => {${0}
+	return previousState;
+});
+endsnippet
+
+snippet componentWillReceiveProps
+componentWillReceiveProps(nextProps) {
+}
+endsnippet
+
+snippet shouldComponentUpdate
+shouldComponentUpdate(nextProps, nextState) {
+}
+endsnippet
+
+snippet handle
+this.handle$1 = this.handle$1.bind(this);
+handle$1() {
+}
+on${0}={this.handle${1}}
+endsnippet
+
+snippet mapx
+{${1}.map(${2:item} => {${0}
+	return (
+		<div
+			key={$2.id}
+			/>
+	);
+})}
+endsnippet
+
+snippet stateless
+const $1 = props => (
+	<div>
+		{'${1}'}
+	</div>
+);
+// $1.propTypes = {};
+// $1.defaultProps = {};
+
+export default $1;
+endsnippet
+
+snippet component
+class ${1} extends React.Component {${0}
+	constructor(props) {
+		super(props);
+		this.state = {};
+	}
+
+	render() {
+		return (
+			<div className="">
+				{'$1'}
+			</div>
+		);
+	}
+}
+$1.propTypes = {
+};
+$1.defaultProps = {
+};
+
+export default $1;
+endsnippet
+
+snippet reactcomponent
+const ${1} = React.createClass({${0}
+	propTypes: {
+	},
+
+	getDefaultProps() {
+		return {};
+	},
+
+	getInitialState() {
+		return {};
+	},
+
+	render() {
+		return (
+			<div className="">
+			</div>
+		);
+	}
+});
+
+export default $1;
+endsnippet
+
+snippet rpt
+React.PropTypes.
+endsnippet
+snippet rpta
+React.PropTypes.array
+endsnippet
+snippet rptb
+React.PropTypes.bool
+endsnippet
+snippet rptf
+React.PropTypes.func
+endsnippet
+snippet rptn
+React.PropTypes.number
+endsnippet
+snippet rpto
+React.PropTypes.object
+endsnippet
+snippet rpts
+React.PropTypes.string
+endsnippet
+snippet rptoo
+React.PropTypes.oneOfType([
+	React.PropTypes.number,
+	React.PropTypes.string
+])
+endsnippet
+snippet rptno
+React.PropTypes.node
+endsnippet
+
+snippet div
+<div className="${0}">
+</div>
+endsnippet
+
+snippet span
+<span className="${0}">
+</span>
+endsnippet
+
+snippet bl
+<${1} className="${0}">
+</$1>
+endsnippet
+
+snippet button
+<button
+	className="btn"
+	onClick={}
+	type="button"
+	>
+</button>
+endsnippet
+
+snippet ifx
+{${0} ? (
+) : null}
+endsnippet
+
+snippet ifxf
+{${0} ? null : (
+)}
+endsnippet
+
+snippet ifex
+{${0} ? (
+) : (
+)}
+endsnippet
