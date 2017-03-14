@@ -136,6 +136,11 @@ npm set init-version 0.0.0
 npm i -g diff-so-fancy
 ```
 
+### [Basher](https://github.com/basherpm/basher)
+```
+git clone https://github.com/basherpm/basher.git ~/.basher
+```
+
 ### Plymouth
 
 Change background wallpaper
@@ -149,6 +154,9 @@ ls /usr/share/plymouth/themes/xubuntu-logo/wallpaper.png && ls /usr/share/xfce4/
 cd ~/.config/dotfiles
 git pull
 vim
+cd ~/.config/base16-shell
+git pull
+basher update
 ```
 
 ## Further customization

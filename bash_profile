@@ -14,6 +14,12 @@ if [ -d ~/.npm-global ]; then
     export NODE_PATH=$NODE_PATH:~/.npm-global/lib/node_modules
 fi
 
+#basher
+if [ -d ~/.basher ]; then
+    export PATH=~/.basher/bin:$PATH
+    eval "$(basher init -)"
+fi
+
 # bash prompt
 if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
