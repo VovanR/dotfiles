@@ -109,6 +109,11 @@ Add [completion](https://github.com/tmuxinator/tmuxinator#completion)
 wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash -P ~/.local/bin/
 ```
 
+### [Alacritty](https://github.com/jwilm/alacritty)
+```bash
+ln -s ~/.config/dotfiles/alacritty/alacritty.yml ~/.alacritty/alacritty.yml
+```
+
 ### Node.js
 
 [Change npm's default directory to another directory](https://docs.npmjs.com/getting-started/fixing-npm-permissions)
