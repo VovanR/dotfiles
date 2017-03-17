@@ -153,6 +153,15 @@ Change background wallpaper
 ls /usr/share/plymouth/themes/xubuntu-logo/wallpaper.png && ls /usr/share/xfce4/backdrops/Mountainous_View_by_Sven_Scheuermeier.jpg && sudo convert /usr/share/xfce4/backdrops/Mountainous_View_by_Sven_Scheuermeier.jpg /usr/share/plymouth/themes/xubuntu-logo/wallpaper.png
 ```
 
+## Fix Xubuntu keyboard auto repeat delay and repeat rate
+```bash
+crontab -e
+```
+Add
+```
+*/15 * * * * DISPLAY=:0 /usr/bin/xset r rate 300 30
+```
+
 ## Upgrade
 
 ```bash
