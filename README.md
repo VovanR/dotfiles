@@ -111,7 +111,7 @@ wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/t
 
 ### [Alacritty](https://github.com/jwilm/alacritty)
 ```bash
-ln -s ~/.config/dotfiles/alacritty/alacritty.yml ~/.alacritty/alacritty.yml
+ln -s ~/.config/dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 ```
 
 ### Node.js
