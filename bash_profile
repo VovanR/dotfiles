@@ -20,6 +20,10 @@ if [ -d ~/.basher ]; then
     eval "$(basher init -)"
 fi
 
+if [ -d ~/.cargo ]; then
+    source ~/.cargo/env
+fi
+
 # bash prompt
 if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
