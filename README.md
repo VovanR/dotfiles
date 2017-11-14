@@ -95,7 +95,7 @@ ln -s ~/.config/dotfiles/ackrc ~/.ackrc
 ln -s ~/.vim ~/.config/nvim
 ln -s ~/.config/nvim/vimrc ~/.config/nvim/init.vim
 ```
-Check [Quickstart](https://neovim.io/doc/user/nvim_python.html) section to using Vim Python 2/3 plugins with Nvim
+Check [PYTHON QUICKSTART](https://neovim.io/doc/user/provider.html#provider-python) section to using Vim Python 2/3 plugins with Nvim
 
 ### Tmux
 
