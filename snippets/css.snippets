@@ -753,8 +753,8 @@ endsnippet
 
 snippet clearfix
 /* Clear fix */
-${1}:before, $1:after { content: " "; display: table; }
-$1:after { clear: both; }
+${1}::before, $1::after { content: " "; display: table; }
+$1::after { clear: both; }
 $1 { zoom: 1; } /* IE6/7 (trigger hasLayout) */
 endsnippet
 
