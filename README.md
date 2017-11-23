@@ -2,9 +2,29 @@
 
 > My configs: bash, Git, Vim, Atom, Tmux, Node.js, Plymouth. Xubuntu.
 
+## Table of Contents
+
+- [Install](#install)
+  - [Font](#font)
+  - [Color scheme](#color-scheme)
+  - [Bash](#bash)
+  - [Git](#git)
+  - [Atom](#atom)
+  - [Vim](#vim)
+     - [Neovim](#neovim)
+  - [Tmux](#tmux)
+  - [Alacritty](#alacritty)
+  - [Node.js](#nodejs)
+  - [Basher](#basher)
+  - [Plymouth](#plymouth)
+- [Fix Xubuntu keyboard auto repeat delay and repeat rate](#fix-xubuntu-keyboard-auto-repeat-delay-and-repeat-rate)
+- [Upgrade](#upgrade)
+- [Further customization](#further-customization)
+- [Resources](#resources)
+
 ## Install
 
-```bash
+```shell
 git clone https://github.com/VovanR/dotfiles.git ~/.config/dotfiles
 ```
 
@@ -13,7 +33,7 @@ git clone https://github.com/VovanR/dotfiles.git ~/.config/dotfiles
 Download [Hack](https://github.com/chrissimpkins/Hack) or [Input](http://input.fontbureau.com/)
 
 Copy it to `~/.fonts/truetype/Hack/`
-```bash
+```shell
 $ tree ~/.fonts/truetype/
 ~/.fonts/truetype/
 └── Hack
@@ -26,13 +46,13 @@ $ tree ~/.fonts/truetype/
 ### Color scheme
 
 Install [Base16 Shell](https://github.com/chriskempson/base16-shell#installation)
-```bash
+```shell
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 ```
 
 ### Bash
 
-```bash
+```shell
 ln -s ~/.config/dotfiles/bash_aliases ~/.bash_aliases
 ln -s ~/.config/dotfiles/bash_functions ~/.bash_functions
 ln -s ~/.config/dotfiles/bash_profile ~/.bash_profile
@@ -46,7 +66,7 @@ source ~/.bash_profile
 
 ### Git
 
-```bash
+```shell
 git config -f ~/.gitlocal user.name "Username"
 git config -f ~/.gitlocal user.email "mail@gmail.com"
 ln -s ~/.config/dotfiles/gitconfig ~/.gitconfig
@@ -55,43 +75,44 @@ ln -s ~/.config/dotfiles/gitignore_global ~/.gitignore_global
 
 ### Atom
 
-```bash
+```shell
 ln -s ~/.config/dotfiles/atom/snippets.cson ~/.atom/snippets.cson
 ```
 
 ### Vim
 
-```bash
+```shell
 mkdir -p ~/.vim/{backups,bundle,swaps,undo}
 ln -s ~/.config/dotfiles/vimrc ~/.vim/vimrc
 ln -s ~/.config/dotfiles/snippets ~/.vim/UltiSnips
 ```
 
 Install [Dein.vim](https://github.com/Shougo/dein.vim)
-```bash
+```shell
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
 sh ./installer.sh ~/.vim/bundle
 rm ./installer.sh
 ```
 
 Install Plugins
-```bash
+```shell
 vim
 ```
 
 Compile [vimproc](https://github.com/Shougo/vimproc.vim#building)
-```bash
+```shell
 cd ~/.vim/bundle/repos/github.com/Shougo/vimproc.vim && make
 ```
 
 Install [ack](http://beyondgrep.com/install/)
-```bash
+```shell
 sudo apt-get install ack-grep
 ln -s ~/.config/dotfiles/ackrc ~/.ackrc
 ```
 
 #### [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
-```bash
+
+```shell
 ln -s ~/.vim ~/.config/nvim
 ln -s ~/.config/nvim/vimrc ~/.config/nvim/init.vim
 ```
@@ -100,24 +121,25 @@ Check [PYTHON QUICKSTART](https://neovim.io/doc/user/provider.html#provider-pyth
 ### Tmux
 
 Install [Tmuxinator](https://github.com/tmuxinator/tmuxinator)
-```bash
+```shell
 sudo gem install tmuxinator
 ```
 
 Add [completion](https://github.com/tmuxinator/tmuxinator#completion)
-```bash
+```shell
 wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash -P ~/.local/bin/
 ```
 
 ### [Alacritty](https://github.com/jwilm/alacritty)
-```bash
+
+```shell
 ln -s ~/.config/dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 ```
 
 ### Node.js
 
 [Change npm's default directory to another directory](https://docs.npmjs.com/getting-started/fixing-npm-permissions)
-```bash
+```shell
 mkdir -p ~/.npm-global/bin
 npm config set prefix '~/.npm-global'
 ```
@@ -129,7 +151,7 @@ echo 32768 | sudo tee -a /proc/sys/fs/inotify/max_user_watches
 ```
 
 Defaults
-```bash
+```shell
 npm set init-author-email mail@gmail.com
 npm set init-author-name "User Name"
 npm set init-author-url https://mysite.com/
@@ -137,34 +159,36 @@ npm set init-license MIT
 npm set init-version 0.0.0
 ```
 
-```
+```shell
 npm i -g diff-so-fancy
 ```
 
 ### [Basher](https://github.com/basherpm/basher)
-```
+
+```shell
 git clone https://github.com/basherpm/basher.git ~/.basher
 ```
 
 ### Plymouth
 
 Change background wallpaper
-```bash
+```shell
 ls /usr/share/plymouth/themes/xubuntu-logo/wallpaper.png && ls /usr/share/xfce4/backdrops/Mountainous_View_by_Sven_Scheuermeier.jpg && sudo convert /usr/share/xfce4/backdrops/Mountainous_View_by_Sven_Scheuermeier.jpg /usr/share/plymouth/themes/xubuntu-logo/wallpaper.png
 ```
 
 ## Fix Xubuntu keyboard auto repeat delay and repeat rate
-```bash
+
+```shell
 crontab -e
 ```
 Add
-```
+```cron
 */15 * * * * DISPLAY=:0 /usr/bin/xset r rate 300 30
 ```
 
 ## Upgrade
 
-```bash
+```shell
 cd ~/.config/dotfiles
 git pull
 vim
