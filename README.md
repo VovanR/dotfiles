@@ -106,7 +106,7 @@ cd ~/.vim/bundle/repos/github.com/Shougo/vimproc.vim && make
 
 Install [ack](http://beyondgrep.com/install/)
 ```shell
-sudo apt-get install ack-grep
+curl https://beyondgrep.com/ack-2.18-single-file > ~/.local/bin/ack && chmod 0755 ~/.local/bin/ack
 ln -s ~/.config/dotfiles/ackrc ~/.ackrc
 ```
 
