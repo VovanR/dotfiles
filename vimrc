@@ -80,9 +80,9 @@ call dein#add('heavenshell/vim-jsdoc')
 " call dein#add('jason0x43/vim-js-indent')
 call dein#add('kchmck/vim-coffee-script')
 " call dein#add('leafgarland/typescript-vim')
-" call dein#add('mxw/vim-jsx')
+call dein#add('mxw/vim-jsx')
 call dein#add('othree/javascript-libraries-syntax.vim')
-" call dein#add('pangloss/vim-javascript')
+call dein#add('pangloss/vim-javascript')
 call dein#add('posva/vim-vue')
 " call dein#add('ternjs/tern_for_vim')
 
@@ -502,13 +502,17 @@ let g:deoplete#enable_at_startup = 1
 " Syntax
 
 " JavaScript
+" Plugin 'pangloss/vim-javascript'
+let g:javascript_plugin_jsdoc = 1
+"
+
 " vim-jsx
 " Plugin 'mxw/vim-jsx'
 let g:jsx_ext_required = 1
 "
 
 " Plugin 'othree/javascript-libraries-syntax.vim'
-let g:used_javascript_libs = 'jquery,underscore,react'
+let g:used_javascript_libs = 'jquery,underscore,ramda,vue,react'
 "
 
 " Plugin 'ternjs/tern_for_vim'
@@ -518,13 +522,7 @@ let g:tern_show_signature_in_pum=0
 
 
 " Plugin 'heavenshell/vim-jsdoc'
-" Не подсвечивать jsDoc
-let g:javascript_ignore_javaScriptdoc=0
-
 nmap <silent> <C-l> <Plug>(jsdoc)
-" let g:jsdoc_return=0
-" let g:jsdoc_access_descriptions=1
-" let g:jsdoc_underscore_private=1
 "
 
 " " }}}
