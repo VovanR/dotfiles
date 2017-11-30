@@ -404,7 +404,7 @@ let g:pymode_rope_lookup_project = 0
 
 " Plugin 'scrooloose/nerdtree'
 " Open a NERDTree automatically when vim starts up if no files were specified
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 " F3 - open dir
 " map <S-F3> :Sexplore!<CR>
 " map <S-F3> :Texplore<CR>
