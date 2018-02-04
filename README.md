@@ -144,10 +144,9 @@ mkdir -p ~/.npm-global/bin
 npm config set prefix '~/.npm-global'
 ```
 
-See: [TypeError: Unable to watch path](https://github.com/atom/atom/blob/master/docs/build-instructions/linux.md#typeerror-unable-to-watch-path)
-```
-sudo sysctl fs.inotify.max_user_watches=32768
-echo 32768 | sudo tee -a /proc/sys/fs/inotify/max_user_watches
+See: [TypeError: Unable to watch path](https://flight-manual.atom.io/hacking-atom/sections/hacking-on-atom-core/#typeerror-unable-to-watch-path)
+```shell
+echo fs.inotify.max_user_watches=32768 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
 
 Defaults
