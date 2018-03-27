@@ -22,13 +22,11 @@ on${0}={this.handle${1}}
 endsnippet
 
 snippet mapx
-{${1}.map(${2:item} => {${0}
-	return (
-		<div
-			key={$2.id}
-			/>
-	);
-})}
+{${1}.map(${2:item} => (
+	<div
+		key={$2.id}
+	/>
+))}
 endsnippet
 
 snippet stateless
@@ -141,13 +139,13 @@ snippet button
 	className="btn"
 	onClick={}
 	type="button"
-	>
+>
 </button>
 endsnippet
 
 snippet ifx
-{${0} ? (
-) : null}
+{${0} && (
+)}
 endsnippet
 
 snippet ifxf
@@ -159,4 +157,12 @@ snippet ifex
 {${0} ? (
 ) : (
 )}
+endsnippet
+
+snippet props
+this.props
+endsnippet
+
+snippet state
+this.state
 endsnippet
