@@ -160,8 +160,9 @@ alias npmglist="npm list --global=true --depth=0"
 alias v-nvimupdate=" \
         cd ~/work/neovim && \
         gpull && \
-        make distclean && \
-        make && \
+        rm -r build && \
+        make clean && \
+        make CMAKE_BUILD_TYPE=Release && \
         notify-send 'v-nvimupdate' 'install' && \
         sudo make install; \
         alert \
