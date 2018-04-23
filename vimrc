@@ -139,7 +139,10 @@ set backspace=indent,eol,start
 " Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
+set undofile
 set undodir=~/.vim/undo
+set undolevels=1000
+set undoreload=10000
 
 " Disable swap files; systems don't crash that often these days
 set updatecount=0
