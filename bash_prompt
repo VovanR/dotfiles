@@ -74,7 +74,7 @@ function prompt_git_whoami() {
 
 # Git dirty
 function prompt_git_dirty {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo '*'
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo '*'
 }
 
 # Git stash
@@ -113,8 +113,8 @@ PS1+="$bldylw\j" # The number of processes you've suspended in this shell by hit
 PS1+="\$(prompt_git)" # Git details
 PS1+=" $txtylw\$(prompt_git_whoami)" # Git whoami
 
-PS1+="\$(parse_git_dirty)" # Git dirty
-PS1+="\$(parse_git_stash)" # Git stash
+PS1+="\$(prompt_git_dirty)" # Git dirty
+PS1+="\$(prompt_git_stash)" # Git stash
 
 PS1+="$txtrst\$(echo_new_line)" # Newline
 PS1+="$PROMPT " # PROMPT
