@@ -227,7 +227,7 @@ set wildignore+=*/LESS_CACHE/*,*/CACHE/*
 " Ignore Sass cache
 set wildignore+=*sass_cache*
 " Ignore env
-set wildignore+=*/env/*,*/node_modules/*,*/cache/*,*/built/*,*/bower_components/*,*/vendor/*,*/__pycache__/*
+set wildignore+=*/env/*,*/node_modules/*,*/.nyc_output/*,*/cache/*,*/built/*,*/bower_components/*,*/vendor/*,*/__pycache__/*
 set wildignore+=log/**,tmp/**
 
 " Show the current mode
