@@ -15,6 +15,7 @@
 --ignore-dir=vendor
 --ignore-dir=makets
 --ignore-dir=node_modules
+--ignore-dir=.nyc_output
 --ignore-dir=bower_components
 --ignore-dir=.env
 --ignore-dir=.venv
