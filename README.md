@@ -30,9 +30,12 @@ git clone https://github.com/VovanR/dotfiles.git ~/.config/dotfiles
 
 ### Font
 
-Download [Hack](https://github.com/chrissimpkins/Hack) or [Input](http://input.fontbureau.com/)
+Download any TrueType font
+- [Hack](https://github.com/chrissimpkins/Hack)
+- [Input](http://input.fontbureau.com/)
+- [IBM Plex Mono](https://github.com/IBM/plex/releases)
 
-Copy it to `~/.fonts/truetype/Hack/`
+Copy it to `~/.fonts/truetype/`
 ```shell
 $ tree ~/.fonts/truetype/
 ~/.fonts/truetype/
