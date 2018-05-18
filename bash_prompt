@@ -113,3 +113,5 @@ PS1+="\$(prompt_git_stash)" # Git stash
 PS1+="$txtrst\$(echo_new_line)" # Newline
 PS1+="$PROMPT " # PROMPT
 PS1+="$txtrst" # Reset color
+
+# vim: syntax=sh
