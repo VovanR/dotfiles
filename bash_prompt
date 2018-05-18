@@ -53,9 +53,9 @@ function prompt_git() {
     [[ "$output" ]] || output="$(git branch | perl -ne '/^\* (.*)/ && print $1')"
     flags="$(
     echo "$status" | awk 'BEGIN {r=""} \
-        /^# Changes to be committed:$/ {r=r "+"}\
-        /^# Changes not staged for commit:$/ {r=r "!"}\
-        /^# Untracked files:$/ {r=r "?"}\
+        /^Changes to be committed:$/ {r=r "+"}\
+        /^Changes not staged for commit:$/ {r=r "!"}\
+        /^Untracked files:$/ {r=r "?"}\
         END {print r}'
     )"
     if [[ "$flags" ]]; then
@@ -70,14 +70,6 @@ function prompt_git_whoami() {
     email="$(git config --local user.email 2>/dev/null)"
     [[ $? != 0 ]] && return;
     echo -en "${name} <${email}>"
-}
-
-# Git dirty
-function prompt_git_dirty {
-    status="$(git status 2>/dev/null)"
-    [[ $? != 0 ]] && return;
-    lastLineOfStatus=$(echo "$status" | tail -n1)
-    [[ "$lastLineOfStatus" != "nothing to commit, working tree clean" ]] && echo "*"
 }
 
 # Git stash
@@ -116,7 +108,6 @@ PS1+="$bldylw\j" # The number of processes you've suspended in this shell by hit
 PS1+="\$(prompt_git)" # Git details
 PS1+=" $txtylw\$(prompt_git_whoami)" # Git whoami
 
-PS1+="\$(prompt_git_dirty)" # Git dirty
 PS1+="\$(prompt_git_stash)" # Git stash
 
 PS1+="$txtrst\$(echo_new_line)" # Newline
