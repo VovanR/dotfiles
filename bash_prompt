@@ -74,7 +74,10 @@ function prompt_git_whoami() {
 
 # Git dirty
 function prompt_git_dirty {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo '*'
+    status="$(git status 2>/dev/null)"
+    [[ $? != 0 ]] && return;
+    lastLineOfStatus=$(echo "$status" | tail -n1)
+    [[ "$lastLineOfStatus" != "nothing to commit, working tree clean" ]] && echo "*"
 }
 
 # Git stash
