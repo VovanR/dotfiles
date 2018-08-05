@@ -21,7 +21,7 @@ if [ -d ~/.basher ]; then
 fi
 
 if [ -d ~/.cargo ]; then
-    source ~/.cargo/env
+    export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
 # bash prompt
@@ -37,6 +37,11 @@ fi
 # tmuxinator
 if [ -f ~/.local/bin/tmuxinator.bash ]; then
     source ~/.local/bin/tmuxinator.bash
+fi
+
+# Alacritty
+if [ -f ~/.local/bin/alacritty-completions.bash ]; then
+    source ~/.local/bin/alacritty-completions.bash
 fi
 
 # Base16 Shell
