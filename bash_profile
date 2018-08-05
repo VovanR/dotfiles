@@ -103,3 +103,5 @@ export HISTIGNORE="&:ls:[bf]g:exit"
 
 # Load extra (private) settings
 [ -f ~/.bashlocal ] && source ~/.bashlocal
+
+# vim: syntax=sh

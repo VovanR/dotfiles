@@ -167,3 +167,5 @@ alias v-nvimupdate=" \
         sudo make install; \
         alert \
     "
+
+# vim: syntax=sh
