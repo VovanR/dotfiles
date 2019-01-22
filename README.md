@@ -53,6 +53,11 @@ Install [Base16 Shell](https://github.com/chriskempson/base16-shell#installation
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 ```
 
+Apply theme
+```shell
+base16_atelier-forest
+```
+
 ### Bash
 
 ```shell
