@@ -236,7 +236,9 @@ set wildignore+=log/**,tmp/**
 set showmode
 
 " Show matching brackets
+" ?
 set showmatch
+" DoMatchParen highlight matching bracket
 " Bracket blinking
 set matchtime=2
 
@@ -255,6 +257,13 @@ map <F2> :w<CR>
 map <S-F2> :wa<CR>
 
 
+" Spell
+" See: http://www.opennet.ru/base/X/vim_orfo.txt.html
+" set spell spelllang=en,ru
+
+
+" Netrw
+" let g:netrw_banner=0
 
 
 
@@ -509,6 +518,7 @@ let g:deoplete#enable_at_startup = 1
 " JavaScript
 " Plugin 'pangloss/vim-javascript'
 let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_flow = 1
 "
 
 " vim-jsx
