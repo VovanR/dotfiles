@@ -35,13 +35,13 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # tmuxinator
-if [ -f ~/.local/bin/tmuxinator.bash ]; then
-    source ~/.local/bin/tmuxinator.bash
+if [ -f ~/.bash-completion/tmuxinator.bash ]; then
+    source ~/.bash-completion/tmuxinator.bash
 fi
 
 # Alacritty
-if [ -f ~/.local/bin/alacritty-completions.bash ]; then
-    source ~/.local/bin/alacritty-completions.bash
+if [ -f ~/.bash-completion/alacritty.bash ]; then
+    source ~/.bash-completion/alacritty.bash
 fi
 
 # Base16 Shell

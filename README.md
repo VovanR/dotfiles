@@ -61,6 +61,7 @@ base16_atelier-forest
 ### Bash
 
 ```shell
+mkdir ~/.bash_completion
 ln -s ~/.config/dotfiles/bash_aliases ~/.bash_aliases
 ln -s ~/.config/dotfiles/bash_functions ~/.bash_functions
 ln -s ~/.config/dotfiles/bash_profile ~/.bash_profile
@@ -135,13 +136,14 @@ sudo gem install tmuxinator
 
 Add [completion](https://github.com/tmuxinator/tmuxinator#completion)
 ```shell
-wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash -P ~/.local/bin/
+wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash -P ~/.bash_completion/
 ```
 
 ### [Alacritty](https://github.com/jwilm/alacritty)
 
 ```shell
 ln -s ~/.config/dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+cp ~/work/alacritty/extra/completions/alacritty.bash ~/.bash_completion/
 ```
 
 ### Node.js
