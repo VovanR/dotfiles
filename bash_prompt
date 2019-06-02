@@ -3,43 +3,26 @@
 
 # Variables for convenient PS1 construction
 #
-# Управляющие последовательности заключены в скобки "\[" и "\]"
-# для того, чтобы shell не учитывал их при оценке длины строки.
-# В противном случае длинные строки будут переноситься неверно.
+# Note: Wrapping the tput output in \[ \] is recommended by the Bash man page.
+# This helps Bash ignore non-printable characters so that it correctly calculates the size of the prompt.
+# See: https://wiki.archlinux.org/index.php/Bash/Prompt_customization
 #
-txtblk='\[\e[0;30m\]' # Black - Regular
-txtred='\[\e[0;31m\]' # Red
-txtgrn='\[\e[0;32m\]' # Green
-txtylw='\[\e[0;33m\]' # Yellow
-txtblu='\[\e[0;34m\]' # Blue
-txtpur='\[\e[0;35m\]' # Purple
-txtcyn='\[\e[0;36m\]' # Cyan
-txtwht='\[\e[0;37m\]' # White
-bldblk='\[\e[1;30m\]' # Black - Bold
-bldred='\[\e[1;31m\]' # Red
-bldgrn='\[\e[1;32m\]' # Green
-bldylw='\[\e[1;33m\]' # Yellow
-bldblu='\[\e[1;34m\]' # Blue
-bldpur='\[\e[1;35m\]' # Purple
-bldcyn='\[\e[1;36m\]' # Cyan
-bldwht='\[\e[1;37m\]' # White
-unkblk='\[\e[4;30m\]' # Black - Underline
-undred='\[\e[4;31m\]' # Red
-undgrn='\[\e[4;32m\]' # Green
-undylw='\[\e[4;33m\]' # Yellow
-undblu='\[\e[4;34m\]' # Blue
-undpur='\[\e[4;35m\]' # Purple
-undcyn='\[\e[4;36m\]' # Cyan
-undwht='\[\e[4;37m\]' # White
-bakblk='\[\e[40m\]'   # Black - Background
-bakred='\[\e[41m\]'   # Red
-bakgrn='\[\e[42m\]'   # Green
-bakylw='\[\e[43m\]'   # Yellow
-bakblu='\[\e[44m\]'   # Blue
-bakpur='\[\e[45m\]'   # Purple
-bakcyn='\[\e[46m\]'   # Cyan
-bakwht='\[\e[47m\]'   # White
-txtrst='\[\e[0m\]'    # Text Reset
+# \[   Begin a sequence of non-printing characters. (like color escape sequences).
+#      This allows bash to calculate word wrapping correctly.
+#
+# \]   End a sequence of non-printing characters.
+
+RESET="\[$(tput sgr0)\]"
+BOLD="\[$(tput bold)\]"
+
+# BLACK="\[$(tput setaf 0)\]"
+RED="\[$(tput setaf 1)\]"
+GREEN="\[$(tput setaf 2)\]"
+YELLOW="\[$(tput setaf 3)\]"
+# BLUE="\[$(tput setaf 4)\]"
+# MAGENTA="\[$(tput setaf 5)\]"
+CYAN="\[$(tput setaf 6)\]"
+# WHITE="\[$(tput setaf 7)\]"
 
 # Git status.
 # Adapted from: https://github.com/cowboy/dotfiles/
@@ -49,7 +32,7 @@ function prompt_git() {
     status="$(git status 2>/dev/null)"
     [[ $? != 0 ]] && return;
     output="$(echo "$status" | awk '/# Initial commit/ {print "(init)"}')"
-    [[ "$output" ]] || output="$(echo "$status" | awk '/# On branch/ {print $4}')"
+    [[ "$output" ]] || output="$(echo "$status" | awk '/^On branch/ {print $4}')"
     [[ "$output" ]] || output="$(git branch | perl -ne '/^\* (.*)/ && print $1')"
     flags="$(
     echo "$status" | awk 'BEGIN {r=""} \
@@ -59,13 +42,15 @@ function prompt_git() {
         END {print r}'
     )"
     if [[ "$flags" ]]; then
-        output="$output[$flags]"
+        output="${output} ${flags}"
     fi
-    echo -en '\033[00;33m'"; on "'\033[01;33m'$output
+    echo -en " ${output}"
 }
 
 # Git whoami
+# Show current directory git Username and Email (not global git config)
 function prompt_git_whoami() {
+    local name email
     name="$(git config --local user.name 2>/dev/null)"
     email="$(git config --local user.email 2>/dev/null)"
     [[ $? != 0 ]] && return;
@@ -74,7 +59,7 @@ function prompt_git_whoami() {
 
 # Git stash
 function prompt_git_stash {
-  [[ $(git stash list 2> /dev/null | tail -n1) != "" ]] && echo '^'
+  [[ $(git stash list 2> /dev/null | tail -n1) != "" ]] && echo -en '^'
 }
 
 # Fix Windows Bash EOL
@@ -86,32 +71,50 @@ function echo_new_line() {
 # Personal colors for root
 case $(id -u) in
     0)
-        STARTCOLOUR=$txtred;
-        PROMPT="$bldred #";
+        STARTCOLOUR=${RED};
+        PROMPT="${BOLD}${RED} #";
         ;;
     *)
-        STARTCOLOUR=$txtylw;
-        PROMPT="$bldgrn >";
+        STARTCOLOUR=${YELLOW};
+        PROMPT="${BOLD}${GREEN} >";
         ;;
 esac
 
 # Prompt
-# PS1="$bldgrn[\u@\h \w]\$ $txtrst"
-PS1="$STARTCOLOUR\u" # Username
-PS1+="$txtrst@" # @
-PS1+="$txtcyn\h " # Host
-PS1+="$bldgrn\w" # Working directory
 
-PS1+="$txtylw jobs:" # jobs:
-PS1+="$bldylw\j" # The number of processes you've suspended in this shell by hitting ^Z
+# Time
+# PS1="${CYAN}\t "
 
-PS1+="\$(prompt_git)" # Git details
-PS1+=" $txtylw\$(prompt_git_whoami)" # Git whoami
+# Username
+PS1="${STARTCOLOUR}\u"
+# @
+PS1+="${RESET}@"
+# Host
+PS1+="${CYAN}\h "
 
-PS1+="\$(prompt_git_stash)" # Git stash
+# Working directory
+PS1+="${BOLD}${GREEN}\w"
 
-PS1+="$txtrst\$(echo_new_line)" # Newline
-PS1+="$PROMPT " # PROMPT
-PS1+="$txtrst" # Reset color
+# jobs:
+PS1+="${RESET}${YELLOW} jobs:"
+# The number of processes you've suspended in this shell by hitting ^Z
+PS1+="${BOLD}\j${RESET}"
+
+# Git details
+PS1+="${YELLOW}\$(prompt_git)"
+
+# Git whoami
+PS1+=" ${YELLOW}\$(prompt_git_whoami)"
+
+# Git stash
+PS1+="\$(prompt_git_stash)"
+
+# Newline
+PS1+="${RESET}\$(echo_new_line)"
+
+# PROMPT
+PS1+="$PROMPT "
+# Reset color
+PS1+="${RESET}"
 
 # vim: syntax=sh
