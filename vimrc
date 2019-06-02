@@ -67,6 +67,7 @@ call dein#add('wesQ3/vim-windowswap')
 
 " Syntax
 " call dein#add('sheerun/vim-polyglot')
+call dein#add('cespare/vim-toml')
 
 " CSS
 " call dein#add('groenewege/vim-less')
@@ -84,6 +85,7 @@ call dein#add('mxw/vim-jsx')
 call dein#add('othree/javascript-libraries-syntax.vim')
 call dein#add('pangloss/vim-javascript')
 call dein#add('posva/vim-vue')
+call dein#add('jparise/vim-graphql')
 " call dein#add('ternjs/tern_for_vim')
 
 " HTML
