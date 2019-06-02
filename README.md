@@ -62,10 +62,10 @@ base16_atelier-forest
 
 ```shell
 mkdir ~/.bash_completion
-ln -s ~/.config/dotfiles/bash_aliases ~/.bash_aliases
-ln -s ~/.config/dotfiles/bash_functions ~/.bash_functions
-ln -s ~/.config/dotfiles/bash_profile ~/.bash_profile
-ln -s ~/.config/dotfiles/bash_prompt ~/.bash_prompt
+ln -s ~/.config/dotfiles/bash_aliases.bash ~/.bash_aliases
+ln -s ~/.config/dotfiles/bash_functions.bash ~/.bash_functions
+ln -s ~/.config/dotfiles/bash_profile.bash ~/.bash_profile
+ln -s ~/.config/dotfiles/bash_prompt.bash ~/.bash_prompt
 ln -s ~/.config/dotfiles/inputrc ~/.inputrc
 ln -s ~/.config/dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/.config/dotfiles/Xresources ~/.Xresources
