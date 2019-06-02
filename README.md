@@ -204,6 +204,7 @@ vim
 cd ~/.config/base16-shell
 git pull
 basher update
+rustup update stable
 ```
 
 ## Further customization
