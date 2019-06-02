@@ -70,4 +70,4 @@
 [include]
 	path = .gitlocal
 
-# vim: syntax=gitconfig
+# ex: filetype=gitconfig
