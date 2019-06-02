@@ -25,5 +25,3 @@ extract () {
 # and want to make a quick copy before hand
 # See: http://serverfault.com/a/12209
 bu () { cp $1 ~/.backup/`basename $1`-`date +%Y%m%d%H%M`.backup ; }
-
-# vim: syntax=sh
