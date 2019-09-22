@@ -61,7 +61,7 @@ base16_atelier-forest
 ### Bash
 
 ```shell
-mkdir ~/.bash_completion
+mkdir ~/.bash-completion
 ln -s ~/.config/dotfiles/bash_aliases.bash ~/.bash_aliases
 ln -s ~/.config/dotfiles/bash_functions.bash ~/.bash_functions
 ln -s ~/.config/dotfiles/bash_profile.bash ~/.bash_profile
@@ -115,7 +115,7 @@ cd ~/.vim/bundle/repos/github.com/Shougo/vimproc.vim && make
 
 Install [ack](http://beyondgrep.com/install/)
 ```shell
-curl https://beyondgrep.com/ack-2.18-single-file > ~/.local/bin/ack && chmod 0755 ~/.local/bin/ack
+curl https://beyondgrep.com/ack-3.0.2 > ~/.local/bin/ack && chmod 0755 ~/.local/bin/ack
 ln -s ~/.config/dotfiles/ackrc ~/.ackrc
 ```
 
@@ -126,6 +126,9 @@ ln -s ~/.vim ~/.config/nvim
 ln -s ~/.config/nvim/vimrc ~/.config/nvim/init.vim
 ```
 Check [PYTHON QUICKSTART](https://neovim.io/doc/user/provider.html#provider-python) section to using Vim Python 2/3 plugins with Nvim
+```
+:checkhealth
+```
 
 ### Tmux
 
@@ -136,14 +139,14 @@ sudo gem install tmuxinator
 
 Add [completion](https://github.com/tmuxinator/tmuxinator#completion)
 ```shell
-wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash -P ~/.bash_completion/
+wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash -P ~/.bash-completion/
 ```
 
 ### [Alacritty](https://github.com/jwilm/alacritty)
 
 ```shell
 ln -s ~/.config/dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
-cp ~/work/alacritty/extra/completions/alacritty.bash ~/.bash_completion/
+cp ~/work/alacritty/extra/completions/alacritty.bash ~/.bash-completion/
 ```
 
 ### Node.js
