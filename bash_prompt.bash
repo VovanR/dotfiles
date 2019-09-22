@@ -12,17 +12,20 @@
 #
 # \]   End a sequence of non-printing characters.
 
-RESET="\[$(tput sgr0)\]"
-BOLD="\[$(tput bold)\]"
+# https://www.freebsd.org/cgi/man.cgi?query=termcap&apropos=0&sektion=5&manpath=FreeBSD+12.0-RELEASE+and+Ports&arch=default&format=html
+# https://github.com/robbyrussell/oh-my-zsh/issues/4404
 
-# BLACK="\[$(tput setaf 0)\]"
-RED="\[$(tput setaf 1)\]"
-GREEN="\[$(tput setaf 2)\]"
-YELLOW="\[$(tput setaf 3)\]"
-# BLUE="\[$(tput setaf 4)\]"
-# MAGENTA="\[$(tput setaf 5)\]"
-CYAN="\[$(tput setaf 6)\]"
-# WHITE="\[$(tput setaf 7)\]"
+RESET="\[$(tput me)\]"
+BOLD="\[$(tput md)\]"
+
+# BLACK="\[$(tput AF 0)\]"
+RED="\[$(tput AF 1)\]"
+GREEN="\[$(tput AF 2)\]"
+YELLOW="\[$(tput AF 3)\]"
+# BLUE="\[$(tput AF 4)\]"
+# MAGENTA="\[$(tput AF 5)\]"
+CYAN="\[$(tput AF 6)\]"
+# WHITE="\[$(tput AF 7)\]"
 
 # Git status.
 # Adapted from: https://github.com/cowboy/dotfiles/

@@ -18,102 +18,107 @@ if &compatible
 endif
 set runtimepath+=~/.vim/bundle/repos/github.com/Shougo/dein.vim
 
-call dein#begin('~/.vim/bundle')
+if dein#load_state('~/.vim/bundle')
+    call dein#begin('~/.vim/bundle')
 
-call dein#add('Shougo/dein.vim')
+    call dein#add('Shougo/dein.vim')
 
-" My Bundles here:
-
-
-"" Plugins begin
-
-call dein#add('Shougo/vimproc.vim', {'build': 'make'})
-
-" Editing
-call dein#add('Raimondi/delimitMate')
-call dein#add('SirVer/ultisnips')
-call dein#add('editorconfig/editorconfig-vim')
-" call dein#add('klen/python-mode')
-call dein#add('mattn/emmet-vim')
-call dein#add('scrooloose/nerdcommenter')
-call dein#add('tpope/vim-surround')
-
-" View
-call dein#add('Shougo/deoplete.nvim')
-call dein#add('Xuyuanp/nerdtree-git-plugin')
-" call dein#add('Yggdroot/indentLine')
-call dein#add('bling/vim-airline')
-call dein#add('bronson/vim-trailing-whitespace')
-call dein#add('chriskempson/base16-vim')
-call dein#add('ctrlpvim/ctrlp.vim')
-call dein#add('ervandew/supertab')
-call dein#add('gcavallanti/vim-noscrollbar')
-" call dein#add('haya14busa/incsearch.vim')
-call dein#add('jistr/vim-nerdtree-tabs')
-call dein#add('jlanzarotta/bufexplorer')
-call dein#add('low-ghost/nerdtree-fugitive')
-call dein#add('mhinz/vim-signify')
-" call dein#add('nathanaelkane/vim-indent-guides')
-call dein#add('mileszs/ack.vim')
-call dein#add('scrooloose/nerdtree')
-" call dein#add('scrooloose/syntastic')
-" call dein#add('sjl/gundo.vim')
-call dein#add('tpope/vim-fugitive')
-call dein#add('wesQ3/vim-windowswap')
-
-" Formatting
-" call dein#add('csscomb/vim-csscomb')
-" call dein#add('maksimr/vim-jsbeautify')
-
-" Syntax
-" call dein#add('sheerun/vim-polyglot')
-call dein#add('cespare/vim-toml')
-
-" CSS
-" call dein#add('groenewege/vim-less')
-" call dein#add('hail2u/vim-css3-syntax')
-" call dein#add('tpope/vim-haml')
-call dein#add('wavded/vim-stylus')
-
-" JavaScript
-" call dein#add('SevInf/vim-bemhtml')
-call dein#add('heavenshell/vim-jsdoc')
-" call dein#add('jason0x43/vim-js-indent')
-call dein#add('kchmck/vim-coffee-script')
-" call dein#add('leafgarland/typescript-vim')
-call dein#add('mxw/vim-jsx')
-call dein#add('othree/javascript-libraries-syntax.vim')
-call dein#add('pangloss/vim-javascript')
-call dein#add('posva/vim-vue')
-call dein#add('jparise/vim-graphql')
-" call dein#add('ternjs/tern_for_vim')
-
-" HTML
-" call dein#add('AndrewRadev/vim-eco')
-" call dein#add('Glench/Vim-Jinja2-Syntax')
-call dein#add('digitaltoad/vim-pug')
-" call dein#add('evidens/vim-twig')
-" call dein#add('godlygeek/tabular')
-" call dein#add('gregsexton/MatchTag')
-" call dein#add('mustache/vim-mustache-handlebars')
-" call dein#add('othree/html5.vim')
-" call dein#add('plasticboy/vim-markdown')
-
-"" Plugins end
+    " My Bundles here:
 
 
-call dein#end()
+    "" Plugins begin
+
+    call dein#add('Shougo/vimproc.vim', {'build': 'gmake'})
+
+    " Editing
+    call dein#add('Raimondi/delimitMate')
+    call dein#add('SirVer/ultisnips')
+    call dein#add('editorconfig/editorconfig-vim')
+    " call dein#add('klen/python-mode')
+    call dein#add('mattn/emmet-vim')
+    call dein#add('scrooloose/nerdcommenter')
+    call dein#add('tpope/vim-surround')
+
+    " View
+    call dein#add('Shougo/deoplete.nvim')
+    call dein#add('Xuyuanp/nerdtree-git-plugin')
+    " call dein#add('Yggdroot/indentLine')
+    call dein#add('bling/vim-airline')
+    call dein#add('bronson/vim-trailing-whitespace')
+    call dein#add('chriskempson/base16-vim')
+    call dein#add('ctrlpvim/ctrlp.vim')
+    call dein#add('ervandew/supertab')
+    call dein#add('gcavallanti/vim-noscrollbar')
+    " call dein#add('haya14busa/incsearch.vim')
+    call dein#add('jistr/vim-nerdtree-tabs')
+    call dein#add('jlanzarotta/bufexplorer')
+    call dein#add('low-ghost/nerdtree-fugitive')
+    call dein#add('mhinz/vim-signify')
+    " call dein#add('nathanaelkane/vim-indent-guides')
+    call dein#add('mileszs/ack.vim')
+    call dein#add('scrooloose/nerdtree')
+    " call dein#add('scrooloose/syntastic')
+    " call dein#add('sjl/gundo.vim')
+    call dein#add('tpope/vim-fugitive')
+    call dein#add('wesQ3/vim-windowswap')
+
+    " Formatting
+    " call dein#add('csscomb/vim-csscomb')
+    " call dein#add('maksimr/vim-jsbeautify')
+
+    " Syntax
+    " call dein#add('sheerun/vim-polyglot')
+    call dein#add('cespare/vim-toml')
+
+    " CSS
+    " call dein#add('groenewege/vim-less')
+    " call dein#add('hail2u/vim-css3-syntax')
+    " call dein#add('tpope/vim-haml')
+    call dein#add('wavded/vim-stylus')
+
+    " JavaScript
+    " call dein#add('SevInf/vim-bemhtml')
+    call dein#add('heavenshell/vim-jsdoc')
+    " call dein#add('jason0x43/vim-js-indent')
+    call dein#add('kchmck/vim-coffee-script')
+    " call dein#add('leafgarland/typescript-vim')
+    call dein#add('mxw/vim-jsx')
+    call dein#add('othree/javascript-libraries-syntax.vim')
+    call dein#add('pangloss/vim-javascript')
+    call dein#add('posva/vim-vue')
+    call dein#add('jparise/vim-graphql')
+    " call dein#add('ternjs/tern_for_vim')
+
+    " HTML
+    " call dein#add('AndrewRadev/vim-eco')
+    " call dein#add('Glench/Vim-Jinja2-Syntax')
+    call dein#add('digitaltoad/vim-pug')
+    " call dein#add('evidens/vim-twig')
+    " call dein#add('godlygeek/tabular')
+    " call dein#add('gregsexton/MatchTag')
+    " call dein#add('mustache/vim-mustache-handlebars')
+    " call dein#add('othree/html5.vim')
+    " call dein#add('plasticboy/vim-markdown')
+
+    "" Plugins end
+
+
+    call dein#end()
+    call dein#save_state()
+endif
 
 " Required:
 filetype plugin indent on
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
-if dein#check_install()
-    call dein#install()
-endif
+"if dein#check_install()
+"    call dein#install()
+"endif
 
 
+let g:python_host_prog  = '/usr/local/bin/python2.7'  " Python 2
+let g:python3_host_prog = '/usr/local/bin/python3.6'  " Python 3
 
 "" General Settings begin
 

@@ -16,9 +16,14 @@ alias mv='mv -i'
 alias ln='ln -i'
 
 # Some more ls aliases
-alias ll='ls -lahF'
-alias la='ls -AhF'
+alias ls="grc ls"
+alias ll='grc ls -lahF'
+alias la='grc ls -AhF'
 alias l='ll'
+
+alias ping="grc ping"
+alias ps="grc ps"
+alias ifconfig="grc ifconfig"
 
 # tree aliaces
 alias tree='tree --dirsfirst'
@@ -39,10 +44,8 @@ alias sourcer="source ~/.bash_profile"
 alias bashaliases="$EDITOR ~/.bash_aliases"
 
 alias v-upgrade=" \
-        sudo apt-get update && \
-        sudo apt-get upgrade && \
-        sudo apt-get dist-upgrade && \
-        sudo apt-get autoremove && \
+        sudo pkg update && \
+        sudo pkg upgrade && \
         vim \"+call dein#update()\" +qall \
     "
 
@@ -53,7 +56,7 @@ alias e="$EDITOR"
 alias v="vim"
 
 # Play sound Done!
-alias alert-done="paplay /usr/share/sounds/freedesktop/stereo/complete.oga"
+alias alert-done="play -q /usr/local/share/sounds/freedesktop/stereo/complete.oga"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -106,8 +109,6 @@ alias sa="svn add"
 alias sad="st | grep ^?"
 alias sadd="st | awk '/^[?]/{ print \$2 }' | xargs svn add"
 alias stc="st | grep ^C"
-# Open conflicts in Netbeans
-# alias stcn="st | awk '/^C/{ print \$2 }' | xargs '~/netbeans-7.2/bin/netbeans'"
 
 
 # Git aliases
@@ -155,15 +156,4 @@ alias npmis="npmi -S"
 alias npmu="npm-upgrade"
 alias npmglist="npm list --global=true --depth=0"
 
-
-# Update neovim
-alias v-nvimupdate=" \
-        cd ~/work/neovim && \
-        gpull && \
-        rm -rf build && \
-        make clean && \
-        make CMAKE_BUILD_TYPE=Release && \
-        notify-send 'v-nvimupdate' 'install' && \
-        sudo make install; \
-        alert \
-    "
+alias mux="tmuxinator"

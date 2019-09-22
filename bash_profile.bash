@@ -45,8 +45,15 @@ if [ -f ~/.bash-completion/alacritty.bash ]; then
 fi
 
 # Base16 Shell
-BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"
+
+# Complete SUDO
+if [ "$PS1" ]; then
+    complete -cf sudo
+fi
 
 # Path #
 ########
@@ -68,7 +75,7 @@ fi
 # color in different utilitties by default
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-eval `dircolors -b`
+#eval `dircolors -b`
 
 
 # color in man
@@ -86,7 +93,16 @@ export LESS_TERMCAP_us=$'\033[01;36m'
 # Deprecated: Used from `Xresources`
 # export TERM=xterm-256color
 
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/local/bin/vim
+
+export CHARSET="UTF-8"
+export LANG="ru_RU.UTF-8"
+export LC_TIME="en_GB.UTF-8"
+export LC_CTYPE="ru_RU.UTF-8"
+export LC_COLLATE="ru_RU.UTF-8"
+export LC_NUMERIC="ru_RU.UTF-8"
+export LC_MONETARY="ru_RU.UTF-8"
+export LC_MESSAGES="en_GB.UTF-8"
 
 # big history
 export HISTFILESIZE=20000
@@ -105,6 +121,15 @@ shopt -s checkwinsize
 # Avoid duplicates
 export HISTCONTROL=ignoredups:erasedups
 export HISTIGNORE="&:ls:[bf]g:exit"
+
+
+export XDG_CONFIG_HOME=~/.config/
+export XDG_CACHE_HOME=~/.cache
+
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://10.2.1.100:2376"
+export DOCKER_CERT_PATH="/home/vovanr/.docker/machine/machines/docker1"
+export DOCKER_MACHINE_NAME="docker1"
 
 # Load extra (private) settings
 [ -f ~/.bashlocal ] && source ~/.bashlocal
