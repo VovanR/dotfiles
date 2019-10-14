@@ -46,18 +46,6 @@ $ tree ~/.fonts/truetype/
     └── Hack-Regular.ttf
 ```
 
-### Color scheme
-
-Install [Base16 Shell](https://github.com/chriskempson/base16-shell#installation)
-```shell
-git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
-```
-
-Apply theme
-```shell
-base16_atelier-forest
-```
-
 ### Bash
 
 ```shell
@@ -72,6 +60,18 @@ ln -s ~/.config/dotfiles/Xresources ~/.Xresources
 ln -s ~/.config/dotfiles/albertignore ~/.albertignore
 xrdb -merge ~/.Xresources
 source ~/.bash_profile
+```
+
+### Color scheme
+
+Install [Base16 Shell](https://github.com/chriskempson/base16-shell#installation)
+```shell
+git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+```
+
+Apply theme
+```shell
+base16_atelier-forest
 ```
 
 ### Git
