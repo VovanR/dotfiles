@@ -69,6 +69,7 @@ ln -s ~/.config/dotfiles/bash_prompt.bash ~/.bash_prompt
 ln -s ~/.config/dotfiles/inputrc ~/.inputrc
 ln -s ~/.config/dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/.config/dotfiles/Xresources ~/.Xresources
+ln -s ~/.config/dotfiles/albertignore ~/.albertignore
 xrdb -merge ~/.Xresources
 source ~/.bash_profile
 ```
