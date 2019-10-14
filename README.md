@@ -46,6 +46,10 @@ $ tree ~/.fonts/truetype/
     └── Hack-Regular.ttf
 ```
 
+```shell
+sudo apt install fonts-ibm-plex fonts-hack
+```
+
 ### Bash
 
 ```shell
