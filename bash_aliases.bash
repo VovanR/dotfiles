@@ -39,10 +39,10 @@ alias sourcer="source ~/.bash_profile"
 alias bashaliases="$EDITOR ~/.bash_aliases"
 
 alias v-upgrade=" \
-        sudo apt-get update && \
-        sudo apt-get upgrade && \
-        sudo apt-get dist-upgrade && \
-        sudo apt-get autoremove && \
+        sudo apt update && \
+        sudo apt upgrade && \
+        sudo apt dist-upgrade && \
+        sudo apt autoremove && \
         vim \"+call dein#update()\" +qall \
     "
 
