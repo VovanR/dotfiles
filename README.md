@@ -163,7 +163,7 @@ npm config set prefix '~/.npm-global'
 
 See: [TypeError: Unable to watch path](https://flight-manual.atom.io/hacking-atom/sections/hacking-on-atom-core/#typeerror-unable-to-watch-path)
 ```shell
-echo fs.inotify.max_user_watches=32768 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
 
 Defaults
