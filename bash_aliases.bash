@@ -43,6 +43,7 @@ alias v-upgrade=" \
         sudo apt upgrade && \
         sudo apt dist-upgrade && \
         sudo apt autoremove && \
+        sudo snap refresh && \
         vim \"+call dein#update()\" +qall \
     "
 
