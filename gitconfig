@@ -49,6 +49,7 @@
 [alias]
 	co = checkout
 	ci = commit
+	uncommit = git reset --soft HEAD^
 	st = status
 	s = status -sb
 	br = branch
