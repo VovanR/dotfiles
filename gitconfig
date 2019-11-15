@@ -50,7 +50,7 @@
 	co = checkout
 	ci = commit
 	commend = commit --amend --no-edit
-	uncommit = git reset --soft HEAD^
+	uncommit = reset --soft HEAD^
 	st = status
 	s = status -sb
 	br = branch
