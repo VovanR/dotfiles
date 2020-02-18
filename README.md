@@ -34,6 +34,7 @@ Download any TrueType font
 - [Hack](https://github.com/chrissimpkins/Hack)
 - [Input](http://input.fontbureau.com/)
 - [IBM Plex Mono](https://github.com/IBM/plex/releases)
+- [JetBrains Mono](https://www.jetbrains.com/lp/mono/#how-to-install)
 
 Copy it to `~/.fonts/truetype/`
 ```shell
