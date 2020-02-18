@@ -186,6 +186,13 @@ npm i -g diff-so-fancy
 git clone https://github.com/basherpm/basher.git ~/.basher
 ```
 
+```shell
+basher install vovanr/v-dummyimage
+basher install vovanr/v-pomodoro-alert
+basher install vovanr/git-delete-current-branch
+```
+
+
 ### Plymouth
 
 Change background wallpaper
