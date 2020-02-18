@@ -103,11 +103,11 @@ PS1+="${BOLD}\j${RESET}"
 # Git details
 PS1+="${YELLOW}\$(prompt_git)"
 
-# Git whoami
-PS1+=" ${YELLOW}\$(prompt_git_whoami)"
-
 # Git stash
 PS1+="\$(prompt_git_stash)"
+
+# Git whoami
+PS1+=" ${YELLOW}\$(prompt_git_whoami)"
 
 # Newline
 PS1+="${RESET}\$(echo_new_line)"
