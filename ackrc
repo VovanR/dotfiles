@@ -20,5 +20,6 @@
 --ignore-dir=.env
 --ignore-dir=.venv
 --ignore-file=is:yarn.lock
+--ignore-file=is:package-lock.json
 --sort-files
 --ignore-case
