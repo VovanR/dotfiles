@@ -87,6 +87,7 @@ if dein#load_state('~/.vim/bundle')
     call dein#add('othree/javascript-libraries-syntax.vim')
     call dein#add('pangloss/vim-javascript')
     call dein#add('posva/vim-vue')
+    call dein#add('evanleck/vim-svelte')
     call dein#add('jparise/vim-graphql')
     " call dein#add('ternjs/tern_for_vim')
 
