@@ -40,7 +40,7 @@ if dein#load_state('~/.vim/bundle')
     call dein#add('tpope/vim-surround')
 
     " View
-    call dein#add('Shougo/deoplete.nvim')
+    call dein#add('Shougo/deoplete.nvim', {'rev': '5.2'})
     call dein#add('Xuyuanp/nerdtree-git-plugin')
     " call dein#add('Yggdroot/indentLine')
     call dein#add('bling/vim-airline')
