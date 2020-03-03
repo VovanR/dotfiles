@@ -65,6 +65,11 @@
 [credential]
 	helper = cache
 
+# Git GUI
+[gui]
+	fontui = -family Hack -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+	fontdiff = -family Hack -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+
 # Include local settings
 # Requires Git 1.7.10
 # git config -f ~/.gitlocal user.email "artem@sapegin.ru"
