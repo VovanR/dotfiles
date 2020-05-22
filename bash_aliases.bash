@@ -44,7 +44,9 @@ alias v-upgrade=" \
         sudo apt dist-upgrade && \
         sudo apt autoremove && \
         sudo snap refresh && \
-        vim \"+call dein#update()\" +qall \
+        vim \"+call dein#update()\" +qall \ && \
+        npm update -g && \
+        npm outdated -g --depth=0 \
     "
 
 alias open="xdg-open"
