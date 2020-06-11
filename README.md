@@ -54,15 +54,15 @@ sudo apt install fonts-ibm-plex fonts-hack
 ### Bash
 
 ```shell
-mkdir ~/.bash-completion
-ln -s ~/.config/dotfiles/bash_aliases.bash ~/.bash_aliases
-ln -s ~/.config/dotfiles/bash_functions.bash ~/.bash_functions
-ln -s ~/.config/dotfiles/bash_profile.bash ~/.bash_profile
-ln -s ~/.config/dotfiles/bash_prompt.bash ~/.bash_prompt
-ln -s ~/.config/dotfiles/inputrc ~/.inputrc
-ln -s ~/.config/dotfiles/tmux.conf ~/.tmux.conf
-ln -s ~/.config/dotfiles/Xresources ~/.Xresources
-ln -s ~/.config/dotfiles/albertignore ~/.albertignore
+mkdir -p ~/.bash-completion
+ln -sf ~/.config/dotfiles/bash_aliases.bash ~/.bash_aliases
+ln -sf ~/.config/dotfiles/bash_functions.bash ~/.bash_functions
+ln -sf ~/.config/dotfiles/bash_profile.bash ~/.bash_profile
+ln -sf ~/.config/dotfiles/bash_prompt.bash ~/.bash_prompt
+ln -sf ~/.config/dotfiles/inputrc ~/.inputrc
+ln -sf ~/.config/dotfiles/tmux.conf ~/.tmux.conf
+ln -sf ~/.config/dotfiles/Xresources ~/.Xresources
+ln -sf ~/.config/dotfiles/albertignore ~/.albertignore
 xrdb -merge ~/.Xresources
 source ~/.bash_profile
 ```
@@ -84,22 +84,22 @@ base16_atelier-forest
 ```shell
 git config -f ~/.gitlocal user.name "Username"
 git config -f ~/.gitlocal user.email "mail@gmail.com"
-ln -s ~/.config/dotfiles/gitconfig ~/.gitconfig
-ln -s ~/.config/dotfiles/gitignore_global ~/.gitignore_global
+ln -sf ~/.config/dotfiles/gitconfig ~/.gitconfig
+ln -sf ~/.config/dotfiles/gitignore_global ~/.gitignore_global
 ```
 
 ### Atom
 
 ```shell
-ln -s ~/.config/dotfiles/atom/snippets.cson ~/.atom/snippets.cson
+ln -sf ~/.config/dotfiles/atom/snippets.cson ~/.atom/snippets.cson
 ```
 
 ### Vim
 
 ```shell
 mkdir -p ~/.vim/{backups,bundle,swaps,undo}
-ln -s ~/.config/dotfiles/vimrc ~/.vim/vimrc
-ln -s ~/.config/dotfiles/snippets ~/.vim/UltiSnips
+ln -sf ~/.config/dotfiles/vimrc ~/.vim/vimrc
+ln -sfn ~/.config/dotfiles/snippets ~/.vim/UltiSnips
 ```
 
 Install [Dein.vim](https://github.com/Shougo/dein.vim)
@@ -121,14 +121,14 @@ cd ~/.vim/bundle/repos/github.com/Shougo/vimproc.vim && make
 
 Install [ack](http://beyondgrep.com/install/)
 ```shell
-ln -s ~/.config/dotfiles/ackrc ~/.ackrc
+ln -sf ~/.config/dotfiles/ackrc ~/.ackrc
 ```
 
 #### [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 
 ```shell
-ln -s ~/.vim ~/.config/nvim
-ln -s ~/.config/nvim/vimrc ~/.config/nvim/init.vim
+ln -sf ~/.vim ~/.config/nvim
+ln -sf ~/.config/nvim/vimrc ~/.config/nvim/init.vim
 ```
 Check [PYTHON QUICKSTART](https://neovim.io/doc/user/provider.html#provider-python) section to using Vim Python 2/3 plugins with Nvim
 ```
@@ -150,7 +150,7 @@ wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/t
 ### [Alacritty](https://github.com/jwilm/alacritty)
 
 ```shell
-ln -s ~/.config/dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -sf ~/.config/dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 cp ~/work/alacritty/extra/completions/alacritty.bash ~/.bash-completion/
 ```
 
