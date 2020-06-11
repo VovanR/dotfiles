@@ -190,6 +190,7 @@ git clone https://github.com/basherpm/basher.git ~/.basher
 basher install vovanr/v-dummyimage
 basher install vovanr/v-pomodoro-alert
 basher install vovanr/git-delete-current-branch
+basher install vovanr/clone-my-repo
 ```
 
 
