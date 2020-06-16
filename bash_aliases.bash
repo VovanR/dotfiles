@@ -39,14 +39,19 @@ alias sourcer="source ~/.bash_profile"
 alias bashaliases="$EDITOR ~/.bash_aliases"
 
 alias v-upgrade=" \
+        echo -e \"== Apt ==\\n\" && \
         sudo apt update && \
         sudo apt upgrade && \
         sudo apt dist-upgrade && \
         sudo apt autoremove && \
+        echo -e \"== Snap ==\\n\" && \
         sudo snap refresh && \
+        echo -e \"== Vim ==\\n\" && \
         vim \"+call dein#update()\" +qall \ && \
+        echo -e \"== Npm ==\\n\" && \
         npm update -g && \
-        npm outdated -g --depth=0 \
+        npm outdated -g --depth=0 && \
+        alert \
     "
 
 alias open="xdg-open"
