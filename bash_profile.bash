@@ -17,7 +17,7 @@ fi
 #basher
 if [ -d ~/.basher ]; then
     export PATH=~/.basher/bin:$PATH
-    eval "$(basher init -)"
+    eval "$(basher init - bash)"
 fi
 
 if [ -d ~/.cargo ]; then
