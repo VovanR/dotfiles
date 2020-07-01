@@ -79,6 +79,11 @@ Apply theme
 base16_atelier-forest
 ```
 
+or
+```shell
+base16_bespin
+```
+
 ### Git
 
 ```shell
