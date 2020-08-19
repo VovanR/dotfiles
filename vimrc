@@ -102,6 +102,9 @@ if dein#load_state('~/.vim/bundle')
     " call dein#add('othree/html5.vim')
     " call dein#add('plasticboy/vim-markdown')
 
+    " Go
+    call dein#add('fatih/vim-go')
+
     " Nginx
     call dein#add('chr4/nginx.vim')
 
