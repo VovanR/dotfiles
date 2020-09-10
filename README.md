@@ -69,6 +69,8 @@ source ~/.bash_profile
 
 ### Color scheme
 
+- See: [Preview themes](http://chriskempson.com/projects/base16/)
+
 Install [Base16 Shell](https://github.com/chriskempson/base16-shell#installation)
 ```shell
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
@@ -77,6 +79,7 @@ git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shel
 Apply theme
 ```shell
 base16_atelier-forest
+base16_bespin
 ```
 
 or
