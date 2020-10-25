@@ -78,7 +78,7 @@ if dein#load_state('~/.vim/bundle')
 
     " JavaScript
     " call dein#add('SevInf/vim-bemhtml')
-    call dein#add('heavenshell/vim-jsdoc')
+    call dein#add('heavenshell/vim-jsdoc', {'build': 'make install'})
     " call dein#add('jason0x43/vim-js-indent')
     call dein#add('kchmck/vim-coffee-script')
     " call dein#add('leafgarland/typescript-vim')
