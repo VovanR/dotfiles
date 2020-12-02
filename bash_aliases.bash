@@ -176,3 +176,6 @@ alias v-nvimupdate=" \
         sudo make install; \
         alert \
     "
+
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
