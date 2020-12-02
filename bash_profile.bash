@@ -24,6 +24,11 @@ if [ -d ~/.cargo ]; then
     export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
+if [ -d ~/go ]; then
+    export GOPATH=$HOME/go
+    export PATH="$PATH:$GOPATH/bin"
+fi
+
 # bash prompt
 if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
