@@ -82,3 +82,4 @@ bower_components
 .nyc_output
 npm-debug.log
 yarn.lock
+# package-lock.json
