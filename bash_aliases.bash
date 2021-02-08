@@ -41,7 +41,7 @@ alias bashaliases="$EDITOR ~/.bash_aliases"
 alias v-upgrade=" \
         echo -e \"== Apt ==\\n\" && \
         sudo apt update && \
-        apt list --upgradable
+        apt list --upgradable && \
         sudo apt upgrade && \
         sudo apt dist-upgrade && \
         sudo apt autoremove && \
@@ -50,8 +50,11 @@ alias v-upgrade=" \
         echo -e \"== Vim ==\\n\" && \
         vim \"+call dein#update()\" +qall \ && \
         echo -e \"== Npm ==\\n\" && \
+        npm install -g npm && \
         npm update -g && \
         npm outdated -g --depth=0 && \
+        echo -e \"== Basher ==\\n\" && \
+        basher outdated && \
         alert \
     "
 
