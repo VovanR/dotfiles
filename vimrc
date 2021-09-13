@@ -40,7 +40,10 @@ if dein#load_state('~/.vim/bundle')
     call dein#add('tpope/vim-surround')
 
     " View
-    call dein#add('Shougo/deoplete.nvim', {'rev': '5.2'})
+    " Autocomplete
+    call dein#add('neoclide/coc.nvim', {'branch': 'release'})
+    " call dein#add('Shougo/deoplete.nvim', {'rev': '5.2'})
+
     call dein#add('Xuyuanp/nerdtree-git-plugin')
     " call dein#add('Yggdroot/indentLine')
     call dein#add('bling/vim-airline')
@@ -426,6 +429,9 @@ let g:pymode_rope_lookup_project = 0
 
 
 " View
+
+" Plugin 'neoclide/coc.nvim'
+let g:coc_global_extensions = ['coc-tsserver']
 
 " Plugin 'scrooloose/nerdtree'
 " Open a NERDTree automatically when vim starts up if no files were specified
