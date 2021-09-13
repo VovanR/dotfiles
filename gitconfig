@@ -65,6 +65,9 @@
 [credential]
 	helper = cache
 
+[init]
+	defaultBranch = main
+
 # Git GUI
 [gui]
 	fontui = -family Hack -size 10 -weight normal -slant roman -underline 0 -overstrike 0
