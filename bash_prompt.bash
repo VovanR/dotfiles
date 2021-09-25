@@ -37,7 +37,7 @@ function prompt_git() {
     flags="$(
     echo "$status" | awk 'BEGIN {r=""} \
         /^Changes to be committed:$/ {r=r "+"}\
-        /^Changes not staged for commit:$/ {r=r "!"}\
+        /^Changes not staged for commit:$/ {r=r "*"}\
         /^Untracked files:$/ {r=r "?"}\
         END {print r}'
     )"
