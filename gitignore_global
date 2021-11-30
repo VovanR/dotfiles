@@ -71,7 +71,7 @@ makets
 framework
 tmp
 env
-.env
+# .env
 .venv
 cache
 __pycache__
