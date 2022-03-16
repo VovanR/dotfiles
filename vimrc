@@ -16,10 +16,10 @@ set nocompatible
 if &compatible
     set nocompatible
 endif
-set runtimepath+=~/.vim/bundle/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.vim/bundles/repos/github.com/Shougo/dein.vim
 
-if dein#load_state('~/.vim/bundle')
-    call dein#begin('~/.vim/bundle')
+if dein#load_state('~/.vim/bundles')
+    call dein#begin('~/.vim/bundles')
 
     call dein#add('Shougo/dein.vim')
 
@@ -41,7 +41,7 @@ if dein#load_state('~/.vim/bundle')
 
     " View
     " Autocomplete
-    call dein#add('neoclide/coc.nvim', {'branch': 'release'})
+    call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'master', 'build': 'yarn install --frozen-lockfile' })
     " call dein#add('Shougo/deoplete.nvim', {'rev': '5.2'})
 
     call dein#add('Xuyuanp/nerdtree-git-plugin')
