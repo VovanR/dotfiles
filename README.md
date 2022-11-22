@@ -164,6 +164,11 @@ cp ~/work/alacritty/extra/completions/alacritty.bash ~/.bash-completion/
 
 ### Node.js
 
+Add npm [completion](https://docs.npmjs.com/cli/commands/npm-completion)
+```shell
+npm completion > ~/.bash-completion/npm.bash
+```
+
 [Change npm's default directory to another directory](https://docs.npmjs.com/getting-started/fixing-npm-permissions)
 ```shell
 mkdir -p ~/.npm-global/bin
