@@ -54,6 +54,11 @@ if [ -f ~/.bash-completion/npm.bash ]; then
     source ~/.bash-completion/npm.bash
 fi
 
+# pm2
+if [ -f ~/.bash-completion/pm2.bash ]; then
+    source ~/.bash-completion/pm2.bash
+fi
+
 # Base16 Shell
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
