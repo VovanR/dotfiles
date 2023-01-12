@@ -1,6 +1,6 @@
 # dotfiles
 
-> My configs: Bash, Git, Atom, Vim, Tmux, Alacritty, Node, Plymouth. Xubuntu.
+> My configs: Bash, Git, Atom, Vim, Tmux, Alacritty, Node, Plymouth. Xubuntu, Fedora.
 
 ## Table of Contents
 
@@ -190,8 +190,15 @@ npm set init-version 0.0.0
 ```
 
 ```shell
-npm i -g diff-so-fancy
+npm install -g diff-so-fancy pm2
 ```
+
+#### `pm2` [auto completion](https://pm2.keymetrics.io/docs/usage/auto-completion/)
+
+```shell
+pm2 completion > ~/.bash-completion/pm2.bash
+```
+
 
 ### [Basher](https://github.com/basherpm/basher)
 
