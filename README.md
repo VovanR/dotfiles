@@ -1,6 +1,6 @@
 # dotfiles
 
-> My configs: Bash, Git, Atom, Vim, Tmux, Alacritty, Node, Plymouth. Xubuntu, Fedora.
+> My configs: Bash, Git, Vim, Tmux, Alacritty, Node, Plymouth. Xubuntu/Fedora.
 
 ## Table of Contents
 
@@ -46,8 +46,14 @@ $ tree ~/.fonts/truetype/
     └── Hack-Regular.ttf
 ```
 
+**Xubuntu**
 ```shell
 sudo apt install fonts-ibm-plex fonts-hack
+```
+
+**Fedora**
+```shell
+sudo dnf install ibm-plex-mono-fonts jetbrains-mono-fonts
 ```
 
 ### Bash
@@ -97,16 +103,17 @@ ln -sf ~/.config/dotfiles/gitignore_global ~/.gitignore_global
 ### Vim
 
 ```shell
-mkdir -p ~/.vim/{backups,bundle,swaps,undo}
+mkdir -p ~/.vim/{backups,swaps,undo}
 ln -sf ~/.config/dotfiles/vimrc ~/.vim/vimrc
 ln -sfn ~/.config/dotfiles/snippets ~/.vim/UltiSnips
 ```
 
-Install [Dein.vim](https://github.com/Shougo/dein.vim)
+Install [Dein.vim](https://github.com/Shougo/dein.vim).  
+Use [Dein-installer.vim](https://github.com/Shougo/dein-installer.vim)
 ```shell
-curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-sh ./installer.sh ~/.vim/bundle
-rm ./installer.sh
+wget https://raw.githubusercontent.com/Shougo/dein-installer.vim/master/installer.sh
+less installer.sh
+sh installer.sh
 ```
 
 Install Plugins
@@ -116,7 +123,7 @@ vim
 
 Compile [vimproc](https://github.com/Shougo/vimproc.vim#building)
 ```shell
-cd ~/.vim/bundle/repos/github.com/Shougo/vimproc.vim && make
+cd ~/.cache/dein/repos/github.com/Shougo/vimproc.vim && make
 ```
 
 Install [ack](http://beyondgrep.com/install/)
