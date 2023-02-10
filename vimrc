@@ -34,9 +34,9 @@ if dein#load_state('~/.vim/bundles')
     call dein#add('Raimondi/delimitMate')
     call dein#add('SirVer/ultisnips')
     call dein#add('editorconfig/editorconfig-vim')
-    " call dein#add('klen/python-mode')
+    " call dein#add('python-mode/python-mode')
     call dein#add('mattn/emmet-vim')
-    call dein#add('scrooloose/nerdcommenter')
+    call dein#add('preservim/nerdcommenter')
     call dein#add('tpope/vim-surround')
 
     " View
@@ -46,7 +46,7 @@ if dein#load_state('~/.vim/bundles')
 
     call dein#add('Xuyuanp/nerdtree-git-plugin')
     " call dein#add('Yggdroot/indentLine')
-    call dein#add('bling/vim-airline')
+    call dein#add('vim-airline/vim-airline')
     call dein#add('bronson/vim-trailing-whitespace')
     call dein#add('chriskempson/base16-vim')
     call dein#add('ctrlpvim/ctrlp.vim')
@@ -59,8 +59,8 @@ if dein#load_state('~/.vim/bundles')
     call dein#add('mhinz/vim-signify')
     " call dein#add('nathanaelkane/vim-indent-guides')
     call dein#add('mileszs/ack.vim')
-    call dein#add('scrooloose/nerdtree')
-    " call dein#add('scrooloose/syntastic')
+    call dein#add('preservim/nerdtree')
+    " call dein#add('vim-syntastic/syntastic')
     " call dein#add('sjl/gundo.vim')
     call dein#add('tpope/vim-fugitive')
     call dein#add('wesQ3/vim-windowswap')
@@ -104,10 +104,13 @@ if dein#load_state('~/.vim/bundles')
     " call dein#add('gregsexton/MatchTag')
     " call dein#add('mustache/vim-mustache-handlebars')
     " call dein#add('othree/html5.vim')
-    " call dein#add('plasticboy/vim-markdown')
+    " call dein#add('preservim/vim-markdown')
 
     " Go
     call dein#add('fatih/vim-go')
+
+    " Kotlin
+    call dein#add('udalov/kotlin-vim')
 
     " Nginx
     call dein#add('chr4/nginx.vim')
@@ -402,7 +405,7 @@ set autowrite
 
 " Editing
 
-" Plugin 'scrooloose/nerdcommenter'
+" Plugin 'preservim/nerdcommenter'
 " Добавлять и удалять пробелы после символов комментирования
 let NERDSpaceDelims=1
 let NERDRemoveExtraSpaces=1
@@ -417,7 +420,7 @@ let g:UltiSnipsEnableSnipMate = 0
 "
 
 
-" Plugin 'klen/python-mode'
+" Plugin 'python-mode/python-mode'
 let g:pymode_lint = 0
 let g:pymode_lint_on_write = 0
 let g:pymode_lint_unmodified = 0
@@ -434,7 +437,7 @@ let g:pymode_rope_lookup_project = 0
 " Plugin 'neoclide/coc.nvim'
 let g:coc_global_extensions = ['coc-tsserver']
 
-" Plugin 'scrooloose/nerdtree'
+" Plugin 'preservim/nerdtree'
 " Open a NERDTree automatically when vim starts up if no files were specified
 " autocmd vimenter * NERDTree
 " F3 - open dir
@@ -477,7 +480,7 @@ let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '−'
 "
 
-" Plugin 'bling/vim-airline'
+" Plugin 'vim-airline/vim-airline'
 " Hide git branch and show scrollbar
 " line number/total lines:column number
 let g:airline_section_b='%{noscrollbar#statusline(20, "—", "|")}%l/%L:%v'
@@ -493,9 +496,11 @@ let g:airline#extensions#hunks#enabled = 0
 
 
 " Plugin 'chriskempson/base16-vim'
-set background=dark
+set background=light
 let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme base16-bespin
+" colorscheme base16-bespin
+colorscheme base16-atelier-forest-light
+" colorscheme base16-cupertino
 "
 
 " Plugin 'Xuyuanp/nerdtree-git-plugin'
