@@ -29,6 +29,11 @@ if [ -d ~/go ]; then
     export PATH="$PATH:$GOPATH/bin"
 fi
 
+# JetBrains Toolbox App
+if [ -d ~/.local/share/JetBrains/Toolbox/scripts ]; then
+    export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts"
+fi
+
 # bash prompt
 if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
@@ -49,6 +54,22 @@ if [ -f ~/.bash-completion/alacritty.bash ]; then
     source ~/.bash-completion/alacritty.bash
 fi
 
+# https://github.com/wting/autojump
+if [ -f /usr/share/autojump/autojump.sh ]; then
+    . /usr/share/autojump/autojump.sh
+fi
+
+# SDKMAN!
+# https://sdkman.io/
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# nvm (Node Version Manager)
+# https://github.com/nvm-sh/nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
+
 # npm
 if [ -f ~/.bash-completion/npm.bash ]; then
     source ~/.bash-completion/npm.bash
@@ -60,8 +81,8 @@ if [ -f ~/.bash-completion/pm2.bash ]; then
 fi
 
 # Base16 Shell
-BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && [ -s "$BASE16_SHELL/profile_helper.sh" ] && source "$BASE16_SHELL/profile_helper.sh"
 
 # Path #
 ########
