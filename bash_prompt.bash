@@ -24,6 +24,15 @@ YELLOW="\[$(tput setaf 3)\]"
 CYAN="\[$(tput setaf 6)\]"
 # WHITE="\[$(tput setaf 7)\]"
 
+# Node.js version
+function prompt_node() {
+    local version output
+    version="$(node --version 2>/dev/null)"
+    [[ $? != 0 ]] && return;
+    output="$(echo "$version" | awk -F '.' '{print $1}')"
+    echo -en " ${output}"
+}
+
 # Git status.
 # Adapted from: https://github.com/cowboy/dotfiles/
 # Source: https://github.com/miripiruni/dotfiles/
@@ -99,6 +108,9 @@ PS1+="${BOLD}${GREEN}\w"
 PS1+="${RESET}${YELLOW} jobs:"
 # The number of processes you've suspended in this shell by hitting ^Z
 PS1+="${BOLD}\j${RESET}"
+
+# Node.js:
+PS1+="\$(prompt_node)"
 
 # Git details
 PS1+="${YELLOW}\$(prompt_git)"
