@@ -9,7 +9,6 @@
   - [Color scheme](#color-scheme)
   - [Bash](#bash)
   - [Git](#git)
-  - [Atom](#atom)
   - [Vim](#vim)
      - [Neovim](#neovim)
   - [Tmux](#tmux)
@@ -62,7 +61,6 @@ ln -sf ~/.config/dotfiles/bash_prompt.bash ~/.bash_prompt
 ln -sf ~/.config/dotfiles/inputrc ~/.inputrc
 ln -sf ~/.config/dotfiles/tmux.conf ~/.tmux.conf
 ln -sf ~/.config/dotfiles/Xresources ~/.Xresources
-ln -sf ~/.config/dotfiles/albertignore ~/.albertignore
 xrdb -merge ~/.Xresources
 source ~/.bash_profile
 ```
@@ -94,12 +92,6 @@ git config -f ~/.gitlocal user.name "Username"
 git config -f ~/.gitlocal user.email "mail@gmail.com"
 ln -sf ~/.config/dotfiles/gitconfig ~/.gitconfig
 ln -sf ~/.config/dotfiles/gitignore_global ~/.gitignore_global
-```
-
-### Atom
-
-```shell
-ln -sf ~/.config/dotfiles/atom/snippets.cson ~/.atom/snippets.cson
 ```
 
 ### Vim
