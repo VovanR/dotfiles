@@ -51,6 +51,7 @@
 	ci = commit
 	commend = commit --amend --no-edit
 	uncommit = reset --soft HEAD^
+	cancellastcommit = reset --soft HEAD^
 	st = status
 	s = status -sb
 	br = branch
