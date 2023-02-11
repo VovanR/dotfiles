@@ -50,6 +50,7 @@ function prompt_git() {
         /^Untracked files:$/ {r=r "?"}\
         END {print r}'
     )"
+    flags="${flags}$(prompt_git_stash)"
     if [[ "$flags" ]]; then
         output="${output} ${flags}"
     fi
@@ -110,16 +111,18 @@ PS1+="${RESET}${YELLOW} jobs:"
 PS1+="${BOLD}\j${RESET}"
 
 # Node.js:
-PS1+="\$(prompt_node)"
+if [ -x "$(command -v node)" ]; then
+    PS1+="\$(prompt_node)"
+fi
 
-# Git details
-PS1+="${YELLOW}\$(prompt_git)"
+# Git
+if [ -x "$(command -v git)" ]; then
+    # Git details
+    PS1+="${YELLOW}\$(prompt_git)"
 
-# Git stash
-PS1+="\$(prompt_git_stash)"
-
-# Git whoami
-PS1+=" ${YELLOW}\$(prompt_git_whoami)"
+    # Git whoami
+    PS1+=" ${YELLOW}\$(prompt_git_whoami)"
+fi
 
 # Newline
 PS1+="${RESET}\$(echo_new_line)"
