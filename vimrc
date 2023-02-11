@@ -11,125 +11,123 @@
 set nocompatible
 
 
+" Set Dein base path (required)
+let s:dein_base = '~/.cache/dein'
 
-" Dein.vim
-if &compatible
-    set nocompatible
-endif
-set runtimepath+=~/.vim/bundles/repos/github.com/Shougo/dein.vim
+" Set Dein source path (required)
+let s:dein_src = '~/.cache/dein/repos/github.com/Shougo/dein.vim'
 
-if dein#load_state('~/.vim/bundles')
-    call dein#begin('~/.vim/bundles')
+" Set Dein runtime path (required)
+execute 'set runtimepath+=' . s:dein_src
 
-    call dein#add('Shougo/dein.vim')
+" Call Dein initialization (required)
+call dein#begin(s:dein_base)
 
-    " My Bundles here:
+call dein#add(s:dein_src)
 
+" Your plugins go here:
+call dein#add('Shougo/vimproc.vim', {'build': 'make'})
 
-    "" Plugins begin
+" Editing
+call dein#add('Raimondi/delimitMate')
+call dein#add('SirVer/ultisnips')
+call dein#add('editorconfig/editorconfig-vim')
+" call dein#add('python-mode/python-mode')
+call dein#add('mattn/emmet-vim')
+call dein#add('preservim/nerdcommenter')
+call dein#add('tpope/vim-surround')
 
-    call dein#add('Shougo/vimproc.vim', {'build': 'make'})
+" View
+" Autocomplete
+call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'master', 'build': 'yarn install --frozen-lockfile' })
+" call dein#add('Shougo/deoplete.nvim', {'rev': '5.2'})
 
-    " Editing
-    call dein#add('Raimondi/delimitMate')
-    call dein#add('SirVer/ultisnips')
-    call dein#add('editorconfig/editorconfig-vim')
-    " call dein#add('python-mode/python-mode')
-    call dein#add('mattn/emmet-vim')
-    call dein#add('preservim/nerdcommenter')
-    call dein#add('tpope/vim-surround')
+call dein#add('Xuyuanp/nerdtree-git-plugin')
+" call dein#add('Yggdroot/indentLine')
+call dein#add('vim-airline/vim-airline')
+call dein#add('bronson/vim-trailing-whitespace')
+call dein#add('chriskempson/base16-vim')
+call dein#add('ctrlpvim/ctrlp.vim')
+call dein#add('ervandew/supertab')
+call dein#add('gcavallanti/vim-noscrollbar')
+" call dein#add('haya14busa/incsearch.vim')
+call dein#add('jistr/vim-nerdtree-tabs')
+call dein#add('jlanzarotta/bufexplorer')
+call dein#add('low-ghost/nerdtree-fugitive')
+call dein#add('mhinz/vim-signify')
+" call dein#add('nathanaelkane/vim-indent-guides')
+call dein#add('mileszs/ack.vim')
+call dein#add('preservim/nerdtree')
+" call dein#add('vim-syntastic/syntastic')
+" call dein#add('sjl/gundo.vim')
+call dein#add('tpope/vim-fugitive')
+call dein#add('wesQ3/vim-windowswap')
 
-    " View
-    " Autocomplete
-    call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'master', 'build': 'yarn install --frozen-lockfile' })
-    " call dein#add('Shougo/deoplete.nvim', {'rev': '5.2'})
+" Formatting
+" call dein#add('csscomb/vim-csscomb')
+" call dein#add('maksimr/vim-jsbeautify')
 
-    call dein#add('Xuyuanp/nerdtree-git-plugin')
-    " call dein#add('Yggdroot/indentLine')
-    call dein#add('vim-airline/vim-airline')
-    call dein#add('bronson/vim-trailing-whitespace')
-    call dein#add('chriskempson/base16-vim')
-    call dein#add('ctrlpvim/ctrlp.vim')
-    call dein#add('ervandew/supertab')
-    call dein#add('gcavallanti/vim-noscrollbar')
-    " call dein#add('haya14busa/incsearch.vim')
-    call dein#add('jistr/vim-nerdtree-tabs')
-    call dein#add('jlanzarotta/bufexplorer')
-    call dein#add('low-ghost/nerdtree-fugitive')
-    call dein#add('mhinz/vim-signify')
-    " call dein#add('nathanaelkane/vim-indent-guides')
-    call dein#add('mileszs/ack.vim')
-    call dein#add('preservim/nerdtree')
-    " call dein#add('vim-syntastic/syntastic')
-    " call dein#add('sjl/gundo.vim')
-    call dein#add('tpope/vim-fugitive')
-    call dein#add('wesQ3/vim-windowswap')
+" Syntax
+" call dein#add('sheerun/vim-polyglot')
+call dein#add('cespare/vim-toml')
 
-    " Formatting
-    " call dein#add('csscomb/vim-csscomb')
-    " call dein#add('maksimr/vim-jsbeautify')
+" CSS
+" call dein#add('groenewege/vim-less')
+" call dein#add('hail2u/vim-css3-syntax')
+" call dein#add('tpope/vim-haml')
+call dein#add('wavded/vim-stylus')
 
-    " Syntax
-    " call dein#add('sheerun/vim-polyglot')
-    call dein#add('cespare/vim-toml')
+" JavaScript
+" call dein#add('SevInf/vim-bemhtml')
+call dein#add('heavenshell/vim-jsdoc', {'build': 'make install'})
+" call dein#add('jason0x43/vim-js-indent')
+" call dein#add('kchmck/vim-coffee-script')
+call dein#add('leafgarland/typescript-vim')
+call dein#add('HerringtonDarkholme/yats.vim')
+" call dein#add('mxw/vim-jsx')
+call dein#add('maxmellon/vim-jsx-pretty')
+call dein#add('othree/javascript-libraries-syntax.vim')
+call dein#add('pangloss/vim-javascript')
+call dein#add('posva/vim-vue')
+call dein#add('evanleck/vim-svelte')
+call dein#add('jparise/vim-graphql')
+" call dein#add('ternjs/tern_for_vim')
 
-    " CSS
-    " call dein#add('groenewege/vim-less')
-    " call dein#add('hail2u/vim-css3-syntax')
-    " call dein#add('tpope/vim-haml')
-    call dein#add('wavded/vim-stylus')
+" HTML
+" call dein#add('AndrewRadev/vim-eco')
+" call dein#add('Glench/Vim-Jinja2-Syntax')
+call dein#add('digitaltoad/vim-pug')
+" call dein#add('evidens/vim-twig')
+" call dein#add('godlygeek/tabular')
+" call dein#add('gregsexton/MatchTag')
+" call dein#add('mustache/vim-mustache-handlebars')
+" call dein#add('othree/html5.vim')
+" call dein#add('preservim/vim-markdown')
 
-    " JavaScript
-    " call dein#add('SevInf/vim-bemhtml')
-    call dein#add('heavenshell/vim-jsdoc', {'build': 'make install'})
-    " call dein#add('jason0x43/vim-js-indent')
-    " call dein#add('kchmck/vim-coffee-script')
-    call dein#add('leafgarland/typescript-vim')
-    call dein#add('HerringtonDarkholme/yats.vim')
-    " call dein#add('mxw/vim-jsx')
-    call dein#add('maxmellon/vim-jsx-pretty')
-    call dein#add('othree/javascript-libraries-syntax.vim')
-    call dein#add('pangloss/vim-javascript')
-    call dein#add('posva/vim-vue')
-    call dein#add('evanleck/vim-svelte')
-    call dein#add('jparise/vim-graphql')
-    " call dein#add('ternjs/tern_for_vim')
+" Go
+call dein#add('fatih/vim-go')
 
-    " HTML
-    " call dein#add('AndrewRadev/vim-eco')
-    " call dein#add('Glench/Vim-Jinja2-Syntax')
-    call dein#add('digitaltoad/vim-pug')
-    " call dein#add('evidens/vim-twig')
-    " call dein#add('godlygeek/tabular')
-    " call dein#add('gregsexton/MatchTag')
-    " call dein#add('mustache/vim-mustache-handlebars')
-    " call dein#add('othree/html5.vim')
-    " call dein#add('preservim/vim-markdown')
+" Kotlin
+call dein#add('udalov/kotlin-vim')
 
-    " Go
-    call dein#add('fatih/vim-go')
+" Nginx
+call dein#add('chr4/nginx.vim')
 
-    " Kotlin
-    call dein#add('udalov/kotlin-vim')
-
-    " Nginx
-    call dein#add('chr4/nginx.vim')
-
-    "" Plugins end
+"" Plugins end
 
 
-    call dein#end()
-    call dein#save_state()
-endif
+" Finish Dein initialization (required)
+call dein#end()
 
-" Required:
+" Attempt to determine the type of a file based on its name and possibly its
+" contents. Use this to allow intelligent auto-indenting for each filetype,
+" and for plugins that are filetype specific.
 filetype plugin indent on
 
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-if dein#check_install()
-    call dein#install()
-endif
+" Uncomment if you want to install not-installed plugins on startup.
+" if dein#check_install()
+"     call dein#install()
+" endif
 
 
 
@@ -566,3 +564,4 @@ nmap <silent> <C-l> <Plug>(jsdoc)
 "
 
 " " }}}
+
