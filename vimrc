@@ -496,11 +496,13 @@ let g:airline#extensions#hunks#enabled = 0
 
 
 " Plugin 'chriskempson/base16-vim'
-set background=light
-let base16colorspace=256  " Access colors present in 256 colorspace
-" colorscheme base16-bespin
-colorscheme base16-atelier-forest-light
-" colorscheme base16-cupertino
+" set background=light
+" set termguicolors
+if exists('$BASE16_THEME')
+        \ && (!exists('g:colors_name') || g:colors_name != 'base16-$BASE16_THEME')
+    let base16colorspace=256
+    colorscheme base16-$BASE16_THEME
+endif
 "
 
 " Plugin 'Xuyuanp/nerdtree-git-plugin'
