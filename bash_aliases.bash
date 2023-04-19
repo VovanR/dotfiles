@@ -180,5 +180,10 @@ alias v-nvimupdate=" \
         alert \
     "
 
+# Copy/Paste
+# example format JSON: `pbpaste | jq | pbcopy`
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+
+# example: `v-port-usage 8080`
+alias v-port-usage='bash -xc '\''lsof -i :$0'\'''
