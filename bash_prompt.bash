@@ -50,7 +50,7 @@ function prompt_git() {
         /^Untracked files:$/ {r=r "?"}\
         END {print r}'
     )"
-    flags="${flags}$(prompt_git_stash)"
+    flags="${flags}$(prompt_git_stash)$(prompt_git_rev)"
     if [[ "$flags" ]]; then
         output="${output} ${flags}"
     fi
@@ -72,6 +72,30 @@ function prompt_git_stash {
     local count
     count="$(git stash list 2> /dev/null | wc -l)"
     [[ $count != "0" ]] && echo -en "^${count}"
+}
+
+# Source https://gist.github.com/dariok/0205036e6d4c473a05a9469022f87f3f
+function check_git_rev() {
+    # Check the current dir is actually a repository
+    #git status &> /dev/null || return 2
+    # If we are not on a branch we will get annoying errors if we don't do this check
+    git branch | grep -qE '^\* \((no branch|detached from .*|fatal: )\)' && return 1
+    return 0
+}
+
+function prompt_git_rev() {
+    local ahead behind
+
+    if ! check_git_rev; then
+        return;
+    fi
+
+    ahead="$(git rev-list --count @{u}..HEAD 2> /dev/null)"
+    behind="$(git rev-list --count HEAD..@{u} 2> /dev/null)"
+
+    [[ $? != 0 ]] && return;
+
+    echo -en " ↑${ahead} ↓${behind}"
 }
 
 # Fix Windows Bash EOL
