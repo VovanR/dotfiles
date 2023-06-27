@@ -69,7 +69,9 @@ function prompt_git_whoami() {
 
 # Git stash
 function prompt_git_stash {
-  [[ $(git stash list 2> /dev/null | tail -n1) != "" ]] && echo -en '^'
+    local count
+    count="$(git stash list 2> /dev/null | wc -l)"
+    [[ $count != "0" ]] && echo -en "^${count}"
 }
 
 # Fix Windows Bash EOL
