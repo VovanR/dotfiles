@@ -300,7 +300,11 @@ set synmaxcol=210
 
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
-set clipboard=unnamed,unnamedplus
+if exists('$WAYLAND_DISPLAY')
+    set clipboard+=unnamedplus
+else
+    set clipboard=unnamed,unnamedplus
+endif
 
 " Optimize for fast terminal connections
 set ttyfast
