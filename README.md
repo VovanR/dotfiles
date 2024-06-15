@@ -154,10 +154,10 @@ Add [completion](https://github.com/tmuxinator/tmuxinator#completion)
 wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash -P ~/.bash-completion/
 ```
 
-### [Alacritty](https://github.com/jwilm/alacritty)
+### [Alacritty](https://github.com/alacritty/alacritty)
 
 ```shell
-ln -sf ~/.config/dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -sf ~/.config/dotfiles/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
 cp ~/work/alacritty/extra/completions/alacritty.bash ~/.bash-completion/
 ```
 
