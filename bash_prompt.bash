@@ -37,12 +37,16 @@ function prompt_node() {
 # Adapted from: https://github.com/cowboy/dotfiles/
 # Source: https://github.com/miripiruni/dotfiles/
 function prompt_git() {
-    local status output flags
+    local status output flags hash
     status="$(git status 2>/dev/null)"
     [[ $? != 0 ]] && return;
     output="$(echo "$status" | awk '/# Initial commit/ {print "(init)"}')"
     [[ "$output" ]] || output="$(echo "$status" | awk '/^On branch/ {print $4}')"
     [[ "$output" ]] || output="$(git branch | perl -ne '/^\* (.*)/ && print $1')"
+    if [[ "$output" ]]; then
+        hash="$(git lasthash 2>/dev/null)"
+        [[ $? == 0 ]] && output="${output} ${hash}"
+    fi
     flags="$(
     echo "$status" | awk 'BEGIN {r=""} \
         /^Changes to be committed:$/ {r=r "+"}\
